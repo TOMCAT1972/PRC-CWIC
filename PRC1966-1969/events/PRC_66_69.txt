@@ -1,0 +1,2143 @@
+add_namespace = prc_66_69_die
+add_namespace = prc_66_69_cr
+add_namespace = prc_66_69_interesting
+add_namespace = prc_66_69_diplomacy
+
+###死亡相关事件###
+news_event = { #乒坛三杰逝世
+	id = prc_66_69_die.1
+	title = prc_66_69_die.1.t
+	desc = prc_66_69_die.1.d
+	trigger = {
+		date > 1968.06.21
+		tag = PRC
+		has_completed_focus = PRC_66_69_Clearing_the_Class
+	}
+	fire_only_once = yes
+	major = no
+	option = {
+		name = prc_66_69_die.1.a
+		add_manpower = -3
+		custom_effect_tooltip = PRC_60s_The_revolutionaries_have_been_vilified_tt
+	}
+}
+news_event = { #贺龙逝世
+	id = prc_66_69_die.2
+	title = prc_66_69_die.2.t
+	desc = prc_66_69_die.2.d
+	trigger = {
+		tag = PRC
+		date > 1969.06.09
+		date < 1969.07.09
+		has_country_leader = {
+			name = "Mao Zedong"
+			ruling_only = yes
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_die.2.a 
+	}
+}
+
+
+
+
+
+###文革###
+country_event = { #清华百日武斗1968.7.27
+	id = prc_66_69_cr.1
+	title = prc_66_69_cr.1.t
+	desc = prc_66_69_cr.1.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		has_completed_focus = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		OR = {
+			has_completed_focus = PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+			has_completed_focus = PRC_66_69_Treating_Events_as_Individual_Cases
+		}
+		date > 1968.04.14
+	}
+	option = {
+		name = prc_66_69_cr.1.a
+		
+	}
+}
+country_event = { #重庆大武斗1967.7.25
+	id = prc_66_69_cr.2
+	title = prc_66_69_cr.2.t
+	desc = prc_66_69_cr.2.d
+	trigger = {
+		has_completed_focus = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		tag = PRC
+		###重庆两派矛盾尖锐
+	}
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_cr.2.a
+		
+	}
+}
+country_event = { #破四旧1966.8.18
+	id = prc_66_69_cr.3
+	title = prc_66_69_cr.3.t
+	desc = prc_66_69_cr.3.d
+	trigger = {
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+		tag = PRC
+		date > 1966.08.18
+	}
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_cr.3.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.12
+				random_days = 162
+			}
+			country_event = {
+				id = prc_66_69_cr.13
+				random_days = 5
+			}
+		}
+	}
+}
+country_event = { #南京长江大桥通车
+	id = prc_66_69_cr.4
+	title = prc_66_69_cr.4.t
+	desc =  prc_66_69_cr.4.d
+	trigger = {
+		tag = PRC
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+		###南京已经成立革委会半年
+	}
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_cr.4.a
+	}
+}
+country_event = { #新内人党事件恶化
+	id = prc_66_69_cr.5
+	title = prc_66_69_cr.5.t
+	desc = prc_66_69_cr.5.d
+	trigger = {
+		tag = PRC
+	}
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_cr.13.a
+		
+	}
+}
+news_event = { #对四大金刚进行改造
+	id = prc_66_69_cr.6
+	title = prc_66_69_cr.6.t
+	desc = prc_66_69_cr.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name =  prc_66_69_cr.6.a
+	}
+}
+country_event = { #打倒黑五类1966.7.29
+	id = prc_66_69_cr.7
+	title = prc_66_69_cr.7.t
+	desc = prc_66_69_cr.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.7.a 
+		country_event = {
+			id = prc_66_69_cr.8
+			random_days = 5
+		}
+	}
+}
+country_event = { #红八月1966.8.3
+	id = prc_66_69_cr.8
+	title = prc_66_69_cr.8.t
+	desc = prc_66_69_cr.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.8.a 
+		country_event = {
+			id = prc_66_69_cr.9
+			random_days = 124
+		}
+		
+	}
+}
+country_event = { #西纠联动1966.12.5
+	id = prc_66_69_cr.9
+	title = prc_66_69_cr.9.t
+	desc = prc_66_69_cr.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.9.a
+		country_event = {
+			id = prc_66_69_cr.10
+			random_days = 57
+		}
+	}
+}
+country_event = { #首都三司控诉联动1967.1.31
+	id = prc_66_69_cr.10
+	title = prc_66_69_cr.10.t
+	desc = prc_66_69_cr.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.10.a
+		set_country_flag = PRC_Someone_is_advocating_for_pedigree_flag
+	}
+}
+country_event = { #联动罪行展览会与联动解散1967.5.29
+	id = prc_66_69_cr.11
+	title = prc_66_69_cr.11.t
+	desc = prc_66_69_cr.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.11.a 
+	}
+}
+country_event = { #粉碎旧思想，保护文物古迹
+	id = prc_66_69_cr.12
+	title = prc_66_69_cr.12.t
+	desc = prc_66_69_cr.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.12.a
+	}
+}
+country_event = { #对寺庙的破坏1966.8.23
+	id = prc_66_69_cr.13
+	title = prc_66_69_cr.13.t
+	desc = prc_66_69_cr.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.13.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.14
+			}
+		}
+	}
+}
+country_event = { #逮捕十世班禅1966.8
+	id = prc_66_69_cr.14
+	title = prc_66_69_cr.14.t
+	desc = prc_66_69_cr.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.14.a
+	}
+}
+country_event = { #批判《论共产党员的修养》1967.5.4
+	id = prc_66_69_cr.15
+	title = prc_66_69_cr.15.t
+	desc = prc_66_69_cr.15.d
+	trigger = {
+		tag = PRC
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_cr.15.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.17
+				random_days = 21
+			}
+			country_event = {
+				id = prc_66_69_cr.18
+				random_days = 528
+			}
+		}
+	}
+}
+
+country_event = { #撤职刘少奇和邓小平1967.3
+	id = prc_66_69_cr.16
+	title = prc_66_69_cr.16.t
+	desc = prc_66_69_cr.16.d
+	trigger = {
+		tag = PRC
+		has_completed_focus = PRC_66_69_Down_with_Imperialism_Revisionism_and_Reactionaries
+		date > 1967.03.01
+	}
+	is_triggered_only = yes
+	option = {
+		name = prc_66_69_cr.16.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.15
+				random_days = 64
+			}
+		}
+	}
+}
+
+country_event = { #伍豪等脱离共产党启事1967.5
+	id = prc_66_69_cr.17
+	title = prc_66_69_cr.17.t
+	desc = prc_66_69_cr.17.d
+	trigger = {
+		tag = PRC
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = prc_66_69_cr.17.a
+		
+	}
+}
+country_event = { #开除刘少奇1968.10.13
+	id = prc_66_69_cr.18
+	title = prc_66_69_cr.18.t
+	desc = prc_66_69_cr.18.d
+	trigger = {
+		tag = PRC
+	}
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_cr.18.a
+	}
+}
+country_event = { #接见来京串联红卫兵1966.8.18
+	id = prc_66_69_cr.19
+	title = prc_66_69_cr.19.t
+	desc = prc_66_69_cr.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.19.a
+		
+	}
+}
+country_event = { #康平路事件1966.12.30
+	id = prc_66_69_cr.20
+	title = prc_66_69_cr.20.t
+	desc = prc_66_69_cr.20.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+		date > 1966.12.30
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+	}
+	option = {
+		name = prc_66_69_cr.20.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.24
+				random_days = 7
+			}
+		}
+	}
+}
+country_event = { #尝试司法改革
+	id = prc_66_69_cr.21
+	title  = prc_66_69_cr.21.t
+	desc = prc_66_69_cr.21.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.21.a
+		hidden_effect = {
+			country_event = {
+				name = prc_66_69_cr.22
+				random_days = 125
+			}
+		}
+	}
+}
+country_event = { #司法改革无疾而终
+	id = prc_66_69_cr.22
+	title  = prc_66_69_cr.22.t
+	desc = prc_66_69_cr.22.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.22.a
+	}
+}
+country_event = { #河南惨案
+	id = prc_66_69_cr.23
+	title  = prc_66_69_cr.23.t
+	desc = prc_66_69_cr.23.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		date > 1966.07.22
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+	}
+	option = {
+		name = prc_66_69_cr.23.a
+		set_country_flag = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force_flag
+	}
+}
+country_event = { #上海夺权风暴1967.1.6
+	id = prc_66_69_cr.24
+	title  = prc_66_69_cr.24.t
+	desc = prc_66_69_cr.24.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.24.a
+		set_country_flag = PRC_66_69_Shanghai_Power_Grab_Storm_flag
+		complete_national_focus = PRC_66_69_Shanghai_Power_Grab_Storm
+	}
+}
+country_event = { #怀仁堂事变
+	id = prc_66_69_cr.25
+	title  = prc_66_69_cr.25.t
+	desc = prc_66_69_cr.25.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		date > 1967.01.19
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+	}
+	option = {
+		name = prc_66_69_cr.25.a
+		set_country_flag = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions_flag
+		complete_national_focus = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.27
+				random_days = 60
+			}
+			country_event = {
+				id = prc_66_69_cr.29
+				random_days = 56
+			}
+			country_event = {
+				id = prc_66_69_cr.39
+				random_days = 17
+			}
+		}
+	}
+}
+country_event = { #青海西宁惨案
+	id = prc_66_69_cr.26
+	title  = prc_66_69_cr.26.t
+	desc = prc_66_69_cr.26.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		date > 1967.02.23
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+	}
+	option = {
+		name = prc_66_69_cr.26.a
+		set_country_flag = PRC_66_69_Levelled_at_Military_Conspirators_flag
+	}
+}
+country_event = { #经济黑风1967.3
+	id = prc_66_69_cr.27
+	title  = prc_66_69_cr.27.t
+	desc = prc_66_69_cr.27.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.27.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.28
+				random_days = 270
+			}
+		}
+	}
+}
+country_event = { #第二次经济黑风1967.11
+	id = prc_66_69_cr.28
+	title  = prc_66_69_cr.28.t
+	desc = prc_66_69_cr.28.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.28.a
+	}
+}
+country_event = { #六十一人叛徒集团案1967.3.16
+	id = prc_66_69_cr.29
+	title  = prc_66_69_cr.29.t
+	desc = prc_66_69_cr.29.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.29.a
+	}
+}
+country_event = { #云南赵建民特务案
+	id = prc_66_69_cr.30
+	title  = prc_66_69_cr.30.t
+	desc = prc_66_69_cr.30.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		###云南武斗严重
+		date > 1968.01.01
+	}
+	option = {
+		name = prc_66_69_cr.30.a
+	}
+}
+country_event = { #各军区对中央命令阳奉阴违
+	id = prc_66_69_cr.31
+	title  = prc_66_69_cr.31.t
+	desc = prc_66_69_cr.31.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.31.a
+	}
+}
+country_event = { #杨余傅事件
+	id = prc_66_69_cr.32
+	title  = prc_66_69_cr.32.t
+	desc = prc_66_69_cr.32.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.32.a
+	}
+}
+country_event = { #武汉政变
+	id = prc_66_69_cr.33
+	title  = prc_66_69_cr.33.t
+	desc = prc_66_69_cr.33.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		date > 1967.07.20
+		has_completed_focus = PRC_66_69_Levelled_at_Military_Conspirators
+	}
+	option = {
+		name = prc_66_69_cr.33.a
+		set_country_flag = PRC_66_69_Wuhan_Coup_flag
+		complete_national_focus = PRC_66_69_Wuhan_Coup
+	}
+}
+country_event = { #内蒙古军区大屠杀
+	id = prc_66_69_cr.34
+	title  = prc_66_69_cr.34.t
+	desc = prc_66_69_cr.34.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+		date > 1967.03.18
+		has_completed_focus = PRC_66_69_Appeasing_the_Military_Hierarchy
+	}
+	option = {
+		name = prc_66_69_cr.34.a
+		set_country_flag = PRC_66_69_Inner_Mongolia_Military_Region_Massacre_flag
+		complete_national_focus = PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+	}
+}
+country_event = { #乙型脑炎疫情蔓延
+	id = prc_66_69_cr.35
+	title  = prc_66_69_cr.35.t
+	desc = prc_66_69_cr.35.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+		date > 1966.12.01
+		has_completed_focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+	}
+	option = {
+		name = prc_66_69_cr.35.a
+		set_country_flag = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement_flag
+	}
+}
+country_event = { #乙脑疫情缓解
+	id = prc_66_69_cr.36
+	title  = prc_66_69_cr.36.t
+	desc = prc_66_69_cr.36.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.36.a
+	}
+}
+country_event = { #乙脑疫情造成严重后果
+	id = prc_66_69_cr.37
+	title  = prc_66_69_cr.37.t
+	desc = prc_66_69_cr.37.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.37.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.38
+				random_days = 15
+			}
+		}
+	}
+}
+country_event = { #扩大乙脑疾病预防宣传
+	id = prc_66_69_cr.38
+	title  = prc_66_69_cr.38.t
+	desc = prc_66_69_cr.38.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.38.a
+	}
+}
+country_event = { #江青声讨军队
+	id = prc_66_69_cr.39
+	title  = prc_66_69_cr.39.t
+	desc = prc_66_69_cr.39.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = { #让叶剑英和徐向前一起出局
+		name = prc_66_69_cr.39.a
+		set_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.40
+				random_days = 1
+			}
+		}
+	}
+	option = { #解职徐向前
+		name = prc_66_69_cr.39.b
+		set_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 0
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.40
+				random_days = 1
+			}
+		}
+	}
+}
+country_event = { #杨成武被任命为全军文革代理组长
+	id = prc_66_69_cr.40
+	title  = prc_66_69_cr.40.t
+	desc = prc_66_69_cr.40.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.40.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.41
+				random_days = 60
+			}
+		}
+	}
+}
+country_event = { #新三军派准备冲击延安文艺座谈会纪念日演出
+	id = prc_66_69_cr.41
+	title  = prc_66_69_cr.41.t
+	desc = prc_66_69_cr.41.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = { #阻止他们的行动
+		name = prc_66_69_cr.41.a
+		add_to_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.42
+				random_days = 27
+			}
+		}
+	}
+	option = { #静观事态发展
+		name = prc_66_69_cr.41.b
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.42
+				random_days = 27
+			}
+		}
+	}
+}
+country_event = { #给演出活动定性
+	id = prc_66_69_cr.42
+	title  = prc_66_69_cr.42.t
+	desc = prc_66_69_cr.42.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = { #两派都是革命派
+		name = prc_66_69_cr.42.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.43
+				random_days = 147
+			}
+		}
+	}
+	option = { #我们要优先支持冲派
+		name = prc_66_69_cr.42.b
+		add_to_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.43
+				random_days = 147
+			}
+		}
+	}
+}
+country_event = { #军委四人小组要求刊登神化毛泽东的文章
+	id = prc_66_69_cr.43
+	title  = prc_66_69_cr.43.t
+	desc = prc_66_69_cr.43.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = { #杨成武选择通过
+		name = prc_66_69_cr.43.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.44
+				random_days = 45
+			}
+		}
+	}
+	option = { #杨成武选择拒绝
+		name = prc_66_69_cr.43.b
+		add_to_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.45
+				random_days = 45
+			}
+		}
+	}
+}
+country_event = { #对杨成武进行批评
+	id = prc_66_69_cr.44
+	title  = prc_66_69_cr.44.t
+	desc = prc_66_69_cr.44.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.44.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.46
+				random_days = 85
+			}
+		}
+	}
+}
+country_event = { #调和杨成武和林彪的矛盾
+	id = prc_66_69_cr.45
+	title  = prc_66_69_cr.45.t
+	desc = prc_66_69_cr.45.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_cr.45.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.46
+				random_days = 85
+			}
+		}
+	}
+}
+country_event = { #在空军的革命行动
+	id = prc_66_69_cr.46
+	title  = prc_66_69_cr.46.t
+	desc = prc_66_69_cr.46.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = { #暂缓在空军的夺权行动
+		name = prc_66_69_cr.46.a
+		add_to_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.47
+				random_days = 21
+			}
+		}
+	}
+	option = { #直接冲击吴法宪
+		name = prc_66_69_cr.46.b
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_cr.47
+				random_days = 21
+			}
+		}
+	}
+}
+country_event = { #清算陆军老帅
+	id = prc_66_69_cr.47
+	title  = prc_66_69_cr.47.t
+	desc = prc_66_69_cr.47.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = PRC
+	}
+	option = { #暂缓陆军的问题
+		name = prc_66_69_cr.47.a
+		add_to_variable = {
+			var = prc_66_69_cr_army_cr_team
+			value = 1
+		}
+	}
+	option = { #矛头直指徐向前
+		name = prc_66_69_cr.47.b
+	}
+}
+news_event = { #中共九大
+	id = prc_66_69_cr.48
+	title = prc_66_69_cr.48.t
+	picture = GFX_PRC_Congress_2
+	desc = prc_66_69_cr.48.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = prc_66_69_cr.48.a
+		
+	}
+}
+
+
+
+
+
+###风味事件
+news_event = { #中国进行珠峰全方位考察
+	id = prc_66_69_interesting.1
+	title = prc_66_69_interesting.1.t
+	desc = prc_66_69_interesting.1.d
+	trigger = {
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+		date > 1967.01.17
+	}
+	option = {
+		name = prc_66_69_interesting.1.a
+	}
+}
+news_event = { #陈景润证明哥德巴赫原初猜想
+	id = prc_66_69_interesting.2
+	title = prc_66_69_interesting.2.t
+	desc = prc_66_69_interesting.2.d
+	trigger = {
+		date > 1966.05.15
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name = prc_66_69_interesting.2.a
+	}
+}
+news_event = { #克格勃间谍破坏援越物资连环画
+	id = prc_66_69_interesting.3
+	title = prc_66_69_interesting.3.t
+	desc = prc_66_69_interesting.3.d
+	is_triggered_only = yes
+	major = no
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+	}
+	option = {
+		name = prc_66_69_interesting.3.a
+		#精彩的侦探小说故事
+	}
+}
+
+
+
+
+
+###外交事件
+country_event = { #中肯关系断绝1967.6.29
+	id = prc_66_69_diplomacy.1
+	title = prc_66_69_diplomacy.1.t
+	desc = prc_66_69_diplomacy.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.1.a
+		country_event = {
+			id = prc_66_69_diplomacy.2
+			random_days = 89
+		}
+	}
+}
+country_event = { #关闭突尼斯大使馆1967.9.26
+	id = prc_66_69_diplomacy.2
+	title = prc_66_69_diplomacy.2.t
+	desc = prc_66_69_diplomacy.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.2.a
+	}
+}
+country_event = { #中尼加德满都国际博览会冲突1967.7.10
+	id = prc_66_69_diplomacy.3
+	title = prc_66_69_diplomacy.3.t
+	desc = prc_66_69_diplomacy.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.3.a
+		country_event = {
+			id = prc_66_69_diplomacy.4
+			random_days = 53
+		}
+	}
+}
+country_event = { #锡兰抢劫、毁坏毛选1967.9.1
+	id = prc_66_69_diplomacy.4
+	title = prc_66_69_diplomacy.4.t
+	desc = prc_66_69_diplomacy.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.4.a
+		set_country_flag = prc_66_69_AntiChinese_wave_flag
+	}
+}
+country_event = { #中国尼泊尔联合公报
+	id = prc_66_69_diplomacy.5
+	title = prc_66_69_diplomacy.5.t
+	desc = prc_66_69_diplomacy.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.5.a
+	}
+}
+country_event = { #与扎伊尔卡拉比交流游击斗争经验
+	id = prc_66_69_diplomacy.6
+	title = prc_66_69_diplomacy.6.t
+	desc = prc_66_69_diplomacy.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.6.a
+	}
+}
+country_event = { #与苏东集团商讨援越物资问题
+	id = prc_66_69_diplomacy.7
+	title = prc_66_69_diplomacy.7.t
+	desc = prc_66_69_diplomacy.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #收费
+		name = prc_66_69_diplomacy.7.a
+		country_event = {
+			id = prc_66_69_diplomacy.8
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.9
+				random_days = 35
+			}
+		}
+	}
+	option = { #免费
+		name = prc_66_69_diplomacy.7.b
+		country_event = {
+			id = prc_66_69_diplomacy.8
+		}
+	}
+}
+country_event = { #援越人员问题
+	id = prc_66_69_diplomacy.8
+	title = prc_66_69_diplomacy.8.t
+	desc = prc_66_69_diplomacy.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #拒绝
+		name = prc_66_69_diplomacy.8.a
+	}
+	option = { #准许
+		name = prc_66_69_diplomacy.8.b
+	}
+}
+country_event = { #苏修集团对援越物质过境的造谣
+	id = prc_66_69_diplomacy.9
+	title = prc_66_69_diplomacy.9.t
+	desc = prc_66_69_diplomacy.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.9.a
+		news_event = {
+			id = prc_66_69_interesting.3
+			random_days = 15
+		}
+	}
+}
+country_event = { #反对美方利用间谍船对朝鲜进行战争威胁1968.1.28
+	id = prc_66_69_diplomacy.10
+	title = prc_66_69_diplomacy.10.t
+	desc = prc_66_69_diplomacy.10.d
+	fire_only_once = yes
+	trigger = {
+		date > 1968.01.28
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.10.a
+	}
+}
+country_event = { #越南美国巴黎谈判1968.5.13
+	id = prc_66_69_diplomacy.11
+	title = prc_66_69_diplomacy.11.t
+	desc = prc_66_69_diplomacy.11.d
+	fire_only_once = yes
+	trigger = {
+		date > 1968.05.13
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = { #让我们的越南同志警惕修正主义陷阱
+		name =  prc_66_69_diplomacy.11.a
+	}
+	option = { #让越南人处理自己的家务事吧
+		name =  prc_66_69_diplomacy.11.b
+	}
+}
+country_event = { #日本右翼团体排华事件1966.11.22
+	id = prc_66_69_diplomacy.12
+	title = prc_66_69_diplomacy.12.t
+	desc = prc_66_69_diplomacy.12.d
+	fire_only_once = yes
+	major = no
+	trigger = {
+		date > 1966.11.22
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.12.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.13
+				random_days = 291
+			}
+		}
+	}
+}
+country_event = { #警惕日本军国主义复活1967.9.9
+	id = prc_66_69_diplomacy.13
+	title = prc_66_69_diplomacy.13.t
+	desc = prc_66_69_diplomacy.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.13.a
+	}
+}
+country_event = { #声援阿拉伯人民反帝斗争
+	id = prc_66_69_diplomacy.14
+	title = prc_66_69_diplomacy.14.t
+	desc = prc_66_69_diplomacy.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.14.a
+	}
+}
+country_event = { #氹仔校舍事件1966.11.18
+	id = prc_66_69_diplomacy.15
+	title = prc_66_69_diplomacy.15.t
+	desc = prc_66_69_diplomacy.15.d
+	fire_only_once = yes
+	major = no
+	trigger = {
+		date > 1966.11.18
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = { #严厉警告葡澳当局
+		name =  prc_66_69_diplomacy.15.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.16
+				random_days = 25
+			}
+		}
+	}
+}
+country_event = { #葡澳当局让步1966.12.11
+	id = prc_66_69_diplomacy.16
+	title = prc_66_69_diplomacy.16.t
+	desc = prc_66_69_diplomacy.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #就此打住
+		name =  prc_66_69_diplomacy.16.a
+	}
+}
+country_event = { #东九龙胶花厂工潮1967.4.28
+	id = prc_66_69_diplomacy.17
+	title = prc_66_69_diplomacy.17.t
+	desc = prc_66_69_diplomacy.17.d
+	fire_only_once = yes
+	trigger = {
+		date > 1967.04.28
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.17.a
+		complete_national_focus = PRC_66_69_Sudden_labor_unrest_in_HongKong
+		set_country_flag = PRC_66_69_Sudden_labor_unrest_in_HongKong_flag
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.18
+				random_days = 13
+			}
+		}
+	}
+}
+country_event = { #第一次九龙暴动1967.5.11
+	id = prc_66_69_diplomacy.18
+	title = prc_66_69_diplomacy.18.t
+	desc = prc_66_69_diplomacy.18.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.18.a
+	}
+}
+country_event = { #抗议港英政府暴行十万人集会1967.5.15
+	id = prc_66_69_diplomacy.19
+	title = prc_66_69_diplomacy.19.t
+	desc = prc_66_69_diplomacy.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.19.a
+		country_event = {
+			id = prc_66_69_diplomacy.20
+			random_days = 19
+		}
+	}
+}
+
+country_event = { #反对英帝国主义的反动统治社论1967.6.3
+	id = prc_66_69_diplomacy.20
+	title = prc_66_69_diplomacy.20.t
+	desc = prc_66_69_diplomacy.20.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.20.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.21
+				random_days = 20
+			}
+		}
+	}
+}
+country_event = { #港英军警射杀抗议群众1967.6.23
+	id = prc_66_69_diplomacy.21
+	title = prc_66_69_diplomacy.21.t
+	desc = prc_66_69_diplomacy.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.21.a
+	}
+}
+
+country_event = { #沙头角交火1967.7.8
+	id = prc_66_69_diplomacy.22
+	title = prc_66_69_diplomacy.22.t
+	desc = prc_66_69_diplomacy.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.22.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.23
+				random_days = 4
+			}
+		}
+	}
+}
+country_event = { #港九大戒严1967.7.12
+	#港警无限制射击集会示威工人
+	#港警特务机构肆意抓捕、拷问工人代表
+	#港英政府成规模抓捕大陆记者、撰稿人
+	#英国出动两艘航母镇压工人
+	#军队在东九龙闯入居民家中暴力搜查宣传材料与武器
+	id = prc_66_69_diplomacy.23
+	title = prc_66_69_diplomacy.23.t
+	desc = prc_66_69_diplomacy.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.23.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.24
+				random_days = 41
+			}
+		}
+	}
+}
+country_event = { #火烧英国代办处1967.8.22
+	id = prc_66_69_diplomacy.24
+	title = prc_66_69_diplomacy.24.t
+	desc = prc_66_69_diplomacy.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.24.a
+	}
+}
+
+country_event = { #香港愈演愈烈的恐怖袭击活动
+	id = prc_66_69_diplomacy.25
+	title = prc_66_69_diplomacy.25.t
+	desc = prc_66_69_diplomacy.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.25.a
+		set_country_flag = PRC_66_69_Call_off_the_protests_flag
+	}
+}
+country_event = { #与港英政府缓和关系
+	id = prc_66_69_diplomacy.26
+	title = prc_66_69_diplomacy.26.t
+	desc = prc_66_69_diplomacy.26.d
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.26.a
+		set_country_flag = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government_flag
+	}
+}
+country_event = { #珠江口最后通牒
+	id = prc_66_69_diplomacy.27
+	title = prc_66_69_diplomacy.27.t
+	desc = prc_66_69_diplomacy.27.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.27.a
+		#边境冲突
+	}
+}
+country_event = { #审判卖国贼
+	id = prc_66_69_diplomacy.28
+	title = prc_66_69_diplomacy.28.t
+	desc = prc_66_69_diplomacy.28.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.28.a
+		country_event = {
+			id = prc_66_69_diplomacy.29
+		}
+	}
+}
+country_event = { #改造香港爱国群体
+	id = prc_66_69_diplomacy.29
+	title = prc_66_69_diplomacy.29.t
+	desc = prc_66_69_diplomacy.29.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.29.a
+	}
+}
+country_event = { #印尼屠华事件1966.8.5
+	id = prc_66_69_diplomacy.30
+	title = prc_66_69_diplomacy.30.t
+	desc = prc_66_69_diplomacy.30.d
+	fire_only_once = yes
+	trigger = {
+		date > 1966.08.05
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.30.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.31
+				random_days = 268
+			}
+		}
+	}
+}
+country_event = { #姚登山保卫驻印尼大使馆1967.4.30
+	id = prc_66_69_diplomacy.31
+	title = prc_66_69_diplomacy.31.t
+	desc = prc_66_69_diplomacy.31.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #提拔红色战士姚登山
+		name =  prc_66_69_diplomacy.31.a
+		country_event = {
+			id = prc_66_69_diplomacy.32
+			random_days = 13
+		}
+	}
+}
+country_event = { #四次印尼撤侨1967.5.13
+	id = prc_66_69_diplomacy.32
+	title = prc_66_69_diplomacy.32.t
+	desc = prc_66_69_diplomacy.32.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.32.a
+		country_event = {
+			id = prc_66_69_diplomacy.33
+			random_days = 84
+		}
+	}
+}
+country_event = { #冲击印尼使馆1967.8.5
+	id = prc_66_69_diplomacy.33
+	title = prc_66_69_diplomacy.33.t
+	desc = prc_66_69_diplomacy.33.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.33.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.34
+				random_days = 57
+			}
+		}
+	}
+}
+country_event = { #印尼暴徒再次袭击我国大使馆1967.10.1
+	id = prc_66_69_diplomacy.34
+	title = prc_66_69_diplomacy.34.t
+	desc = prc_66_69_diplomacy.34.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.34.a
+		country_event = {
+			id = prc_66_69_diplomacy.35
+			random_days = 29
+		}
+	}
+}
+country_event = { #停止与印尼外交关系1967.10.30
+	id = prc_66_69_diplomacy.35
+	title = prc_66_69_diplomacy.35.t
+	desc = prc_66_69_diplomacy.35.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.35.a
+	}
+}
+country_event = { #缅甸排华暴乱1967.6.26
+	id = prc_66_69_diplomacy.36
+	title = prc_66_69_diplomacy.36.t
+	desc = prc_66_69_diplomacy.36.d
+	fire_only_once = yes
+	trigger = {
+		date > 1967.6.26
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.36.a
+		country_event = {
+			id = prc_66_69_diplomacy.37
+			random_days = 3
+		}
+	}
+}
+country_event = { #冲击缅甸大使馆1967.6.29
+	id = prc_66_69_diplomacy.37
+	title = prc_66_69_diplomacy.37.t
+	desc = prc_66_69_diplomacy.37.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.37.a
+	}
+}
+country_event = { #驱逐印度间谍出境1967.6.12
+	id = prc_66_69_diplomacy.38
+	title = prc_66_69_diplomacy.38.t
+	desc = prc_66_69_diplomacy.38.d
+	fire_only_once = yes
+	trigger = {
+		date > 1967.6.12
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.38.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.39
+				random_days = 3
+			}
+		}
+	}
+}
+country_event = { #印度暴徒打砸中国使馆1967.6.15
+	id = prc_66_69_diplomacy.39
+	title = prc_66_69_diplomacy.39.t
+	desc = prc_66_69_diplomacy.39.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.39.a
+		country_event = {
+			id = prc_66_69_diplomacy.40
+			ruling_only = 3
+		}
+	}
+}
+country_event = { #冲击印度外交代办处1967.6.18
+	id = prc_66_69_diplomacy.40
+	title = prc_66_69_diplomacy.40.t
+	desc = prc_66_69_diplomacy.40.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.40.a
+	}
+}
+country_event = { #中印乃堆拉山口冲突1967.8.13
+	id = prc_66_69_diplomacy.41
+	title = prc_66_69_diplomacy.41.t
+	desc = prc_66_69_diplomacy.41.d
+	fire_only_once = yes
+	trigger = {
+		date > 1967.08.13
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+	}
+	option = {
+		name =  prc_66_69_diplomacy.41.a
+		set_country_flag = PRC_66_69_China_India_Nathu_La_Pass_conflict_flag
+		complete_national_focus = PRC_66_69_China_India_Nathu_La_Pass_conflict
+	}
+}
+country_event = { #1967中印冲突_阿鲁纳恰尔
+	id = prc_66_69_diplomacy.42
+	title = prc_66_69_diplomacy.42.t
+	desc = prc_66_69_diplomacy.42.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.42.a
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+#				state = 868
+				num_provinces = 1
+				on_win = prc_66_69_diplomacy.43
+				on_lose = prc_66_69_diplomacy.45
+				on_cancel = prc_66_69_diplomacy.45
+			}		
+			defender = {
+#				state = 1548
+				num_provinces = 2
+			}
+#			if = {
+#				limit = {
+#					PRC = {
+#						is_ai = yes
+#					}
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+#			else_if = {
+#				limit = {
+#					is_historical_focus_on = yes
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+		}
+	}
+}
+country_event = { #1967中印冲突_提斯浦尔
+	id = prc_66_69_diplomacy.43
+	title = prc_66_69_diplomacy.43.t
+	desc = prc_66_69_diplomacy.43.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.43.a
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+#				state = 868
+				num_provinces = 1
+				on_win = prc_66_69_diplomacy.44
+				on_lose = prc_66_69_diplomacy.45
+				on_cancel = prc_66_69_diplomacy.45
+			}		
+			defender = {
+#				state = 1548
+				num_provinces = 2
+			}
+#			if = {
+#				limit = {
+#					PRC = {
+#						is_ai = yes
+#					}
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+#			else_if = {
+#				limit = {
+#					is_historical_focus_on = yes
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+		}
+	}
+}
+country_event = { #提斯浦尔战事顺利
+	id = prc_66_69_diplomacy.44
+	title = prc_66_69_diplomacy.44.t
+	desc = prc_66_69_diplomacy.44.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.44.a
+		set_country_flag = PRC_66_69_storm_Tisphur_win_flag
+	}
+}
+country_event = { #提斯浦尔战况不利
+	id = prc_66_69_diplomacy.45
+	title = prc_66_69_diplomacy.45.t
+	desc = prc_66_69_diplomacy.45.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.45.a
+		hidden_effect = {
+			#如果控制了阿鲁纳恰尔、提斯浦尔就重新给印度
+		}
+		country_event = {
+			id = prc_66_69_diplomacy.46
+		}
+	}
+}
+country_event = { #寻找战败责任
+	id = prc_66_69_diplomacy.46
+	title = prc_66_69_diplomacy.46.t
+	desc = prc_66_69_diplomacy.46.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #把错误归结于经济黑风
+		name =  prc_66_69_diplomacy.46.a
+	}
+	option = { #把责任推给武斗
+		name =  prc_66_69_diplomacy.46.b
+	}
+}
+country_event = { #1967中印冲突_锡金
+	id = prc_66_69_diplomacy.47
+	title = prc_66_69_diplomacy.47.t
+	desc = prc_66_69_diplomacy.47.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.47.a
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+#				state = 868
+				num_provinces = 1
+				on_win = prc_66_69_diplomacy.48
+				on_lose = prc_66_69_diplomacy.49
+				on_cancel = prc_66_69_diplomacy.49
+			}
+			defender = {
+#				state = 1548
+				num_provinces = 2
+			}
+#			if = {
+#				limit = {
+#					PRC = {
+#						is_ai = yes
+#					}
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+#			else_if = {
+#				limit = {
+#					is_historical_focus_on = yes
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+		}
+	}
+}
+country_event = { #继续作战？
+	id = prc_66_69_diplomacy.48
+	title = prc_66_69_diplomacy.48.t
+	desc = prc_66_69_diplomacy.48.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #进攻西里古里走廊
+		name =  prc_66_69_diplomacy.48.a
+		country_event = {
+			id = prc_66_69_diplomacy.50
+		}
+	}
+	option = { #保存有利战果
+		name =  prc_66_69_diplomacy.48.b
+		set_country_flag = PRC_66_69_Preservation_of_a_favorable_outcome_flag
+	}
+}
+country_event = { #锡金作战失败
+	id = prc_66_69_diplomacy.49
+	title = prc_66_69_diplomacy.49.t
+	desc = prc_66_69_diplomacy.49.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.49.a
+		set_country_flag = PRC_66_69_Armistice_negotiations_with_the_Indian_side_flag
+	}
+}
+country_event = { #1967中印冲突_西里古里
+	id = prc_66_69_diplomacy.50
+	title = prc_66_69_diplomacy.50.t
+	desc = prc_66_69_diplomacy.50.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.50.a
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+#				state = 868
+				num_provinces = 1
+				on_win = prc_66_69_diplomacy.51
+				on_lose = prc_66_69_diplomacy.52
+				on_cancel = prc_66_69_diplomacy.52
+			}
+			defender = {
+#				state = 1548
+				num_provinces = 2
+			}
+#			if = {
+#				limit = {
+#					PRC = {
+#						is_ai = yes
+#					}
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+#			else_if = {
+#				limit = {
+#					is_historical_focus_on = yes
+#				}
+#				set_border_war_data = {
+#					attacker = 868
+#					defender = 1548
+#					defender_modifier = 10
+#					combat_width = 200
+#				}
+#			}
+		}
+	}
+}
+country_event = { #西里古里作战胜利
+	id = prc_66_69_diplomacy.51
+	title = prc_66_69_diplomacy.51.t
+	desc = prc_66_69_diplomacy.51.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.51.a
+		set_country_flag = PRC_66_69_Successful_severance_of_the_Siliguri_corridor_flag
+	}
+}
+country_event = { #西里古里作战失败
+	id = prc_66_69_diplomacy.52
+	title = prc_66_69_diplomacy.52.t
+	desc = prc_66_69_diplomacy.52.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.52.a
+		set_country_flag = PRC_66_69_Armistice_negotiations_with_the_Indian_side_flag
+	}
+}
+country_event = { #总结作战经验
+	id = prc_66_69_diplomacy.53
+	title = prc_66_69_diplomacy.53.t
+	desc = prc_66_69_diplomacy.53.d
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = PRC_66_69_Learning_from_combat_experience_flag
+	}
+	option = {
+		name =  prc_66_69_diplomacy.53.a
+	}
+}
+country_event = { #七里沁岛事件1968.1.28
+	id = prc_66_69_diplomacy.54
+	title = prc_66_69_diplomacy.54.t
+	desc = prc_66_69_diplomacy.54.d
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		PRC = {
+			has_country_leader = {
+				name = "Mao Zedong"
+				ruling_only = yes
+			}
+		}
+		date > 1968.01.28
+	}
+	option = {
+		name =  prc_66_69_diplomacy.54.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.55
+				random_days = 399
+			}
+		}
+	}
+}
+country_event = { #珍宝岛事件1969.3.2
+	id = prc_66_69_diplomacy.55
+	title = prc_66_69_diplomacy.55.t
+	desc = prc_66_69_diplomacy.55.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = prc_66_69_diplomacy.55.a 
+		set_country_flag = PRC_60s_chanpoisland_war_has_begin
+		complete_national_focus = PRC_66_69_Jumbo_Island_conflict
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 408
+				num_provinces = 3
+				on_win = prc_66_69_diplomacy.59
+				on_lose = prc_66_69_diplomacy.58
+				on_cancel = prc_66_69_diplomacy.59
+			}		
+			defender = {
+				state = 714
+				num_provinces = 3
+				on_win = prc_66_69_diplomacy.56
+				on_lose = prc_66_69_diplomacy.57
+				on_cancel = prc_66_69_diplomacy.56
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = prc_66_69_diplomacy.60
+			}
+			country_event = {
+				id = prc_66_69_diplomacy.61
+				random_days = 100
+			}
+		}
+	}
+}
+country_event = {#中国-中国胜利
+	id = prc_66_69_diplomacy.56
+	title = prc_66_69_diplomacy.56.t
+	desc = prc_66_69_diplomacy.56.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_diplomacy.56.a
+	}
+}
+country_event = {#中国-中国失败
+	id = prc_66_69_diplomacy.57
+	title = prc_66_69_diplomacy.57.t
+	desc = prc_66_69_diplomacy.57.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_diplomacy.57.a
+		add_stability = -0.05
+	}
+}
+country_event = {#苏联-中国胜利
+	id = prc_66_69_diplomacy.58
+	title = prc_66_69_diplomacy.58.t
+	desc = prc_66_69_diplomacy.58.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_diplomacy.58.a
+		add_stability = -0.05
+	}
+}
+country_event = {#苏联-中国失败
+	id = prc_66_69_diplomacy.59
+	title = prc_66_69_diplomacy.59.t
+	desc = prc_66_69_diplomacy.59.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prc_66_69_diplomacy.59.a
+		add_stability = 0.05
+	}
+}
+news_event = {#世界新闻
+	id = prc_66_69_diplomacy.60
+	title = prc_66_69_diplomacy.60.t
+	desc = prc_66_69_diplomacy.60.d
+	fire_only_once = no
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = prc_66_69_diplomacy.60.a
+	}
+	option = {
+		name = prc_66_69_diplomacy.60.b
+	}
+	option = {
+		name = prc_66_69_diplomacy.60.c
+		trigger = {
+			NOT = {
+				has_government = communism
+				has_government = maoism
+				has_government = trotskyism
+			}
+		}
+	}
+}
+country_event = { #裕民县事件1969.6.10
+	id = prc_66_69_diplomacy.61
+	title = prc_66_69_diplomacy.61.t
+	desc = prc_66_69_diplomacy.61.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.61.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.68
+				random_days = 28
+			}
+		}
+	}
+}
+country_event = { #八岔岛事件1969.7.8
+	id = prc_66_69_diplomacy.68
+	title = prc_66_69_diplomacy.68.t
+	desc = prc_66_69_diplomacy.68.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.68.a
+		hidden_effect = {
+			country_event = {
+				id = prc_66_69_diplomacy.62
+				random_days = 36
+			}
+		}
+	}
+}
+country_event = { #铁列克提冲突1969.8.13
+	id = prc_66_69_diplomacy.62
+	title = prc_66_69_diplomacy.62.t
+	desc = prc_66_69_diplomacy.62.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.62.a
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 408
+				num_provinces = 3
+				on_win = prc_66_69_diplomacy.63
+				on_lose = prc_66_69_diplomacy.64
+				on_cancel = prc_66_69_diplomacy.64
+			}		
+			defender = {
+				state = 714
+				num_provinces = 3
+			}
+		}
+	}
+}
+country_event = { #铁列克提胜利
+	id = prc_66_69_diplomacy.63
+	title = prc_66_69_diplomacy.63.t
+	desc = prc_66_69_diplomacy.63.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.63.a
+		country_event = {
+			id = prc_66_69_diplomacy.65
+			random_days = 31
+		}
+	}
+}
+country_event = { #铁列克提失败
+	id = prc_66_69_diplomacy.64
+	title = prc_66_69_diplomacy.64.t
+	desc = prc_66_69_diplomacy.64.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.64.a
+		country_event = {
+			id = prc_66_69_diplomacy.65
+			random_days = 31
+		}
+		country_event = {
+			id = prc_66_69_diplomacy.67
+			random_days = 854
+		}
+	}
+}
+country_event = { #与苏联代表团会晤1969.9.13
+	id = prc_66_69_diplomacy.65
+	title = prc_66_69_diplomacy.65.t
+	desc = prc_66_69_diplomacy.65.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.65.a
+		country_event = {
+			id = prc_66_69_diplomacy.66
+			random_days = 6
+		}
+	}
+}
+country_event = { #为铁列克提牺牲烈士举办葬礼1969.9.19
+	id = prc_66_69_diplomacy.66
+	title = prc_66_69_diplomacy.66.t
+	desc = prc_66_69_diplomacy.66.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.66.a
+	}
+}
+country_event = { #乌鲁木齐军区负责人被撤职1971.12
+	id = prc_66_69_diplomacy.67
+	title = prc_66_69_diplomacy.67.t
+	desc = prc_66_69_diplomacy.67.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name =  prc_66_69_diplomacy.67.a
+	}
+}

@@ -1,0 +1,2396 @@
+focus_tree = {
+	id = PRC_66_69
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = PRC
+		}
+	}
+	default = no
+	#关于无产阶级文化大革命的决定
+	focus = {
+		id = PRC_66_69_Decision_on_the_Cultural_Revolution
+		icon = GFX_PRC_66_69_Decision_on_the_Cultural_Revolution
+		cost = 4
+		x = 7
+		y = 1
+		by_pass = {
+			always = yes
+		}
+		complete_tooltip = PRC_66_69_culture_revolution_tt
+		allow_branch = {
+			NOT = {
+				AND = {
+					has_completed_focus = PRC_66_69_Support_the_Shanghai_Power_Grab
+					has_completed_focus = PRC_66_69_Three_Supports_and_Two_Militaries
+				}
+			}
+		}
+	}
+	#全国学生大串联
+	focus = {
+		id = PRC_66_69_Students_Revolutionary_Tours_Around_the_Country
+		icon = GFX_PRC_66_69_Students_Revolutionary_Tours_Around_the_Country
+		cost = 3
+		x = -5
+		y = 1
+		relative_position_id = PRC_66_69_Decision_on_the_Cultural_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_cr.19
+			}
+		}
+	}
+	#清除前十七年余毒
+	focus = {
+		id = PRC_66_69_Clear_the_Poison_of_the_Previous_Seventeen_Years
+		icon = GFX_PRC_66_69_Clear_the_Poison_of_the_Previous_Seventeen_Years
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Students_Revolutionary_Tours_Around_the_Country
+		prerequisite = {
+			focus = PRC_66_69_Students_Revolutionary_Tours_Around_the_Country
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.05
+		}
+	}
+	#改造教育制度
+	focus = {
+		id = PRC_66_69_Reform_the_Education_System
+		icon = GFX_PRC_66_69_Reform_the_Education_System
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Students_Revolutionary_Tours_Around_the_Country
+		prerequisite = {
+			focus = PRC_66_69_Students_Revolutionary_Tours_Around_the_Country
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_timed_idea = {
+				idea = Reform_the_education_system
+				days = 730
+			}
+		}
+	}
+	#推广四大民主
+	focus = {
+		id = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		icon = GFX_PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Decision_on_the_Cultural_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -50
+		}
+	}
+	#打倒牛鬼蛇神
+	focus = {
+		id = PRC_66_69_Down_with_Ghosts_and_Monsters
+		icon = GFX_PRC_66_69_Down_with_Ghosts_and_Monsters
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		prerequisite = {
+			focus = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_cr.7
+				}
+			}
+			custom_effect_tooltip = PRC_66_69_Down_with_Ghosts_and_Monsters_tt
+		}
+	}
+	#反击血统论
+	focus = {
+		id = PRC_66_69_Countering_Pedigree_Theory
+		icon = GFX_PRC_66_69_Countering_Pedigree_Theory
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		prerequisite = {
+			focus = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		}
+		available = {
+			has_country_flag = PRC_Someone_is_advocating_for_pedigree_flag
+			custom_effect_tooltip = PRC_Someone_is_advocating_for_pedigree_tt
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_cr.11
+					random_days = 48
+				}
+			}
+			custom_effect_tooltip = PRC_66_69_Countering_Pedigree_Theory_tt
+		}
+	}
+	#把军人排除在外
+	focus = {
+		id = PRC_66_69_Excluding_the_Military
+		icon = GFX_PRC_66_69_Excluding_the_Military
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		prerequisite = {
+			focus = PRC_66_69_Promotion_of_the_Four_Major_Democracies
+		}
+		completion_reward = {
+
+		}
+	}
+	#红宝书
+	focus = {
+		id = PRC_66_69_Red_Book
+		icon = GFX_PRC_66_69_Red_Book
+		cost = 3
+		x = 5
+		y = 1
+		relative_position_id = PRC_66_69_Decision_on_the_Cultural_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Decision_on_the_Cultural_Revolution
+		}
+		completion_reward = {
+
+		}
+	}
+	#塑造红卫兵形象
+	focus = {
+		id = PRC_66_69_Shaping_the_Image_of_the_Red_Guards
+		icon = GFX_PRC_66_69_Shaping_the_Image_of_the_Red_Guards
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Red_Book
+		prerequisite = {
+			focus = PRC_66_69_Red_Book
+		}
+		completion_reward = {
+
+		}
+	}
+	#打倒帝修反
+	focus = {
+		id = PRC_66_69_Down_with_Imperialism_Revisionism_and_Reactionaries
+		icon = GFX_PRC_66_69_Down_with_Imperialism_Revisionism_and_Reactionaries
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Red_Book
+		prerequisite = {
+			focus = PRC_66_69_Red_Book
+		}
+		completion_reward = {
+
+		}
+	}
+	#上海夺权风暴
+	focus = {
+		id = PRC_66_69_Shanghai_Power_Grab_Storm
+		icon = GFX_PRC_66_69_Shanghai_Power_Grab_Storm
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Countering_Pedigree_Theory
+		prerequisite = {
+			focus = PRC_66_69_Reform_the_Education_System
+			focus = PRC_66_69_Clear_the_Poison_of_the_Previous_Seventeen_Years
+			focus = PRC_66_69_Down_with_Ghosts_and_Monsters
+			focus = PRC_66_69_Countering_Pedigree_Theory
+			focus = PRC_66_69_Excluding_the_Military
+			focus = PRC_66_69_Shaping_the_Image_of_the_Red_Guards
+			focus = PRC_66_69_Down_with_Imperialism_Revisionism_and_Reactionaries
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Shanghai_Power_Grab_Storm_flag
+			NOT = {
+				AND = {
+					has_completed_focus = PRC_66_69_Support_the_Shanghai_Power_Grab
+					has_completed_focus = PRC_66_69_Three_Supports_and_Two_Militaries
+				}
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	#支持上海夺权运动
+	focus = {
+		id = PRC_66_69_Support_the_Shanghai_Power_Grab
+		icon = GFX_PRC_66_69_Support_the_Shanghai_Power_Grab
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Shanghai_Power_Grab_Storm
+		prerequisite = {
+			focus = PRC_66_69_Shanghai_Power_Grab_Storm
+		}
+		completion_reward = {
+
+		}
+	}
+	#三支两军
+	focus = {
+		id = PRC_66_69_Three_Supports_and_Two_Militaries
+		icon = GFX_PRC_66_69_Three_Supports_and_Two_Militaries
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Shanghai_Power_Grab_Storm
+		prerequisite = {
+			focus = PRC_66_69_Shanghai_Power_Grab_Storm
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+
+	#文攻武卫
+	focus = {
+		id = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		icon = GFX_PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		cost = 3
+		x = 0
+		y = 3
+		relative_position_id = PRC_66_69_Shanghai_Power_Grab_Storm
+		offset = {
+			x = 0
+			y = -6
+			trigger = {
+				AND = {
+					has_completed_focus = PRC_66_69_Support_the_Shanghai_Power_Grab
+					has_completed_focus = PRC_66_69_Three_Supports_and_Two_Militaries
+				}
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force_flag
+		}
+		completion_reward = {
+			
+		}
+	}
+	#整治武斗乱象
+	focus = {
+		id = PRC_66_69_Rectify_the_Chaos_of_Armed_Conflict
+		icon = GFX_PRC_66_69_Rectify_the_Chaos_of_Armed_Conflict
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		prerequisite = {
+			focus = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Revolution_is_A_Riot
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		}
+		completion_reward = {
+			custom_effect_tooltip = PRC_66_69_This_will_benefit_conservatives_tt
+			hidden_effect = {
+				any_owned_state = {
+					if = {
+						limit = {
+							has_variable = GPCR_province_laobao_power_var
+						}
+						add_to_variable = {
+							GPCR_province_laobao_power_var = 3
+						}
+						add_to_variable = {
+							GPCR_province_zaozao_power_var = -3
+						}
+					}
+				}
+			}
+		}
+	}
+	#革命就是暴动
+	focus = {
+		id = PRC_66_69_Revolution_is_A_Riot
+		icon = GFX_PRC_66_69_Revolution_is_A_Riot
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		prerequisite = {
+			focus = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Rectify_the_Chaos_of_Armed_Conflict
+		}
+		completion_reward = {
+
+		}
+	}
+	#砸烂公检法部门
+	focus = {
+		id = PRC_66_69_Smashing_the_Public_Prosecution_Department
+		icon = GFX_PRC_66_69_Smashing_the_Public_Prosecution_Department
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Revolution_is_A_Riot
+		prerequisite = {
+			focus = PRC_66_69_Rectify_the_Chaos_of_Armed_Conflict
+			focus = PRC_66_69_Revolution_is_A_Riot
+		}
+		completion_reward = {
+			country_event = {
+				name = prc_66_69_cr.21
+			}
+		}
+	}
+	#平息地方武斗
+	focus = {
+		id = PRC_66_69_Calming_Local_Armed_Conflict
+		icon = GFX_PRC_66_69_Calming_Local_Armed_Conflict
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Smashing_the_Public_Prosecution_Department
+		prerequisite = {
+			focus = PRC_66_69_Rectify_the_Chaos_of_Armed_Conflict
+		}
+		prerequisite = {
+			focus = PRC_66_69_Smashing_the_Public_Prosecution_Department
+		}
+		completion_reward = {
+			
+		}
+	}
+	#支援革命造反派
+	focus = {
+		id = PRC_66_69_Support_the_Revolutionary_Rebels
+		icon = GFX_PRC_66_69_Support_the_Revolutionary_Rebels
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Smashing_the_Public_Prosecution_Department
+		prerequisite = {
+			focus = PRC_66_69_Revolution_is_A_Riot
+		}
+		prerequisite = {
+			focus = PRC_66_69_Smashing_the_Public_Prosecution_Department
+		}
+		completion_reward = {
+
+		}
+	}
+	#批斗阶级敌人
+	focus = {
+		id = PRC_66_69_Criticize_Class_Enemies
+		icon = GFX_PRC_66_69_Criticize_Class_Enemies
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Calming_Local_Armed_Conflict
+		prerequisite = {
+			focus = PRC_66_69_Smashing_the_Public_Prosecution_Department
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+
+	#处理大串联运动
+	focus = {
+		id = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement
+		icon = GFX_PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement
+		cost = 3
+		x = -4
+		y = 0
+		relative_position_id = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+		offset = {
+			x = 0
+			y = 0
+			trigger = {
+				AND = {
+					has_completed_focus = PRC_66_69_Support_the_Shanghai_Power_Grab
+					has_completed_focus = PRC_66_69_Three_Supports_and_Two_Militaries
+				}
+			}
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement_flag
+		}
+		completion_reward = {
+
+		}
+	}
+	#加速上山下乡运动
+	focus = {
+		id = PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+		icon = GFX_PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement
+		prerequisite = {
+			focus = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = Go_up_the_mountain_and_go_down_to_the_countryside
+				days = 730
+			}
+			add_political_power = -25
+		}
+	}
+	#到革命最需要的地方去
+	focus = {
+		id = PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		icon = GFX_PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement
+		prerequisite = {
+			focus = PRC_66_69_Cope_with_the_Revolutionary_Tours_Around_the_Country_Movement
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Rectify_the_Chaos_of_Armed_Conflict
+		}
+		completion_reward = {
+
+		}
+	}
+	#支边支内运动
+	focus = {
+		id = PRC_66_69_Support_for_Frontier_and_Mainland_Campaigns
+		icon = GFX_PRC_66_69_Support_for_Frontier_and_Mainland_Campaigns
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+		prerequisite = {
+			focus = PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = Reclamation_of_the_frontier
+				days = 730
+			}
+		}
+	}
+	#复课、节俭闹革命
+	focus = {
+		id = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		icon = GFX_PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+		prerequisite = {
+			focus = PRC_66_69_Accelerate_the_Movement_to_the_Mountains_and_the_Countryside
+			focus = PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Encourage_Students_to_Pay_For_the_Revolutionary_Tours_Around_the_Country
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_cr.36
+					random_days = 15
+				}
+			}
+		}
+	}
+	#鼓励学生有偿串联
+	focus = {
+		id = PRC_66_69_Encourage_Students_to_Pay_For_the_Revolutionary_Tours_Around_the_Country
+		icon = GFX_PRC_66_69_Encourage_Students_to_Pay_For_the_Revolutionary_Tours_Around_the_Country
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		prerequisite = {
+			focus = PRC_66_69_Go_to_the_Place_Where_the_Revolution_is_Most_Needed
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_cr.37
+					random_days = 15
+				}
+			}
+		}
+	}
+	#新一批上山下乡人员
+	focus = {
+		id = PRC_66_69_New_Group_of_People_Going_to_the_Countryside
+		icon = GFX_PRC_66_69_New_Group_of_People_Going_to_the_Countryside
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Support_for_Frontier_and_Mainland_Campaigns
+		}
+		prerequisite = {
+			focus = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		}
+		completion_reward = {
+			
+		}
+	}
+	#赤脚医生
+	focus = {
+		id = PRC_66_69_Barefoot_Doctors
+		icon = GFX_PRC_66_69_Barefoot_Doctors
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Resumption_of_Classes_and_Frugality_for_Revolution
+			focus = PRC_66_69_Encourage_Students_to_Pay_For_the_Revolutionary_Tours_Around_the_Country
+		}
+		completion_reward = {
+
+		}
+	}
+	#派驻工宣队、军宣队
+	focus = {
+		id = PRC_66_69_Assigning_Worker_Propaganda_Team_and_Military_Propaganda_Team
+		icon = GFX_PRC_66_69_Assigning_Worker_Propaganda_Team_and_Military_Propaganda_Team
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = PRC_66_69_Encourage_Students_to_Pay_For_the_Revolutionary_Tours_Around_the_Country
+		prerequisite = {
+			focus = PRC_66_69_New_Group_of_People_Going_to_the_Countryside
+		}
+		prerequisite = {
+			focus = PRC_66_69_Calming_Local_Armed_Conflict
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+
+	#老帅的反动逆流
+	focus = {
+		id = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		icon = GFX_PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		cost = 3
+		x = 5
+		y = 0
+		relative_position_id = PRC_66_69_Attacking_by_the_Articles_and_Defense_by_the_Force
+	    allow_branch = {
+			has_country_flag = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions_flag
+		}
+		completion_reward = {
+
+		}
+	}
+	#直指军事阴谋家
+	focus = {
+		id = PRC_66_69_Levelled_at_Military_Conspirators
+		icon = GFX_PRC_66_69_Levelled_at_Military_Conspirators
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		prerequisite = {
+			focus = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Appeasing_the_Military_Hierarchy
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Levelled_at_Military_Conspirators_flag
+		}
+		completion_reward = {
+
+		}
+	}
+	#安抚军队高层
+	focus = {
+		id = PRC_66_69_Appeasing_the_Military_Hierarchy
+		icon = GFX_PRC_66_69_Appeasing_the_Military_Hierarchy
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		prerequisite = {
+			focus = PRC_66_69_The_Veteran_Marshals_Reactionary_Actions
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Levelled_at_Military_Conspirators
+		}
+		completion_reward = {
+
+		}
+	}
+	#为人民立新功
+	focus = {
+		id = PRC_66_69_Make_New_Achievements_For_the_People
+		icon = GFX_PRC_66_69_Make_New_Achievements_For_the_People
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Levelled_at_Military_Conspirators
+		prerequisite = {
+			focus = PRC_66_69_Levelled_at_Military_Conspirators
+			focus = PRC_66_69_Appeasing_the_Military_Hierarchy
+		}
+		completion_reward = {
+
+		}
+	}
+	#抓革命，促生产
+	focus = {
+		id = PRC_66_69_Grasping_the_Revolution_and_Promoting_Production
+		icon = GFX_PRC_66_69_Grasping_the_Revolution_and_Promoting_Production
+		cost = 3
+		x = 2
+		y = 0
+		relative_position_id = PRC_66_69_Make_New_Achievements_For_the_People
+		prerequisite = {
+			focus = PRC_66_69_Appeasing_the_Military_Hierarchy
+		}
+		completion_reward = {
+
+		}
+	}
+	#推广两忆三查运动
+	focus = {
+		id = PRC_66_69_Promote_Two_Recall_and_Three_Check_Campaigns
+		icon = GFX_PRC_66_69_Promote_Two_Recall_and_Three_Check_Campaigns
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Grasping_the_Revolution_and_Promoting_Production
+		prerequisite = {
+			focus = PRC_66_69_Make_New_Achievements_For_the_People
+			focus = PRC_66_69_Grasping_the_Revolution_and_Promoting_Production
+		}
+		completion_reward = {
+
+		}
+	}
+	#武汉政变
+	focus = {
+		id = PRC_66_69_Wuhan_Coup
+		icon = GFX_PRC_66_69_Wuhan_Coup
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Promote_Two_Recall_and_Three_Check_Campaigns
+		prerequisite = {
+			focus = PRC_66_69_Levelled_at_Military_Conspirators
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = PRC_66_69_Inner_Mongolia_Military_Region_Massacre_flag
+				has_country_flag = PRC_66_69_Wuhan_Coup_flag
+			}
+		}
+		complete_tooltip = PRC_66_69_Wuhan_Coup_tt
+	}
+	#杨余傅职务正式化
+	focus = {
+		id = PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+		icon = GFX_PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Wuhan_Coup
+		prerequisite = {
+			focus = PRC_66_69_Wuhan_Coup
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+		}
+		available = {
+			has_country_flag = A_decision_has_been_made_on_what_to_do_with_the_Army_wide_Cultural_Revolution_team_flag
+			custom_effect_tooltip = A_decision_has_been_made_on_what_to_do_with_the_Army_wide_Cultural_Revolution_team_tt
+			check_variable = {
+				var = prc_66_69_cr_army_cr_team
+				value > 5
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_cr.31
+				}
+			}
+			clear_variable = prc_66_69_cr_army_cr_team
+		}
+	}
+	#处理文革三尖刀
+	focus = {
+		id = PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+		icon = GFX_PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Wuhan_Coup
+		prerequisite = {
+			focus = PRC_66_69_Wuhan_Coup
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+		}
+		available = {
+			has_country_flag = A_decision_has_been_made_on_what_to_do_with_the_Army_wide_Cultural_Revolution_team_flag
+			custom_effect_tooltip = A_decision_has_been_made_on_what_to_do_with_the_Army_wide_Cultural_Revolution_team_tt
+			check_variable = {
+				var = prc_66_69_cr_army_cr_team
+				value < 6
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_cr.32
+				}
+			}
+			clear_variable = prc_66_69_cr_army_cr_team
+		}
+	}
+	#内蒙军区大屠杀
+	focus = {
+		id = PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+		icon = GFX_PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+		cost = 3
+		x = 0
+		y = 3
+		relative_position_id = PRC_66_69_Appeasing_the_Military_Hierarchy
+		prerequisite = {
+			focus = PRC_66_69_Appeasing_the_Military_Hierarchy
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = PRC_66_69_Inner_Mongolia_Military_Region_Massacre_flag
+				has_country_flag = PRC_66_69_Wuhan_Coup_flag
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	#审肃极端分子
+	focus = {
+		id = PRC_66_69_Try_and_Purge_the_Extremists
+		icon = GFX_PRC_66_69_Try_and_Purge_the_Extremists
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+		prerequisite = {
+			focus = PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Treating_Events_as_Individual_Cases
+		}
+		completion_reward = {
+
+		}
+	}
+	#将事件视作个人行为
+	focus = {
+		id = PRC_66_69_Treating_Events_as_Individual_Cases
+		icon = GFX_PRC_66_69_Treating_Events_as_Individual_Cases
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+		prerequisite = {
+			focus = PRC_66_69_Inner_Mongolia_Military_Region_Massacre
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Try_and_Purge_the_Extremists
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+
+	#松开对人武部和民兵的限制
+	focus = {
+		id = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+		icon = GFX_PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+		cost = 3
+		x = 1
+		y = 2
+		relative_position_id = PRC_66_69_Criticize_Class_Enemies
+		prerequisite = {
+			focus = PRC_66_69_Support_the_Revolutionary_Rebels
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_Calming_Local_Armed_Conflict
+				has_completed_focus = PRC_66_69_Support_the_Revolutionary_Rebels
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	#为革命不惜一切
+	focus = {
+		id = PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+		icon = GFX_PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+		prerequisite = {
+			focus = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+		}
+		prerequisite = {
+			focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		}
+		completion_reward = {
+
+		}
+	}
+	#从废墟上崛起
+	focus = {
+		id = PRC_66_69_Rising_From_the_Ruins
+		icon = GFX_PRC_66_69_Rising_From_the_Ruins
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+		prerequisite = {
+			focus = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+			focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		}
+		completion_reward = {
+			
+		}
+	}
+	#提拔年轻干部
+	focus = {
+		id = PRC_66_69_Promotion_of_Young_Cadres
+		icon = GFX_PRC_66_69_Promotion_of_Young_Cadres
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+			focus = PRC_66_69_Rising_From_the_Ruins
+		}
+		completion_reward = {
+			
+		}
+	}
+	#空降公社领导
+	focus = {
+		id = PRC_66_69_Direct_Appointment_of_Commune_Leaders
+		icon = GFX_PRC_66_69_Direct_Appointment_of_Commune_Leaders
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+		prerequisite = {
+			focus = PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+		}
+		prerequisite = {
+			focus = PRC_66_69_Rising_From_the_Ruins
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+
+	#军管化革委会
+	focus = {
+		id = PRC_66_69_Military_Management_of_Commission
+		icon = GFX_PRC_66_69_Military_Management_of_Commission
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Treating_Events_as_Individual_Cases
+		prerequisite = {
+			focus = PRC_66_69_Calming_Local_Armed_Conflict
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_Calming_Local_Armed_Conflict
+				has_completed_focus = PRC_66_69_Support_the_Revolutionary_Rebels
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	#建设五七干校
+	focus = {
+		id = PRC_66_69_Construction_of_Labor_Schools_for_Civilian_Officials
+		icon = GFX_PRC_66_69_Construction_of_Labor_Schools_for_Civilian_Officials
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Military_Management_of_Commission
+		prerequisite = {
+			focus = PRC_66_69_Promote_the_Three_Combination_System
+			focus = PRC_66_69_Military_Management_of_Commission
+		}
+		completion_reward = {
+
+		}
+	}
+	#清理阶级队伍
+	focus = {
+		id = PRC_66_69_Clearing_the_Class
+		icon = GFX_PRC_66_69_Clearing_the_Class
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Military_Management_of_Commission
+		prerequisite = {
+			focus = PRC_66_69_Military_Management_of_Commission
+		}
+		prerequisite = {
+			focus = PRC_66_69_Promote_the_Three_Combination_System
+		}
+		completion_reward = {
+
+		}
+	}
+	#稳定官僚情绪
+	focus = {
+		id = PRC_66_69_Stabilizing_Bureaucratic_Sentiment
+		icon = GFX_PRC_66_69_Stabilizing_Bureaucratic_Sentiment
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Clearing_the_Class
+		prerequisite = {
+			focus = PRC_66_69_Construction_of_Labor_Schools_for_Civilian_Officials
+			focus = PRC_66_69_Clearing_the_Class
+		}
+		completion_reward = {
+
+		}
+	}
+	#使用强力措施
+	focus = {
+		id = PRC_66_69_Employ_Harsh_Measures
+		icon = GFX_PRC_66_69_Employ_Harsh_Measures
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Clearing_the_Class
+		prerequisite = {
+			focus = PRC_66_69_Construction_of_Labor_Schools_for_Civilian_Officials
+			focus = PRC_66_69_Clearing_the_Class
+		}
+		completion_reward = {
+
+		}
+	}
+
+
+
+	#再上井冈山
+	focus = {
+		id = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		icon = GFX_PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+		prerequisite = {
+			focus = PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+			focus = PRC_66_69_Try_and_Purge_the_Extremists
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Promote_the_Three_Combination_System
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+				has_completed_focus = PRC_66_69_Treating_Events_as_Individual_Cases
+				has_completed_focus = PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+				has_completed_focus = PRC_66_69_Try_and_Purge_the_Extremists
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	#推广三结合制度
+	focus = {
+		id = PRC_66_69_Promote_the_Three_Combination_System
+		icon = GFX_PRC_66_69_Promote_the_Three_Combination_System
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Try_and_Purge_the_Extremists
+		prerequisite = {
+			focus = PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+			focus = PRC_66_69_Treating_Events_as_Individual_Cases
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_Deal_With_the_Three_Sharp_Knives_of_the_Cultural_Revolution
+				has_completed_focus = PRC_66_69_Treating_Events_as_Individual_Cases
+				has_completed_focus = PRC_66_69_Officialization_of_YangChengwu_YuLijin_and_FuChongbi_s_Position
+				has_completed_focus = PRC_66_69_Try_and_Purge_the_Extremists
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	#坚持无产阶级专政
+	focus = {
+		id = PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+		icon = GFX_PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		prerequisite = {
+			focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+		}
+		prerequisite = {
+			focus = PRC_66_69_Doing_Whatever_It_Takes_for_the_Revolution
+		}
+		prerequisite = {
+			focus = PRC_66_69_Rising_From_the_Ruins
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Practicing_Reconciliationism
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_The_Whole_Country_is_Red
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+				has_completed_focus = PRC_66_69_Promote_the_Three_Combination_System
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_cr.5
+					random_days = 10
+				}
+			}
+		}
+	}
+	#实行调和主义
+	focus = {
+		id = PRC_66_69_Practicing_Reconciliationism
+		icon = GFX_PRC_66_69_Practicing_Reconciliationism
+		cost = 3
+		x = 2
+		y = 0
+		relative_position_id = PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+		prerequisite = {
+			focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+			focus = PRC_66_69_Promote_the_Three_Combination_System
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_The_Whole_Country_is_Red
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+				has_completed_focus = PRC_66_69_Promote_the_Three_Combination_System
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_cr.5
+					random_days = 10
+				}
+			}
+		}
+	}
+	#全国山河一片红
+	focus = {
+		id = PRC_66_69_The_Whole_Country_is_Red
+		icon = GFX_PRC_66_69_The_Whole_Country_is_Red
+		cost = 3
+		x = 4
+		y = 0
+		relative_position_id = PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+		prerequisite = {
+			focus = PRC_66_69_Promote_the_Three_Combination_System
+		}
+		prerequisite = {
+			focus = PRC_66_69_Construction_of_Labor_Schools_for_Civilian_Officials
+		}
+		prerequisite = {
+			focus = PRC_66_69_Clearing_the_Class
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Practicing_Reconciliationism
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+				has_completed_focus = PRC_66_69_Promote_the_Three_Combination_System
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_cr.5
+					random_days = 10
+				}
+			}
+		}
+	}
+	#中共九大
+	focus = {
+		id = PRC_66_69_The_Ninth_National_Congress_of_the_Communist_Party_of_China
+		icon = GFX_PRC_66_69_The_Ninth_National_Congress_of_the_Communist_Party_of_China
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Practicing_Reconciliationism
+		prerequisite = {
+			focus = PRC_66_69_Adherence_to_the_Dictatorship_of_the_Proletariat
+			focus = PRC_66_69_Practicing_Reconciliationism
+			focus = PRC_66_69_The_Whole_Country_is_Red
+		}
+		allow_branch = {
+			OR = {
+				AND = {
+					has_completed_focus = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+					has_completed_focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+					has_completed_focus = PRC_66_69_Promotion_of_Young_Cadres
+					has_completed_focus = PRC_66_69_Direct_Appointment_of_Commune_Leaders
+				}
+				AND = {
+					has_completed_focus = PRC_66_69_Loosening_Restrictions_on_the_People_s_Armed_Forces_and_Militias
+					has_completed_focus = PRC_66_69_Promote_the_Three_Combination_System
+					has_completed_focus = PRC_66_69_Promotion_of_Young_Cadres
+					has_completed_focus = PRC_66_69_Stabilizing_Bureaucratic_Sentiment
+					has_completed_focus = PRC_66_69_Employ_Harsh_Measures
+				}
+				AND = {
+					has_completed_focus = PRC_66_69_To_Go_Back_to_the_Jinggang_Mountains
+					has_completed_focus = PRC_66_69_Military_Management_of_Commission
+					has_completed_focus = PRC_66_69_Promotion_of_Young_Cadres
+					has_completed_focus = PRC_66_69_Stabilizing_Bureaucratic_Sentiment
+					has_completed_focus = PRC_66_69_Employ_Harsh_Measures
+				}
+				AND = {
+					has_completed_focus = PRC_66_69_Promote_the_Three_Combination_System
+					has_completed_focus = PRC_66_69_Military_Management_of_Commission
+					has_completed_focus = PRC_66_69_Stabilizing_Bureaucratic_Sentiment
+					has_completed_focus = PRC_66_69_Employ_Harsh_Measures
+				}
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				###开始四大金刚（长春、太原、鞍山、抚顺）改造任务
+			}
+			news_event = {
+				id = prc_66_69_cr.48
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+	
+	#反修正主义外交战略
+	focus = {
+		id = PRC_66_69_AntiRevisionist_Diplomatic_Strategy
+		icon = GFC_PRC_66_69_AntiRevisionist_Diplomatic_Strategy
+		cost = 3
+		x = 32
+		y = 1
+		completion_reward = {
+			#
+		}
+	}
+	#积极支持世界革命
+	focus = {
+		id = PRC_66_69_Active_support_for_the_world_revolution
+		icon = GFX_PRC_66_69_Active_support_for_the_world_revolution
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_AntiRevisionist_Diplomatic_Strategy
+		prerequisite = {
+			focus = PRC_66_69_AntiRevisionist_Diplomatic_Strategy
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_diplomacy.1
+					random_days = 409
+				}
+			}
+		}
+	}
+	#声援扎伊尔游击队斗争
+	focus = {
+		id = PRC_66_69_Solidarity_with_the_guerrilla_struggle_in_Zaire
+		icon = GFX_PRC_66_69_Solidarity_with_the_guerrilla_struggle_in_Zaire
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Active_support_for_the_world_revolution
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.6
+				random_days = 15
+			}
+		}
+	}
+	#培训东非解放军
+	focus = {
+		id = PRC_66_69_Training_of_the_East_African_Liberation_Army
+		icon = GFX_PRC_66_69_Training_of_the_East_African_Liberation_Army
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Solidarity_with_the_guerrilla_struggle_in_Zaire
+		prerequisite = {
+			focus = PRC_66_69_Solidarity_with_the_guerrilla_struggle_in_Zaire
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#支持赞比亚卡翁达政权
+	focus = {
+		id = PRC_66_69_Support_for_the_Kaunda_regime_in_Zambia
+		icon = GFX_PRC_66_69_Support_for_the_Kaunda_regime_in_Zambia
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_Active_support_for_the_world_revolution
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#对南也门进行工业援助
+	focus = {
+		id = PRC_66_69_Industrial_assistance_to_South_Yemen
+		icon = GFX_PRC_66_69_Industrial_assistance_to_South_Yemen
+		cost
+		x = 4
+		y = 1
+		relative_position_id = PRC_66_69_Active_support_for_the_world_revolution
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.14
+			}
+		}
+	}
+	#继续支援越南战争
+	focus = {
+		id = PRC_66_69_Continued_support_for_the_Vietnam_War
+		icon = GFX_PRC_66_69_Continued_support_for_the_Vietnam_War
+		cost
+		x = 6
+		y = 1
+		relative_position_id = PRC_66_69_Active_support_for_the_world_revolution
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		allow_branch = {
+			#北越、南越存在
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.7
+			}
+		}
+	}
+	#扩大军事顾问团
+	focus = {
+		id = PRC_66_69_Expansion_of_the_Military_Advisory_Group
+		icon = GFX_PRC_66_69_Expansion_of_the_Military_Advisory_Group
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Continued_support_for_the_Vietnam_War
+		prerequisite = {
+			focus = PRC_66_69_Continued_support_for_the_Vietnam_War
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#派遣秘密志愿军
+	focus = {
+		id = PRC_66_69_Dispatch_of_clandestine_volunteers
+		icon = GFX_PRC_66_69_Dispatch_of_clandestine_volunteers
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Continued_support_for_the_Vietnam_War
+		prerequisite = {
+			focus = PRC_66_69_Continued_support_for_the_Vietnam_War
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#反对美帝国主义对柬埔寨的侵略阴谋
+	focus = {
+		id = PRC_66_69_Opposition_to_the_USA_imperialist_plot_of_aggression_against_Cambodia
+		icon = PRC_66_69_Opposition_to_the_USA_imperialist_plot_of_aggression_against_Cambodia
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_Continued_support_for_the_Vietnam_War
+		prerequisite = {
+			focus = PRC_66_69_Continued_support_for_the_Vietnam_War
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#支持美国国内反战行动
+	focus = {
+		id = PRC_66_69_Support_for_the_USA_Domestic_AntiWar_Action
+		icon = GFX_PRC_66_69_Support_for_the_USA_Domestic_AntiWar_Action
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Dispatch_of_clandestine_volunteers
+		prerequisite = {
+			focus = PRC_66_69_Expansion_of_the_Military_Advisory_Group
+		}
+		prerequisite = {
+			focus = PRC_66_69_Dispatch_of_clandestine_volunteers
+		}
+		prerequisite = {
+			focus = PRC_66_69_Opposition_to_the_USA_imperialist_plot_of_aggression_against_Cambodia
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#接触日本左翼运动
+	focus = {
+		id = PRC_66_69_Contact_with_the_Japanese_leftwing_movement
+		icon = GFX_PRC_66_69_Contact_with_the_Japanese_leftwing_movement
+		cost
+		x = 8
+		y = 1
+		relative_position_id = PRC_66_69_Active_support_for_the_world_revolution
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#输送红宝书与毛主席像章
+	focus = {
+		id = PRC_66_69_Conveyance_of_the_Red_Book_and_Chairman_Mao_s_Medallion
+		icon = GFX_PRC_66_69_Conveyance_of_the_Red_Book_and_Chairman_Mao_s_Medallion
+		cost
+		x = 2
+		y = 0
+		relative_position_id = PRC_66_69_Contact_with_the_Japanese_leftwing_movement
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_diplomacy.3
+					random_days = 220
+				}
+			}
+		}
+	}
+	#应对反华浪潮
+	focus = {
+		id = PRC_66_69_Responding_to_the_AntiChinese_Wave
+		icon = GFX_PRC_66_69_Responding_to_the_AntiChinese_Wave
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Conveyance_of_the_Red_Book_and_Chairman_Mao_s_Medallion
+		prerequisite = {
+			focus = PRC_66_69_Conveyance_of_the_Red_Book_and_Chairman_Mao_s_Medallion
+		}
+		allow_branch = {
+			has_country_flag = prc_66_69_AntiChinese_wave_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#加大宣传力度
+	focus = {
+		id = PRC_66_69_Intensify_publicity_efforts
+		icon = GFX_PRC_66_69_Intensify_publicity_efforts
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Responding_to_the_AntiChinese_Wave
+		prerequisite = {
+			focus = PRC_66_69_Responding_to_the_AntiChinese_Wave
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Reorganization_of_diplomatic_discipline
+		}
+		available = {
+			has_completed_focus = PRC_66_69_The_Cultural_Revolution_in_HongKong
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#整顿外交纪律
+	focus = {
+		id = PRC_66_69_Reorganization_of_diplomatic_discipline
+		icon = GFX_PRC_66_69_Reorganization_of_diplomatic_discipline
+		cost
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Responding_to_the_AntiChinese_Wave
+		prerequisite = {
+			focus = PRC_66_69_Responding_to_the_AntiChinese_Wave
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Intensify_publicity_efforts
+		}
+		available = {
+			has_completed_focus = PRC_66_69_Trial_of_the_rebels_of_the_Ministry_of_Foreign_Affairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_diplomacy.5
+					random_days = 169
+				}
+			}
+		}
+	}
+	#支持缅共进行武装斗争
+	focus = {
+		id = PRC_66_69_Support_for_the_Communist_Party_of_Burma_in_its_armed_struggle
+		icon = GFX_PRC_66_69_Support_for_the_Communist_Party_of_Burma_in_its_armed_struggle
+		cost
+		x = 4
+		y = 0
+		relative_position_id = PRC_66_69_Contact_with_the_Japanese_leftwing_movement
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#法国五月风暴
+	focus = {
+		id = PRC_66_69_French_May_Storm
+		icon = GFX_PRC_66_69_French_May_Storm
+		cost
+		x = 2
+		y = 0
+		relative_position_id = PRC_66_69_Support_for_the_Communist_Party_of_Burma_in_its_armed_struggle
+		prerequisite = {
+			focus = PRC_66_69_Active_support_for_the_world_revolution
+		}
+		allow_branch = {
+			has_country_flag = FRA_May_Storm  ###应该不是这个？回头改一下，我手头没有代码
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#全力支援毛主义者
+	focus = {
+		id = PRC_66_69_Full_support_for_the_Maoists
+		icon = GFX_PRC_66_69_Full_support_for_the_Maoists
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_French_May_Storm
+		prerequisite = {
+			focus = PRC_66_69_French_May_Storm
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_There_s_nothing_we_can_do
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Olive_branch_for_the_de_Gaulle_regime
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#我们无能为力
+	focus = {
+		id = PRC_66_69_There_s_nothing_we_can_do
+		icon = GFX_PRC_66_69_There_s_nothing_we_can_do
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_French_May_Storm
+		prerequisite = {
+			focus = PRC_66_69_French_May_Storm
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Full_support_for_the_Maoists
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Olive_branch_for_the_de_Gaulle_regime
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#给戴高乐政权的橄榄枝
+	focus = {
+		id = PRC_66_69_Olive_branch_for_the_de_Gaulle_regime
+		icon = GFX_PRC_66_69_Olive_branch_for_the_de_Gaulle_regime
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_French_May_Storm
+		prerequisite = {
+			focus = PRC_66_69_French_May_Storm
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Full_support_for_the_Maoists
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_There_s_nothing_we_can_do
+		}
+		completion_reward = {
+			#
+		}
+	}
+
+
+
+	#两个拳头打人
+	focus = {
+		id = PRC_66_69_Two_fists_to_the_head
+		icon = GFX_PRC_66_69_Two_fists_to_the_head
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_AntiRevisionist_Diplomatic_Strategy
+		prerequisite = {
+			focus = PRC_66_69_AntiRevisionist_Diplomatic_Strategy
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#中印乃堆拉山口冲突
+	focus = {
+		id = PRC_66_69_China_India_Nathu_La_Pass_conflict
+		icon = GFX_PRC_66_69_China_India_Nathu_La_Pass_conflict
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Two_fists_to_the_head
+		prerequisite = {
+			focus = PRC_66_69_Two_fists_to_the_head
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_China_India_Nathu_La_Pass_conflict_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#在与锡金交界地带建造工事
+	focus = {
+		id = PRC_66_69_Construction_of_fortifications_along_the_border_with_Sikkim
+		icon = GFX_PRC_66_69_Construction_of_fortifications_along_the_border_with_Sikkim
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_China_India_Nathu_La_Pass_conflict
+		prerequisite = {
+			focus = PRC_66_69_China_India_Nathu_La_Pass_conflict
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#仅进行外交降级
+	focus = {
+		id = PRC_66_69_Diplomatic_Downgrading_Only
+		icon = GFX_PRC_66_69_Diplomatic_Downgrading_Only
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Construction_of_fortifications_along_the_border_with_Sikkim
+		prerequisite = {
+			focus = PRC_66_69_Construction_of_fortifications_along_the_border_with_Sikkim
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Additional_troops_from_Chengdu_Military_Region
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#缓和对印关系
+	focus = {
+		id = PRC_66_69_Easing_relations_with_India
+		icon = GFX_PRC_66_69_Easing_relations_with_India
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Diplomatic_Downgrading_Only
+		prerequisite = {
+			focus = PRC_66_69_Diplomatic_Downgrading_Only
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#从成都军区增调部队
+	focus = {
+		id = PRC_66_69_Additional_troops_from_Chengdu_Military_Region
+		icon = GFX_PRC_66_69_Additional_troops_from_Chengdu_Military_Region
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_Construction_of_fortifications_along_the_border_with_Sikkim
+		prerequisite = {
+			focus = PRC_66_69_Construction_of_fortifications_along_the_border_with_Sikkim
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Diplomatic_Downgrading_Only
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#直捣提斯浦尔
+	focus = {
+		id = PRC_66_69_storm_Tisphur
+		icon = GFX_PRC_66_69_storm_Tisphur
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Additional_troops_from_Chengdu_Military_Region
+		prerequisite = {
+			focus = PRC_66_69_Additional_troops_from_Chengdu_Military_Region
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.42
+			}
+		}
+	}
+	#重申和平共处五项原则
+	focus = {
+		id = PRC_66_69_Reaffirmation_of_the_Five_Principles_of_Peaceful_Coexistence
+		icon = GFX_PRC_66_69_Reaffirmation_of_the_Five_Principles_of_Peaceful_Coexistence
+		cost
+		x = -3
+		y = 1
+		relative_position_id = PRC_66_69_storm_Tisphur
+		prerequisite = {
+			focus = PRC_66_69_storm_Tisphur
+			focus = PRC_66_69_Easing_relations_with_India
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = PRC_66_69_storm_Tisphur_lose_flag
+				has_country_flag = PRC_66_69_storm_Tisphur_win_flag
+				has_completed_focus = PRC_66_69_Easing_relations_with_India
+			}
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#奇袭锡金
+	focus = {
+		id = PRC_66_69_surprise_attack_on_Sikkim
+		icon = GFX_PRC_66_69_surprise_attack_on_Sikkim
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_storm_Tisphur
+		prerequisite = {
+			focus = PRC_66_69_storm_Tisphur
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_storm_Tisphur_win_flag
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Reaffirmation_of_the_Five_Principles_of_Peaceful_Coexistence
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#对印方进行停战谈判
+	focus = {
+		id = PRC_66_69_Armistice_negotiations_with_the_Indian_side
+		icon = GFX_PRC_66_69_Armistice_negotiations_with_the_Indian_side
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_surprise_attack_on_Sikkim
+		prerequisite = {
+			focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Preservation_of_a_favorable_outcome
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		available = {
+			has_country_flag = PRC_66_69_Armistice_negotiations_with_the_Indian_side_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#保存有利战果
+	focus = {
+		id = PRC_66_69_Preservation_of_a_favorable_outcome
+		icon = GFX_PRC_66_69_Preservation_of_a_favorable_outcome
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_surprise_attack_on_Sikkim
+		prerequisite = {
+			focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Armistice_negotiations_with_the_Indian_side
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		available = {
+			has_country_flag = PRC_66_69_Preservation_of_a_favorable_outcome_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#成功切断西里古里走廊
+	focus = {
+		id = PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+		icon = GFX_PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_surprise_attack_on_Sikkim
+		prerequisite = {
+			focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Preservation_of_a_favorable_outcome
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Armistice_negotiations_with_the_Indian_side
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_surprise_attack_on_Sikkim
+		}
+		available = {
+			has_country_flag = PRC_66_69_Successful_severance_of_the_Siliguri_corridor_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#尝试用占领区换取藏南和不丹
+	focus = {
+		id = PRC_66_69_Attempts_to_trade_occupation_for_southern_Tibet_and_Bhutan
+		icon = GFX_PRC_66_69_Attempts_to_trade_occupation_for_southern_Tibet_and_Bhutan
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Armistice_negotiations_with_the_Indian_side
+		prerequisite = {
+			focus = PRC_66_69_Armistice_negotiations_with_the_Indian_side
+			focus = PRC_66_69_Preservation_of_a_favorable_outcome
+		}
+		completion_reward = {
+			set_country_flag = PRC_66_69_Learning_from_combat_experience_flag
+		}
+	}
+	#设立锡金自治县
+	focus = {
+		id = PRC_66_69_Establishment_of_Sikkim_Autonomous_District
+		icon = GFX_PRC_66_69_Establishment_of_Sikkim_Autonomous_District
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Preservation_of_a_favorable_outcome
+		prerequisite = {
+			focus = PRC_66_69_Armistice_negotiations_with_the_Indian_side
+			focus = PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+			focus = PRC_66_69_Preservation_of_a_favorable_outcome
+		}
+		completion_reward = {
+			set_country_flag = PRC_66_69_Learning_from_combat_experience_flag
+		}
+	}
+	#建立阿萨姆人民共和国
+	focus = {
+		id = PRC_66_69_Establishment_of_the_People_s_Republic_of_Assam
+		icon = GFX_PRC_66_69_Establishment_of_the_People_s_Republic_of_Assam
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+		prerequisite = {
+			focus = PRC_66_69_Successful_severance_of_the_Siliguri_corridor
+		}
+		completion_reward = {
+			set_country_flag = PRC_66_69_Learning_from_combat_experience_flag
+		}
+	}
+	#香港突发工潮
+	focus = {
+		id = PRC_66_69_Sudden_labor_unrest_in_HongKong
+		icon = GFX_PRC_66_69_Sudden_labor_unrest_in_HongKong
+		cost
+		x = -7
+		y = 1
+		relative_position_id = PRC_66_69_Two_fists_to_the_head
+		prerequisite = {
+			focus = PRC_66_69_Two_fists_to_the_head
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Sudden_labor_unrest_in_HongKong_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#坚持对港原根本方针
+	focus = {
+		id = PRC_66_69_Adherence_to_the_fundamental_approach_to_HongKong
+		icon = GFX_PRC_66_69_Adherence_to_the_fundamental_approach_to_HongKong
+		cost
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Sudden_labor_unrest_in_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Sudden_labor_unrest_in_HongKong
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Submit_a_statement_in_person_to_the_UK_Chargé_d_affaires
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#惩办广东红旗派极左分子
+	focus = {
+		id = PRC_66_69_Punish_the_extreme_leftists_of_the_RedFlag_Faction_in_Guangdong
+		icon = GFX_PRC_66_69_Punish_the_extreme_leftists_of_the_RedFlag_Faction_in_Guangdong
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Adherence_to_the_fundamental_approach_to_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Adherence_to_the_fundamental_approach_to_HongKong
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#向英国代办当面递交声明
+	focus = {
+		id = PRC_66_69_Submit_a_statement_in_person_to_the_UK_Chargé_d_affaires
+		icon = GFX_PRC_66_69_Submit_a_statement_in_person_to_the_UK_Chargé_d_affaires
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Sudden_labor_unrest_in_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Sudden_labor_unrest_in_HongKong
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Adherence_to_the_fundamental_approach_to_HongKong
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.19
+			}
+		}
+	}
+	#坚决支持港九爱国同胞
+	focus = {
+		id = PRC_66_69_Strongly_support_our_patriotic_compatriots_in_HongKong_and_Kowloon
+		icon = GFX_PRC_66_69_Strongly_support_our_patriotic_compatriots_in_HongKong_and_Kowloon
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Submit_a_statement_in_person_to_the_UK_Chargé_d_affaires
+		prerequisite = {
+			focus = PRC_66_69_Submit_a_statement_in_person_to_the_UK_Chargé_d_affaires
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_Submit_a_statement_in_person_to_the_UK_Chargé_d_affaires
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#放任红卫兵偷渡深圳河
+	focus = {
+		id = PRC_66_69_Letting_the_Red_Guards_sneak_across_the_Shenzhen_River
+		icon = GFX_PRC_66_69_Letting_the_Red_Guards_sneak_across_the_Shenzhen_River
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Strongly_support_our_patriotic_compatriots_in_HongKong_and_Kowloon
+		prerequisite = {
+			focus = PRC_66_69_Strongly_support_our_patriotic_compatriots_in_HongKong_and_Kowloon
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#为香港左派提供支援
+	focus = {
+		id = PRC_66_69_Support_for_the_Left_in_HongKong
+		icon = GFX_PRC_66_69_Support_for_the_Left_in_HongKong
+		cost
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Strongly_support_our_patriotic_compatriots_in_HongKong_and_Kowloon
+		prerequisite = {
+			focus = PRC_66_69_Strongly_support_our_patriotic_compatriots_in_HongKong_and_Kowloon
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#准备迅速解放香港
+	focus = {
+		id = PRC_66_69_Preparing_for_the_rapid_liberation_of_HongKong
+		icon = GFX_PRC_66_69_Preparing_for_the_rapid_liberation_of_HongKong
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Support_for_the_Left_in_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Letting_the_Red_Guards_sneak_across_the_Shenzhen_River
+		}
+		prerequisite = {
+			focus = PRC_66_69_Support_for_the_Left_in_HongKong
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Organize_solidarity_rallies_at_the_border
+		}
+		available = {
+			#六日战争发生三十天内
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#组织民兵偷渡进入香港
+	focus = {
+		id = PRC_66_69_Organization_of_militia_to_smuggle_people_into_HongKong
+		icon = GFX_PRC_66_69_Organization_of_militia_to_smuggle_people_into_HongKong
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Preparing_for_the_rapid_liberation_of_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Preparing_for_the_rapid_liberation_of_HongKong
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_Preparing_for_the_rapid_liberation_of_HongKong
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#解放东方之珠
+	focus = {
+		id = PRC_66_69_Free_the_Pearl_of_the_Orient
+		icon = GFX_PRC_66_69_Free_the_Pearl_of_the_Orient
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Organization_of_militia_to_smuggle_people_into_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Organization_of_militia_to_smuggle_people_into_HongKong
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.27
+			}
+		}
+	}
+	#香港的文化大革命
+	focus = {
+		id = PRC_66_69_The_Cultural_Revolution_in_HongKong
+		icon = GFX_PRC_66_69_The_Cultural_Revolution_in_HongKong
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Free_the_Pearl_of_the_Orient
+		prerequisite = {
+			focus = PRC_66_69_Free_the_Pearl_of_the_Orient
+		}
+		allow_branch = {
+			PRC = {
+				#控制香港
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.28
+			}
+		}
+	}
+	#在边境组织声援集会
+	focus = {
+		id = PRC_66_69_Organize_solidarity_rallies_at_the_border
+		icon = GFX_PRC_66_69_Organize_solidarity_rallies_at_the_border
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Support_for_the_Left_in_HongKong
+		prerequisite = {
+			focus = PRC_66_69_Letting_the_Red_Guards_sneak_across_the_Shenzhen_River
+		}
+		prerequisite = {
+			focus = PRC_66_69_Support_for_the_Left_in_HongKong
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Preparing_for_the_rapid_liberation_of_HongKong
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.22
+			}
+		}
+	}
+	#为香港工人提供火力支援
+	focus = {
+		id = PRC_66_69_Provision_of_fire_support_to_HongKong_workers
+		icon = PRC_66_69_Provision_of_fire_support_to_HongKong_workers
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_Organize_solidarity_rallies_at_the_border
+		prerequisite = {
+			focus = PRC_66_69_Organize_solidarity_rallies_at_the_border
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = prc_66_69_diplomacy.25
+				}
+			}
+		}
+	}
+	#叫停抗暴活动
+	focus = {
+		id = PRC_66_69_Call_off_the_protests
+		icon = GFX_PRC_66_69_Call_off_the_protests
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Provision_of_fire_support_to_HongKong_workers
+		prerequisite = {
+			focus = PRC_66_69_Provision_of_fire_support_to_HongKong_workers
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Call_off_the_protests_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#向港英政府提供赔款
+	focus = {
+		id = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government
+		icon = GFX_PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government
+		cost
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_Organize_solidarity_rallies_at_the_border
+		prerequisite = {
+			focus = PRC_66_69_Organize_solidarity_rallies_at_the_border
+		}
+		mutually_exclusive = {
+			focus = PRC_66_69_Provision_of_fire_support_to_HongKong_workers
+		}
+		completion_reward = {
+			country_event = {
+				id = prc_66_69_diplomacy.26
+			}
+		}
+	}
+	#审判外交部造反派
+	focus = {
+		id = PRC_66_69_Trial_of_the_rebels_of_the_Ministry_of_Foreign_Affairs_1
+		icon = GFX_PRC_66_69_Trial_of_the_rebels_of_the_Ministry_of_Foreign_Affairs
+		cost
+		x = -2
+		y = 2
+		relative_position_id = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government
+		prerequisite = {
+			focus = PRC_66_69_Call_off_the_protests
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_Call_off_the_protests
+		}
+		completion_reward = {
+			#
+		}
+	}
+	focus = {
+		id = PRC_66_69_Trial_of_the_rebels_of_the_Ministry_of_Foreign_Affairs_2
+		icon = GFX_PRC_66_69_Trial_of_the_rebels_of_the_Ministry_of_Foreign_Affairs
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government
+		prerequisite = {
+			focus = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government
+		}
+		allow_branch = {
+			has_country_flag = PRC_66_69_Payment_of_compensation_to_the_British_HongKong_Government_flag
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#051级驱逐舰
+	focus = {
+		id = PRC_66_69_051_class_destroyer
+		icon = GFX_PRC_66_69_051_class_destroyer
+		cost
+		x = -10
+		y = 1
+		relative_position_id = PRC_66_69_Two_fists_to_the_head
+		prerequisite = {
+			focus = PRC_66_69_Two_fists_to_the_head
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#改造军工生产体系
+	focus = {
+		id = PRC_66_69_Transformation_of_the_military_production_system
+		icon = GFX_PRC_66_69_Transformation_of_the_military_production_system
+		cost
+		x = -4
+		y = 0
+		relative_position_id = PRC_66_69_051_class_destroyer
+		prerequisite = {
+			focus = PRC_66_69_Two_fists_to_the_head
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#珍宝岛冲突
+	focus = {
+		id = PRC_66_69_Jumbo_Island_conflict
+		icon = GFX_PRC_66_69_Jumbo_Island_conflict
+		cost
+		x = 2
+		y = 0
+		relative_position_id = PRC_66_69_Transformation_of_the_military_production_system
+		prerequisite = {
+			focus = PRC_66_69_Two_fists_to_the_head
+		}
+		allow_branch = {
+			has_country_flag = PRC_60s_chanpoisland_war_has_begin
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#加速进行核试验
+	focus = {
+		id = PRC_66_69_Accelerated_nuclear_testing
+		icon = GFX_PRC_66_69_Accelerated_nuclear_testing
+		cost
+		x = -2
+		y = 1
+		relative_position_id = PRC_66_69_Jumbo_Island_conflict
+		prerequisite = {
+			focus = PRC_66_69_Jumbo_Island_conflict
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#研究缴获的T-62坦克
+	focus = {
+		id = PRC_66_69_Study_of_captured_T_62_tanks
+		icon = GFX_PRC_66_69_Study_of_captured_T_62_tanks
+		cost
+		x = 0
+		y = 1
+		relative_position_id = PRC_66_69_Jumbo_Island_conflict
+		prerequisite = {
+			focus = PRC_66_69_Jumbo_Island_conflict
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#七亿人民七亿兵
+	focus = {
+		id = PRC_66_69_Seven_hundred_million_soldiers_for_seven_hundred_million_people
+		icon = GFX_PRC_66_69_Seven_hundred_million_soldiers_for_seven_hundred_million_people
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_Jumbo_Island_conflict
+		prerequisite = {
+			focus = PRC_66_69_Jumbo_Island_conflict
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#假如明天战争来临
+	focus = {
+		id = PRC_66_69_If_war_came_tomorrow
+		icon = GFX_PRC_66_69_If_war_came_tomorrow
+		cost
+		x = 2
+		y = 1
+		relative_position_id = PRC_66_69_Accelerated_nuclear_testing
+		prerequisite = {
+			focus = PRC_66_69_Accelerated_nuclear_testing
+		}
+		prerequisite = {
+			focus = PRC_66_69_Study_of_captured_T_62_tanks
+		}
+		prerequisite = {
+			focus = PRC_66_69_Seven_hundred_million_soldiers_for_seven_hundred_million_people
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#反对苏联有限主权论
+	focus = {
+		id = PRC_66_69_Opposition_to_the_Soviet_theory_of_limited_sovereignty
+		icon = GFX_PRC_66_69_Opposition_to_the_Soviet_theory_of_limited_sovereignty
+		cost
+		x = -1
+		y = 1
+		relative_position_id = PRC_66_69_If_war_came_tomorrow
+		prerequisite = {
+			focus = PRC_66_69_If_war_came_tomorrow
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_If_war_came_tomorrow
+		}
+		completion_reward = {
+			#
+		}
+	}
+	#恢复与南斯拉夫的关系
+	focus = {
+		id = PRC_66_69_Restoration_of_relations_with_Yugoslavia
+		icon = GFX_PRC_66_69_Restoration_of_relations_with_Yugoslavia
+		cost
+		x = 1
+		y = 1
+		relative_position_id = PRC_66_69_If_war_came_tomorrow
+		prerequisite = {
+			focus = PRC_66_69_If_war_came_tomorrow
+		}
+		allow_branch = {
+			has_completed_focus = PRC_66_69_If_war_came_tomorrow
+		}
+		completion_reward = {
+			#
+		}
+	}
+}
