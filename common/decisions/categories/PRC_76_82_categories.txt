@@ -1,0 +1,63 @@
+PRC_76_82_Foreign_Leapfrog_cate = {
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_completed_focus = PRC_76_82_Foreign_Leapfrog
+		NOT = { has_country_flag = PRC_76_82_Foreign_Leapfrog_Call_off }
+	}
+	priority = 1000
+	visible_when_empty = no
+}
+
+PRC_76_82_The_Great_Discussion_on_the_Standard_of_Truth_dxp_movement = {
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_completed_focus = PRC_76_82_The_Great_Discussion_on_the_Standard_of_Truth
+		NOT = { has_completed_focus = PRC_76_82_The_12th_Communist_Party_Congress }
+	}
+	priority = 900
+	visible_when_empty = no
+}
+
+PRC_76_82_false_and_wrong_cases_cate = {
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_completed_focus = PRC_76_82_false_and_wrong_cases
+	}
+	priority = 500
+	visible_when_empty = no
+}
+
+PRC_76_82_Universal_Primary_Education_cate = {
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_completed_focus = PRC_76_82_Universal_Primary_Education
+		NOT = { has_country_flag = PRC_76_82_Universal_Primary_Education_completed }
+	}
+	priority = 600
+	visible_when_empty = no
+}
+
+PRC_76_82_National_internal_affairs = {
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+	}
+	priority = 700
+	visible_when_empty = no
+}
+PRC_military_decisions = {
+	
+	allowed = { tag = PRC }
+	icon = GFX_PRC_politic_decision_6
+	visible = {
+	}
+}
