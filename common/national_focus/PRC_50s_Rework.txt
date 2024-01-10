@@ -4200,9 +4200,10 @@ focus_tree = {
         }
         completion_reward = {
             activate_mission = PRC_50s_The_First_Five-year_Plan_mission
-        }
+        }            
+
         ai_will_do = {
-            base = 10
+            base = 109i
         }
     }
     focus = {
@@ -4278,6 +4279,7 @@ focus_tree = {
             }
         }
         completion_reward = {
+            unlock_decision_tooltip = PRC_1_FYP_infrastructure
             add_to_variable = {
                 currentMoney = -8
                 tooltip = increase_money_tt
@@ -4453,6 +4455,7 @@ focus_tree = {
                 currentMoney = -20
                 tooltip = increase_money_tt
             }
+            unlock_decision_tooltip = PRC_1_FYP_construction_of_thermal_power_plant
             614 = {
                 add_building_construction = {
                     type = fossil_fuel_powerplant
@@ -4503,34 +4506,7 @@ focus_tree = {
             }
         }
         completion_reward = {
-            add_to_variable = {
-                currentMoney = -10
-                tooltip = increase_money_tt
-            }
-            325 = {
-                add_resource = {
-                    type = electricity
-                }
-                amount = 6
-            }
-            601 = {
-                add_resource = {
-                    type = electricity
-                }
-                amount = 3
-            }
-            605 = {
-                add_resource = {
-                    type = electricity
-                }
-                amount = 9
-            }
-            620 = {
-                add_resource = {
-                    type = electricity
-                }
-                amount = 7
-            }
+
         }
         ai_will_do = {
             base = 10
@@ -4765,6 +4741,7 @@ focus_tree = {
                     instant_build = yes
                 }
             }
+            unlock_decision_tooltip = PRC_1_FYP_Steel_Plant_Construction
         }
         ai_will_do = {
             base = 10
@@ -4805,6 +4782,7 @@ focus_tree = {
                     instant_build = yes
                 }
             }
+            unlock_decision_tooltip = PRC_1_FYP_non_ferrous_metal_processing_plants_construction
         }
         ai_will_do = {
             base = 10
@@ -4838,6 +4816,7 @@ focus_tree = {
                     instant_build = yes
                 }
             }
+            unlock_decision_tooltip = PRC_1_FYP_Refinery_Construction
         }
         ai_will_do = {
             base = 10
@@ -5022,6 +5001,7 @@ focus_tree = {
                 tooltip = PRC_50s_first_fyp_flag
                 NOT = { has_country_flag = PRC_50s_first_fyp_flag }
             }
+            unlock_decision_tooltip = PRC_1_FYP_develop_wasteland
         }
         completion_reward = {
             add_to_variable = {
