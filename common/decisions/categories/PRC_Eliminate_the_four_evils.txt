@@ -1,8 +1,0 @@
-PRC_EFE_categories = {
-	icon = GFX_PRC_politic_decision_1
-	visible = {
-		original_tag = PRC
-	}
-}
-
-
