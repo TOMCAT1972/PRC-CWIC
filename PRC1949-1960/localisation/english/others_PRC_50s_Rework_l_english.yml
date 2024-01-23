@@ -330,3 +330,6 @@
  PRC_mitigate_famine_risk_tt:0 "This will §Rmitigate§! §Ythe risk of famine§!."
 
  PRC_50s_first_fyp_flag:0 "It has been 50 days since the last completion of the first five-year Plan focus"
+
+ unlock_focuses:0 "§GThis focus will eventually be automatically bypassed and will unlock the other focuses§!"
+ tooltip_focus_unlocked_by_event:0 "§GThis focus will be automatically unlocked via event§!"

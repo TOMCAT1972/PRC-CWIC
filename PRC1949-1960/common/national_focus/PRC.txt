@@ -1,0 +1,41 @@
+focus_tree = {
+    id = PRC_50s_Rework
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+		    tag = PRC
+		}
+	}
+	default = no
+    
+    #PRC 1949-1950.2
+    shared_focus = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+    shared_focus = PRC_50s_Accept_Using_The_Yangtze_as_A_Partition
+    shared_focus = PRC_50s_Found_The_People_s_Republic_of_China
+    shared_focus = PRC_50s_Lessons_from_Three_Major_Campaigns
+    shared_focus = PRC_50s_Lean_to_Soviet_Side
+    shared_focus = PRC_50s_Keep_in_Touch_with_The_USA
+    shared_focus = PRC_50s_The_First_Five-year_Plan
+    shared_focus = PRC_50s_Establish_The_Two_Hundred_Policy
+    shared_focus = PRC_50s_Empower_Local_Governments
+    shared_focus = PRC_50s_Lushan_Meeting
+
+    #PRC 1960.2-1966.8
+    #shared_focus = PRC_60_66_Set_up_Urban_People_s_Communes
+    #shared_focus = PRC_60_66_Master_the_Spiritual_Atomic_Bomb
+    #shared_focus = PRC_60_66_Reject_the_Vulgarisation_of_Mao_Zedong_Thought
+    #shared_focus = PRC_60_66_Arduous_Struggle
+    #shared_focus = PRC_60_66_Convene_the_7000_People_s_Congress
+    #shared_focus = PRC_60_66_The_Last_Bastion_of_the_World_Revolution
+    #shared_focus = PRC_60_66_Aid_to_National_Liberation_Movement
+    #shared_focus = PRC_60_66_Solve_Frontier_Problems
+    #shared_focus = PRC_60_66_Promote_National_Reunification
+    #shared_focus = PRC_60_66_Oppose_the_Individual_Farming_Trend
+    #shared_focus = PRC_60_66_City_Work_Conference
+    #shared_focus = PRC_60_66_Laying_Renewed_Stress_on_Class_Struggle
+    #shared_focus = PRC_60_66_Rectify_Cultural_Work
+    # = PRC_60_66_Counterattack_the_Peaceful_Evolution_forces
+    #shared_focus = PRC_60_66_Take_the_Power_back_Bourgeois_Elements
+    #shared_focus = PRC_60_66_May_16th_Notice
+}

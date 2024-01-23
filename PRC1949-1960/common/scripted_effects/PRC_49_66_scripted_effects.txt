@@ -294,11 +294,11 @@ PRC_50s_Land_Reform_ideas_swap = {
     }
     else_if = {
         limit = { has_idea = agrarian_bourgeoisie_3 }
-        swap_ideas = { remove_idea = agrarian_bourgeoisie_2 add_idea = agrarian_bourgeoisie_4 }
+        swap_ideas = { remove_idea = agrarian_bourgeoisie_3 add_idea = agrarian_bourgeoisie_4 }
     }
     else_if = {
         limit = { has_idea = agrarian_bourgeoisie_4 }
-        swap_ideas = { remove_idea = agrarian_bourgeoisie_2 add_idea = agrarian_bourgeoisie_5 }
+        swap_ideas = { remove_idea = agrarian_bourgeoisie_4 add_idea = agrarian_bourgeoisie_5 }
     }
 }
 PRC_50s_Imperialist_forces_swap = {
