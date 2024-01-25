@@ -1,0 +1,1019 @@
+
+   shared_focus = {
+        id = PRC_50s_The_First_Five-year_Plan
+        icon = GFX_PRC_50s_The_First_Five-year_Plan
+        cost = 3.6
+        x = 60
+        y = 13
+        available = {
+            has_completed_focus = PRC_50s_Establish_State_Planning_Commission
+            #date > 1953.01.01
+        }
+        completion_reward = {
+            activate_mission = PRC_50s_The_First_Five-year_Plan_mission
+        }            
+
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Develop_Frontier_Areas
+        icon = GFX_PRC_50s_Develop_Frontier_Areas
+        cost = 3.6
+        x = -3
+        y = 1
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_The_First_Five-year_Plan
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -20
+                tooltip = increase_money_tt
+            }
+            unlock_decision_tooltip = PRC_1_FYP_develop_wasteland
+            617 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            618 = {
+                add_building_construction = {
+                    type = agri_industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 10
+                }
+                add_resource = {
+                    type = tungsten
+                    amount = 6
+                }
+            }
+            287 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Expand_Mainland_Infrastructure
+        icon = GFX_PRC_50s_Expand_Mainland_Infrastructure
+        cost = 3.6
+        x = 0
+        y = 1
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_The_First_Five-year_Plan
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            unlock_decision_tooltip = PRC_1_FYP_infrastructure
+            add_to_variable = {
+                currentMoney = -8
+                tooltip = increase_money_tt
+            }
+            unlock_decision_tooltip = PRC_1_FYP_infrastructure
+            614 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            622 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            605 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            620 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            1556 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            716 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            615 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Construct_Synthetic_Rubber_Plants
+        icon = GFX_PRC_50s_Construct_Synthetic_Rubber_Plants
+        cost = 3.6
+        x = 3
+        y = 1
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_The_First_Five-year_Plan
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -15
+                tooltip = increase_money_tt
+            }
+            716 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            614 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Invest_in_Heavy_Industry
+        icon = GFX_PRC_50s_Invest_in_Heavy_Industry
+        cost = 3.6
+        x = -7
+        y = 2
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Develop_Frontier_Areas
+        }
+        prerequisite = {
+            focus = PRC_50s_Expand_Mainland_Infrastructure
+        }
+        prerequisite = {
+            focus = PRC_50s_Construct_Synthetic_Rubber_Plants
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -22
+                tooltip = increase_money_tt
+            }
+            714 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            716 = {
+                716 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            328 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Construct_Thermal_Power_Plants
+        icon = GFX_PRC_50s_Construct_Thermal_Power_Plants
+        cost = 3.6
+        x = -9
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Invest_in_Heavy_Industry
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -20
+                tooltip = increase_money_tt
+            }
+            unlock_decision_tooltip = PRC_1_FYP_construction_of_thermal_power_plant
+            614 = {
+                add_building_construction = {
+                    type = fossil_fuel_powerplant
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            615 = {
+                add_building_construction = {
+                    type = fossil_fuel_powerplant
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            620 = {
+                add_building_construction = {
+                    type = fossil_fuel_powerplant
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            716 = {
+                add_building_construction = {
+                    type = fossil_fuel_powerplant
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Use_Fast_Flowing_River
+        icon = GFX_PRC_50s_Use_Fast_Flowing_River
+        cost = 3.6
+        x = -7
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Invest_in_Heavy_Industry
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Construct_Chemical_Plants
+        icon = GFX_PRC_50s_Construct_Chemical_Plants
+        cost = 3.6
+        x = -5
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Invest_in_Heavy_Industry
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -9
+                tooltip = increase_money_tt
+            }
+            597 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            1556 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Increase_The_Proportion_of_Light_Industrial_Construction
+        icon = GFX_PRC_50s_Increase_The_Proportion_of_Light_Industrial_Construction
+        cost = 3.6
+        x = -7
+        y = 4
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Construct_Thermal_Power_Plants
+        }
+        prerequisite = {
+            focus = PRC_50s_Use_Fast_Flowing_River
+        }
+        prerequisite = {
+            focus = PRC_50s_Construct_Chemical_Plants
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Mineral_Extraction
+        icon = GFX_PRC_50s_Mineral_Extraction
+        cost = 3.6
+        x = 0
+        y = 2
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Develop_Frontier_Areas
+        }
+        prerequisite = {
+            focus = PRC_50s_Expand_Mainland_Infrastructure
+        }
+        prerequisite = {
+            focus = PRC_50s_Construct_Synthetic_Rubber_Plants
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            random_owned_state = {
+                limit = {
+                    state_population > 10000
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 5
+                }
+                set_temp_variable = { prc_var_temp = 1 }
+            }
+            random_owned_state = {
+                
+                limit = { 
+                    NOT = {
+                        has_variable = prc_var_temp
+                    }
+                    state_population > 10000
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 6
+                }
+                set_temp_variable = { prc_var_temp = 1 }
+            }
+            random_owned_state = {
+                limit = { 
+                    NOT = {
+                        has_variable = prc_var_temp
+                    }
+                    state_population > 10000
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 10
+                }
+                set_temp_variable = { prc_var_temp = 1 }
+            }
+            random_owned_state = {  
+                limit = { 
+                    NOT = {
+                        has_variable = prc_var_temp
+                    }
+                    state_population > 10000
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 6
+                }
+            }
+            random_owned_state = {
+                state_population > 10000
+                add_resource = {
+                    type = steel
+                    amount = 9
+                }
+                set_temp_variable = { prc_var_temp2 = 1 }
+            }
+            random_owned_state = {   
+                limit = { 
+                    NOT = {
+                        has_variable = prc_var_temp2
+                    }
+                    state_population > 10000
+                }
+                add_resource = {
+                    type = steel
+                    amount = 10
+                }
+                set_temp_variable = { prc_var_temp2 = 1 }
+            }
+            random_owned_state = {
+                
+                limit = { 
+                    NOT = {
+                        has_variable = prc_var_temp2
+                    }
+                    state_population > 10000
+                }
+                add_resource = {
+                    type = steel
+                    amount = 9
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Construct_Iron_And_Steel_Joint_Enterprises
+        icon = GFX_PRC_50s_Construct_Iron_And_Steel_Joint_Enterprises
+        cost = 3.6
+        x = -2
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Mineral_Extraction
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -12
+                tooltip = increase_money_tt
+            }
+            621 = {
+                add_building_construction = {
+                    type = steel_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            620 = {
+                add_building_construction = {
+                    type = steel_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            613 = {
+                add_building_construction = {
+                    type = steel_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            716 = {
+                add_building_construction = {
+                    type = steel_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            unlock_decision_tooltip = PRC_1_FYP_Steel_Plant_Construction
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Non-ferrous_Metal_Smelting
+        icon = GFX_PRC_50s_Non-ferrous_Metal_Smelting
+        cost = 3.6
+        x = 0
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Mineral_Extraction
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -12
+                tooltip = increase_money_tt
+            }
+            606 = {
+                add_building_construction = {
+                    type = tungsten_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            598 = {
+                add_building_construction = {
+                    type = tungsten_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            unlock_decision_tooltip = PRC_1_FYP_non_ferrous_metal_processing_plants_construction
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Construct_Oil_Refineries
+        icon = GFX_PRC_50s_Construct_Oil_Refineries
+        cost = 3.6
+        x = 2
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Mineral_Extraction
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -12
+                tooltip = increase_money_tt
+            }
+            283 = {
+                add_building_construction = {
+                    type = synthetic_refinery
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            unlock_decision_tooltip = PRC_1_FYP_Refinery_Construction
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Improve_The_Industrial_Sector
+        icon = GFX_PRC_50s_Improve_The_Industrial_Sector
+        cost = 3.6
+        x = 0
+        y = 4
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Construct_Iron_And_Steel_Joint_Enterprises
+        }
+        prerequisite = {
+            focus = PRC_50s_Non-ferrous_Metal_Smelting
+        }
+        prerequisite = {
+            focus = PRC_50s_Construct_Oil_Refineries
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Address_Agricultural_Mechanisation_Threshold
+        icon = GFX_PRC_50s_Address_Agricultural_Mechanisation_Threshold
+        cost = 3.6
+        x = 7
+        y = 2
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Develop_Frontier_Areas
+        }
+        prerequisite = {
+            focus = PRC_50s_Expand_Mainland_Infrastructure
+        }
+        prerequisite = {
+            focus = PRC_50s_Construct_Synthetic_Rubber_Plants
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            unlock_decision_category_tooltip = PRC_1_FYP_develop_wasteland
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_First_Automobile_Works
+        icon = GFX_PRC_50s_First_Automobile_Works
+        cost = 3.6
+        x = 5
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Address_Agricultural_Mechanisation_Threshold
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -12
+                tooltip = increase_money_tt
+            }
+            328 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                }
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Found_State-run_Aircraft_Manufacturing_Plants
+        icon = GFX_PRC_50s_Found_State-run_Aircraft_Manufacturing_Plants
+        cost = 3.6
+        x = 7
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Address_Agricultural_Mechanisation_Threshold
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -12
+                tooltip = increase_money_tt
+            }
+            716 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Independent_Military_Material_Enterprises
+        icon = GFX_PRC_50s_Independent_Military_Material_Enterprises
+        cost = 3.6
+        x = 9
+        y = 3
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Address_Agricultural_Mechanisation_Threshold
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -6
+                tooltip = increase_money_tt
+            }
+            621 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Increase_Food_Production
+        icon = GFX_PRC_50s_Increase_Food_Production
+        cost = 3.6
+        x = 6
+        y = 4
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_First_Automobile_Works
+        }
+        prerequisite = {
+            focus = PRC_50s_Found_State-run_Aircraft_Manufacturing_Plants
+        }
+        prerequisite = {
+            focus = PRC_50s_Independent_Military_Material_Enterprises
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+            unlock_decision_tooltip = PRC_1_FYP_develop_wasteland
+        }
+        completion_reward = {
+            add_to_variable = {
+                currentMoney = -5
+                tooltip = increase_money_tt
+            }
+            random_owned_state = {
+                limit = {
+                    state_population > 5000000
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 1
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    state_population > 5000000
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 1
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    state_population > 5000000
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 1
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    state_population > 5000000
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 1
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    state_population > 5000000
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 1
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Improve_The_Treatment_of_Workers
+        icon = GFX_PRC_50s_Improve_The_Treatment_of_Workers
+        cost = 3.6
+        x = 8
+        y = 4
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_First_Automobile_Works
+        }
+        prerequisite = {
+            focus = PRC_50s_Found_State-run_Aircraft_Manufacturing_Plants
+        }
+        prerequisite = {
+            focus = PRC_50s_Independent_Military_Material_Enterprises
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_first_fyp_flag
+                NOT = { has_country_flag = PRC_50s_first_fyp_flag }
+            }
+        }
+        completion_reward = {
+            add_stability = 0.025
+            effect_tooltip = {
+                swap_ideas = {
+                    remove_idea = PRC_50s_Improve_The_Status_of_Workers
+                    add_idea = PRC_50s_Improve_The_Status_of_Workers2
+                }
+            }
+            hidden_effect = {
+                remove_ideas = PRC_50s_Improve_The_Status_of_Workers
+                add_timed_idea = {
+                    idea = PRC_50s_Improve_The_Status_of_Workers2
+                    days = 360
+                }
+            }
+            
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Exceed_Target
+        icon = GFX_PRC_50s_Exceed_Target
+        cost = 3.6
+        x = -2
+        y = 5
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Increase_The_Proportion_of_Light_Industrial_Construction
+        }
+        prerequisite = {
+            focus = PRC_50s_Improve_The_Industrial_Sector
+        }
+        prerequisite = {
+            focus = PRC_50s_Increase_Food_Froduction
+        }
+        prerequisite = {
+            focus = PRC_50s_Improve_The_Treatment_of_Workers
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Achieve_Expected_Target
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_We_Should_Have_Done_Better
+        }
+        available = {
+
+        }
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Achieve_Expected_Target
+        icon = GFX_PRC_50s_Achieve_Expected_Target
+        cost = 3.6
+        x = 0
+        y = 5
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Increase_The_Proportion_of_Light_Industrial_Construction
+        }
+        prerequisite = {
+            focus = PRC_50s_Improve_The_Industrial_Sector
+        }
+        prerequisite = {
+            focus = PRC_50s_Increase_Food_Production
+        }
+        prerequisite = {
+            focus = PRC_50s_Improve_The_Treatment_of_Workers
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Exceed_Target
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_We_Should_Have_Done_Better
+        }
+        available = {
+
+        }
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_We_Should_Have_Done_Better
+        icon = GFX_PRC_50s_We_Should_Have_Done_Better
+        cost = 3.6
+        x = 2
+        y = 5
+        relative_position_id = PRC_50s_The_First_Five-year_Plan
+        prerequisite = {
+            focus = PRC_50s_Increase_The_Proportion_of_Light_Industrial_Construction
+        }
+        prerequisite = {
+            focus = PRC_50s_Improve_The_Industrial_Sector
+        }
+        prerequisite = {
+            focus = PRC_50s_Increase_Food_Production
+        }
+        prerequisite = {
+            focus = PRC_50s_Improve_The_Treatment_of_Workers
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Exceed_Target
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Achieve_Expected_Target
+        }
+        available = {
+
+        }
+        completion_reward = {
+
+        }
+    }
+
+
+

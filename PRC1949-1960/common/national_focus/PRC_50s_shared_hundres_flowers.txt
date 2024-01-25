@@ -1,0 +1,1268 @@
+    shared_focus = {
+        id = PRC_50s_Establish_The_Two_Hundred_Policy
+        icon = GFX_PRC_50s_Establish_The_Two_Hundred_Policy
+        cost = 5
+        x = 35
+        y = 13
+        available = {
+            always = no
+        }
+        completion_reward = {
+            add_dynamic_modifier = { modifier = PRC_50s_The_Two_Hundred_Policy }
+            set_variable = { PRC_50s_The_Two_Hundred_Policy_st = -0.05 }
+            set_variable = { PRC_50s_The_Two_Hundred_Policy_ddf = -0.3 }
+            set_variable = { PRC_50s_The_Two_Hundred_Policy_od = 0.001 }
+            set_temp_variable = { temp_x = 2 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            hidden_effect = {
+                country_event = {
+	                id = PRC_50s_Rework_event.26
+                    days = 30
+                }
+            }
+            set_variable = { PRC_50s_The_Two_Hundred_Policy_open_var = 0 }
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Praise_for_the_Communist_Party
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Silence_on_key_issues
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Unfreeze_Newspaper_Media
+        icon = GFX_PRC_50s_Unfreeze_Newspaper_Media
+        cost = 5
+        x = -4
+        y = 1
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Establish_The_Two_Hundred_Policy
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = -0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_de
+            }
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ppf = 0.05
+                tooltip = PRC_50s_dm_political_power_factor_in
+            }
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 5 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Encourage_Crowds_to_Sound_The_Release
+        icon = GFX_PRC_50s_Encourage_Crowds_to_Sound_The_Release
+        cost = 5
+        x = -2
+        y = 1
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Establish_The_Two_Hundred_Policy
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ppf = 0.05
+                tooltip = PRC_50s_dm_political_power_factor_in
+            }
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = 0.5 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 2 }
+            set_temp_variable = { temp_y = 0.5 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 5 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Break_The_Shackles_of_Bureaucracy
+        icon = GFX_PRC_50s_Break_The_Shackles_of_Bureaucracy
+        cost = 5
+        x = 0
+        y = 1
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Establish_The_Two_Hundred_Policy
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ic = 0.05
+                tooltip = PRC_50s_dm_industrial_capacity_in
+            }
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_psbf = 0.05
+                tooltip = PRC_50s_dm_production_speed_buildings_factor_in
+            }
+            set_temp_variable = { temp_x = 5 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Open_Literary_And_Artistic_Creation
+        icon = GFX_PRC_50s_Open_Literary_And_Artistic_Creation
+        cost = 5
+        x = 2
+        y = 1
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Establish_The_Two_Hundred_Policy
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = -0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_de
+            }
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ppf = -0.1
+                tooltip = PRC_50s_dm_political_power_factor_de
+            }
+            set_temp_variable = { temp_x = 2 }
+            set_temp_variable = { temp_y = -1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 5 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Adhere_to_Mass_Line
+        icon = GFX_PRC_50s_Adhere_to_Mass_Line
+        cost = 5
+        x = 4
+        y = 1
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Establish_The_Two_Hundred_Policy
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = -0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_de
+            }
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ppf = 0.05
+                tooltip = PRC_50s_dm_political_power_factor_in
+            }
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -2 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            hidden_effect = {
+                country_event = {
+	                id = PRC_50s_Rework_event.25
+                    days = 10
+                }
+                country_event = {
+                	id = PRC_50s_Rework_event.36
+                    days = 50
+                }
+            }
+            set_temp_variable = { temp_x = 5 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Carry_out_A_Rectification_Movement
+        icon = GFX_PRC_50s_Carry_out_A_Rectification_Movement
+        cost = 5
+        x = -1
+        y = 2
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Unfreeze_Newspaper_Media
+        }
+        prerequisite = {
+            focus = PRC_50s_Encourage_Crowds_to_Sound_The_Release
+        }
+        prerequisite = {
+            focus = PRC_50s_Break_The_Shackles_of_Bureaucracy
+        }
+        prerequisite = {
+            focus = PRC_50s_Open_Literary_And_Artistic_Creation
+        }
+        prerequisite = {
+            focus = PRC_50s_Adhere_to_Mass_Line
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Insist_on_Selfcriticism
+        }
+        select_effect = {
+            country_event = {
+	            id = PRC_50s_Rework_event.27
+                days = 10
+            }
+            country_event = {
+	            id = PRC_50s_Rework_event.28
+                days = 11
+            }
+        }
+        cancelable = no
+        available = {
+            date > 1957.04.10
+        }
+        completion_reward = {
+            effect_tooltip = {
+                country_event = {
+	                id = PRC_50s_Rework_event.27
+                    days = 10
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.28
+                    days = 11
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Let_The_National_People_s_Congress_Go
+        icon = GFX_PRC_50s_Let_The_National_People_s_Congress_Go
+        cost = 3.6
+        x = -5
+        y = 3
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Carry_out_A_Rectification_Movement
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+        }
+        available = {
+
+        }
+        completion_reward = {
+            hidden_effect = {
+                country_event = {
+	                id = PRC_50s_Rework_event.70
+                    days = 20
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.71
+                    days = 60
+                    random = 20
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.72
+                    days = 60
+                    random = 20
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.73
+                    days = 60
+                    random = 20
+                }
+            }
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 2 }
+            set_temp_variable = { temp_y = -1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 20 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Rewarding_innovative_inventions
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Strengthen_the_knowledge_of_party_members
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Formalize_civil_servants
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Stopping_Bureaucracy
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Achievement_is_not_always_the_main_thing
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Tear_down_the_wall_of_party_cadres
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Abolish_the_secrecy_system
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Loosen_publication_control
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Release_news_reports
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Practicing_the_Nine_Days_and_Nine_Lands_Theory
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Studying_the_Soviet_Union_is_not_necessarily_good_studying_the_United_States_is_not_necessarily_bad
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Professors_Rule_Schools
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Outsiders_cannot_lead_insiders
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Withdrawal_of_public_representatives
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Guaranteed_20_year_fixed_interest_rate
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Political_Design_Institute
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Change_the_election_system
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Unite_intellectual_parties
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Establishment_of_a_vindication_committee
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_China_s_Secret_Report
+            unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Opposing_the_Party_World
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Liberate_The_Democratic_Parties
+        icon = GFX_PRC_50s_Liberate_The_Democratic_Parties
+        cost = 3.6
+        x = -6
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Let_The_National_People_s_Congress_Go
+        }
+        available = {
+            hidden_trigger = {
+                NOT = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+            }
+        }
+        cancel = {
+            hidden_trigger = {
+                has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+            }
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 10 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Abolish_literary_And_Art_Censorship
+        icon = GFX_PRC_50s_Abolish_literary_And_Art_Censorship
+        cost = 3.6
+        x = -4
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Let_The_National_People_s_Congress_Go
+        }
+        available = {
+            hidden_trigger = {
+                NOT = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+            }
+        }
+        cancel = {
+            hidden_trigger = {
+                has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+            }
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = -0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_de
+            }
+            set_temp_variable = { temp_x = 10 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Organise_Local_Elections
+        icon = GFX_PRC_50s_Organise_Local_Elections
+        cost = 3.6
+        x = -7
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Liberate_The_Democratic_Parties
+        }
+        available = {
+            hidden_trigger = {
+                NOT = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+            }
+        }
+        cancel = {
+            hidden_trigger = {
+                has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+            }
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 10 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Adopt_Hu_Feng_s_Report
+        icon = GFX_PRC_50s_Adopt_Hu_Feng_s_Report
+        cost = 3.6
+        x = -5
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Liberate_The_Democratic_Parties
+        }
+        prerequisite = {
+            focus = PRC_50s_Abolish_literary_And_Art_Censorship
+        }
+        cancel = {
+            hidden_trigger = {
+                has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+            }
+        }
+        available = {
+            hidden_trigger = {
+                NOT = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+            }
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = -0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_de
+            }
+            set_temp_variable = { temp_x = 10 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Refuse_The_Party_Committee_to_Lead_Everything
+        icon = GFX_PRC_50s_Refuse_The_Party_Committee_to_Lead_Everything
+        cost = 3.6
+        x = -3
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Abolish_literary_And_Art_Censorship
+        }
+        cancel = {
+            hidden_trigger = {
+                has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+            }
+        }
+        available = {
+            hidden_trigger = {
+                NOT = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+            }
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 10 }
+            PRC_50s_The_Two_Hundred_Policy_open_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Establish_A_Truly_Democratic_Regime
+        icon = GFX_PRC_50s_Establish_A_Truly_Democratic_Regime
+        cost = 3.6
+        x = -8
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Organise_Local_Elections
+        }
+        prerequisite = {
+            focus = PRC_50s_Adopt_Hu_Feng_s_Report
+        }
+        prerequisite = {
+            focus = PRC_50s_Refuse_The_Party_Committee_to_Lead_Everything
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Suppress_Internal_Hungary_Elements
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Suppress_Internal_Antiparty_Elements
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_The_Two_Hundred_Policy_open_var_tt
+				check_variable = { PRC_50s_The_Two_Hundred_Policy_open_var > 100 }
+            }
+            hidden_trigger = {
+                always = no
+            }
+        }
+        completion_reward = {
+            effect_tooltip = {
+                add_political_power = 200
+                add_stability = 0.5
+                add_ideas = PRC_50s_Establish_A_Truly_Democratic_Regime
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Suppress_Internal_Hungary_Elements
+        icon = GFX_PRC_50s_Suppress_Internal_Hungary_Elements
+        cost = 3.6
+        x = -5
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Organise_Local_Elections
+        }
+        prerequisite = {
+            focus = PRC_50s_Adopt_Hu_Feng_s_Report
+        }
+        prerequisite = {
+            focus = PRC_50s_Refuse_The_Party_Committee_to_Lead_Everything
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Establish_A_Truly_Democratic_Regime
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Suppress_Internal_Antiparty_Elements
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_The_Two_Hundred_Policy_open_var_tt
+				check_variable = { PRC_50s_The_Two_Hundred_Policy_open_var > 100 }
+            }
+            hidden_trigger = {
+                always = no
+            }
+        }
+        completion_reward = {
+            effect_tooltip = {
+                add_political_power = 200
+                add_stability = 0.5
+                add_popularity = {
+                    ideology = ROOT
+                    popularity = 1
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Suppress_Internal_Antiparty_Elements
+        icon = GFX_PRC_50s_Suppress_Internal_Antiparty_Elements
+        cost = 3.6
+        x = -2
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Organise_Local_Elections
+        }
+        prerequisite = {
+            focus = PRC_50s_Adopt_Hu_Feng_s_Report
+        }
+        prerequisite = {
+            focus = PRC_50s_Refuse_The_Party_Committee_to_Lead_Everything
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Establish_A_Truly_Democratic_Regime
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Suppress_Internal_Hungary_Elements
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_The_Two_Hundred_Policy_open_var_tt
+				check_variable = { PRC_50s_The_Two_Hundred_Policy_open_var > 100 }
+            }
+            hidden_trigger = {
+                always = no
+            }
+        }
+        completion_reward = {
+            effect_tooltip = {
+                add_political_power = 200
+                add_war_support = 0.5
+                add_ideas = PRC_50s_Suppress_Internal_Antiparty_Elements
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+        icon = GFX_PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+        cost = 3.6
+        x = 2
+        y = 3
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Carry_out_A_Rectification_Movement
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Let_The_National_People_s_Congress_Go
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PRC_50s_The_Two_Hundred_Policy_open_var_tt
+				check_variable = { PRC_50s_The_Two_Hundred_Policy_open_var > 20 }
+            }
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 2 }
+            set_temp_variable = { temp_y = -2 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            hidden_effect = {
+                country_event = {
+	                id = PRC_50s_Rework_event.30
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.35
+                    days = 20
+                }
+            }
+            set_variable = { PRC_50s_The_Two_Hundred_Policy_Preparation = 0 }
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Launching_a_struggle_against_intellectuals
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Encourage_mutual_reporting
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Establishment_of_Fortnightly_Symposium
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Make_them_spit_out_their_toxins_in_the_press
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Collect_revisionist_remarks
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Catch_the_big_rightist_fish
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Prepare_expert_symposiums
+                unlock_decision_tooltip = PRC_50s_The_Two_Hundred_Policy_Down_with_the_Zhang_Luo_League
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Classify_Right_Elements
+        icon = GFX_PRC_50s_Classify_Right_Elements
+        cost = 3.6
+        x = 1
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Combat_Military_Dogmatism
+        icon = GFX_PRC_50s_Combat_Military_Dogmatism
+        cost = 3.6
+        x = 0
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Classify_Right_Elements
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_i = 5 }
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = 0 }
+            PRC_faction_struggle_system_faction_supporter_change = yes
+            set_temp_variable = { temp_i = 8 }
+            set_temp_variable = { temp_y = 0.05 }
+            PRC_faction_struggle_system_faction_supporter_effect_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Purge_Anti-party_Elements_from_The_Government
+        icon = GFX_PRC_50s_Purge_Anti-party_Elements_from_The_Government
+        cost = 3.6
+        x = 3
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Combat_Localism
+        icon = GFX_PRC_50s_Combat_Localism
+        cost = 3.6
+        x = 2
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Classify_Right_Elements
+        }
+        prerequisite = {
+            focus = PRC_50s_Purge_Anti-party_Elements_from_The_Government
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = -2 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Purify_the_Party_Organization
+        icon = GFX_PRC_50s_Purify_the_Party_Organization
+        cost = 3.6
+        x = 1
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Combat_Military_Dogmatism
+        }
+        prerequisite = {
+            focus = PRC_50s_Combat_Localism
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.32
+                }
+            }
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = 2 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = 2 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Send_Cadre_to_labour_at_The_Grass_Roots_Units
+        icon = GFX_PRC_50s_Send_Cadre_to_labour_at_The_Grass_Roots_Units
+        cost = 3.6
+        x = 4
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Purge_Anti-party_Elements_from_The_Government
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Purify_Social_Thought
+        icon = GFX_PRC_50s_Purify_Social_Thought
+        cost = 3.6
+        x = 3
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Combat_Localism
+        }
+        prerequisite = {
+            focus = PRC_50s_Send_Cadre_to_labour_at_The_Grass_Roots_Units
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = 2 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = 2 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Expand_The_Labour_Farm
+        icon = GFX_PRC_50s_Expand_The_Labour_Farm
+        cost = 3.6
+        x = 5
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Send_Cadre_to_labour_at_The_Grass_Roots_Units
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+            }
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Abolish_The_Line_of_the_8th_NCCPC
+        icon = GFX_PRC_50s_Abolish_The_Line_of_the_8th_NCCPC
+        cost = 3.6
+        x = 2
+        y = 7
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Purify_the_Party_Organization
+        }
+        prerequisite = {
+            focus = PRC_50s_Purify_Social_Thought
+        }
+        prerequisite = {
+            focus = PRC_50s_Expand_The_Labour_Farm
+        }
+        available = {
+
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    has_completed_focus = PRC_50s_Prepare_to_Counter-offense_Against_The_Counter-revolutionaries
+                }
+                add_to_variable = {
+                    PRC_50s_The_Two_Hundred_Policy_Preparation = 5
+                    tooltip = PRC_50s_The_Two_Hundred_Policy_Preparation_change
+                }
+                country_event = {
+	                id = PRC_50s_Rework_event.34
+                }
+            }
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            add_popularity = {
+                ideology = ROOT
+                popularity = 0.05
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Insist_on_Selfcriticism
+        icon = GFX_PRC_50s_Insist_on_Selfcriticism
+        cost = 5
+        x = 1
+        y = 2
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Unfreeze_Newspaper_Media
+        }
+        prerequisite = {
+            focus = PRC_50s_Encourage_Crowds_to_Sound_The_Release
+        }
+        prerequisite = {
+            focus = PRC_50s_Break_The_Shackles_of_Bureaucracy
+        }
+        prerequisite = {
+            focus = PRC_50s_Open_Literary_And_Artistic_Creation
+        }
+        prerequisite = {
+            focus = PRC_50s_Adhere_to_Mass_Line
+        }
+        mutually_exclusive = {
+            focus = PRC_50s_Carry_out_A_Rectification_Movement
+        }
+        available = {
+            date > 1957.04.10
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Be_Wary_of_liberalization_Tendency_within_The_Party
+        icon = GFX_PRC_50s_Be_Wary_of_liberalization_Tendency_within_The_Party
+        cost = 3.6
+        x = 8
+        y = 3
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Insist_on_Selfcriticism
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = 1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = -1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = 0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_in
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Reinforce_Leadership_Authority
+        icon = GFX_PRC_50s_Reinforce_Leadership_Authority
+        cost = 3.6
+        x = 6
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Be_Wary_of_liberalization_Tendency_within_The_Party
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = 4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Unite_The_People
+        icon = GFX_PRC_50s_Unite_The_People
+        cost = 3.6
+        x = 8
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Be_Wary_of_liberalization_Tendency_within_The_Party
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = 4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Tighten_up_The_Management_of_Intellectuals
+        icon = GFX_PRC_50s_Tighten_up_The_Management_of_Intellectuals
+        cost = 3.6
+        x = 7
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Reinforce_Leadership_Authority
+        }
+        prerequisite = {
+            focus = PRC_50s_Unite_The_People
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = 4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Allow_Secret_Criticism_within_The_Party
+        icon = GFX_PRC_50s_Allow_Secret_Criticism_within_The_Party_aaa
+        cost = 3.6
+        x = 10
+        y = 4
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Be_Wary_of_liberalization_Tendency_within_The_Party
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = 4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Suppress_Liberals
+        icon = GFX_PRC_50s_Suppress_Liberals
+        cost = 3.6
+        x = 9
+        y = 5
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Unite_The_People
+        }
+        prerequisite = {
+            focus = PRC_50s_Allow_Secret_Criticism_within_The_Party
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 1 }
+            set_temp_variable = { temp_y = -4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+            set_temp_variable = { temp_x = 4 }
+            set_temp_variable = { temp_y = -1 }
+            PRC_faction_struggle_system_faction_influence_change = yes
+            add_to_variable = {
+                PRC_50s_The_Two_Hundred_Policy_ddf = 0.1
+                tooltip = PRC_50s_dm_drift_defence_factor_in
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    shared_focus = {
+        id = PRC_50s_Downplay_Party_s_Mistakes
+        icon = GFX_PRC_50s_Downplay_Party_s_Mistakes
+        cost = 3.6
+        x = 8
+        y = 6
+        relative_position_id = PRC_50s_Establish_The_Two_Hundred_Policy
+        prerequisite = {
+            focus = PRC_50s_Tighten_up_The_Management_of_Intellectuals
+        }
+        prerequisite = {
+            focus = PRC_50s_Suppress_Liberals
+        }
+        available = {
+
+        }
+        completion_reward = {
+            set_temp_variable = { temp_x = 0 }
+            set_temp_variable = { temp_y = 4 }
+            PRC_faction_struggle_system_faction_var_change = yes
+        }
+    }
+
+
+
