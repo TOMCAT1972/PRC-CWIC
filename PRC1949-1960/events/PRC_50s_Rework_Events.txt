@@ -3169,6 +3169,10 @@ country_event = {
 	option = { 
 		name = PRC_50s_Rework_event.163.a
 		add_political_power = -50
+		swap_ideas = {
+			remove_idea = PRC_50s_Illiteracy_everywhere_1
+			add_idea = PRC_50s_Illiteracy_everywhere_2
+		}
 		hidden_effect = {
 			country_event = {
 				id = PRC_50s_Rework_event.164
@@ -3179,6 +3183,10 @@ country_event = {
 	option = { 
 		name = PRC_50s_Rework_event.163.b
 		add_political_power = -50
+		swap_ideas = {
+			remove_idea = PRC_50s_Illiteracy_everywhere_1
+			add_idea = PRC_50s_Illiteracy_everywhere_2
+		}
 		hidden_effect = {
 			country_event = {
 				id = PRC_50s_Rework_event.164
@@ -3200,6 +3208,10 @@ country_event = {
 		name = PRC_50s_Rework_event.164.a
 		set_temp_variable = { temp_x = 5 }
         PRC_50s_spend_money_tt = yes
+		swap_ideas = {
+			remove_idea = PRC_50s_Illiteracy_everywhere_2
+			add_idea = PRC_50s_Illiteracy_everywhere_3
+		}
 		hidden_effect = {
 			country_event = {
 				id = PRC_50s_Rework_event.165
@@ -3221,6 +3233,10 @@ country_event = {
 		name = PRC_50s_Rework_event.165.a
 		add_political_power = 50
 		news_event = PRC_50s_Rework_event.166
+		swap_ideas = {
+			remove_idea = PRC_50s_Illiteracy_everywhere_3
+			add_idea = PRC_50s_Illiteracy_everywhere_4
+		}
 		hidden_effect = {
 			country_event = {
 				id = PRC_50s_Rework_event.167
@@ -3253,9 +3269,11 @@ country_event = {
 	
 	option = { 
 		name = PRC_50s_Rework_event.167.a
+		remove_ideas = PRC_50s_Illiteracy_everywhere_4
 	}
 	option = { 
 		name = PRC_50s_Rework_event.167.a
+		remove_ideas = PRC_50s_Illiteracy_everywhere_4
 	}
 }
 
