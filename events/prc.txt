@@ -1,0 +1,1299 @@
+##############
+# People Republic of China Events
+##############
+
+add_namespace = prc
+add_namespace = peng
+add_namespace = prc_collapse
+
+# 5 base division because of Focus Tree
+country_event = {
+	id = prc.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.1"}
+	title = prc.1.t
+	desc = prc.1.d
+	picture = GFX_report_event_indian_soldiers
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.1.a
+		hidden_effect = {
+			load_oob = "PRC_communist_reinforcements"
+		}
+		custom_effect_tooltip = PRC_Communist_Army_arrives
+		set_global_flag = prc_communist_army_setup
+	}
+}
+
+# PRC goes with South Korea
+country_event = {
+	id = prc.2 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.2"}
+	title = prc.2.t
+	desc = prc.2.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	trigger = {
+		PRC = {
+			owns_state = 746
+			owns_state = 745
+			owns_state = 747
+			owns_state = 749
+			owns_state = 748
+			controls_state = 746
+			controls_state = 745
+			controls_state = 747
+			controls_state = 749
+			controls_state = 748
+		}
+	}
+
+	option = {
+		name = prc.2.a
+		KOR = {
+			transfer_state = 745
+			transfer_state = 746
+			transfer_state = 747
+			transfer_state = 748
+			transfer_state = 749
+		}
+	}
+
+	option = {
+		name = prc.2.b
+		add_opinion_modifier = { target = KOR modifier = PRC_south_korea_no_states }
+	}
+}
+
+# PRC goes with North Korea
+country_event = {
+	id = prc.3 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.3"}
+	title = prc.3.t
+	desc = prc.3.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	trigger = {
+		PRC = {
+			owns_state = 750
+			owns_state = 753
+			owns_state = 754
+			owns_state = 751
+			owns_state = 752
+			controls_state = 750
+			controls_state = 753
+			controls_state = 754
+			controls_state = 752
+			controls_state = 751
+		}
+	}
+
+	option = {
+		name = prc.3.a
+		effect_tooltip = {
+			KPA = {
+				transfer_state = 750
+				transfer_state = 751
+				transfer_state = 752
+				transfer_state = 753
+				transfer_state = 754
+				transfer_state = 755
+				transfer_state = 525
+			}
+		}
+	}
+
+	option = {
+		name = prc.3.b
+		add_opinion_modifier = { target = KPA modifier = PRC_north_korea_no_states }
+	}
+}
+
+
+# 7 division because of Focus Tree
+country_event = {
+	id = prc.5 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.5"}
+	title = prc.5.t
+	desc = prc.5.d
+	picture = GFX_report_event_indian_soldiers
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.5.a
+		hidden_effect = {
+			load_oob = "PRC_revolution_aid"
+		}
+		custom_effect_tooltip = PRC_revolution_reinforcement
+		set_global_flag = PRC_revolution_reinforcement
+	}
+}
+
+# PRC / USA says no to request
+news_event = {
+	id = prc.6 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.6"}
+	title = prc.6.t
+	desc = prc.6.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.6.a
+	}
+}
+
+# PRC / USA says yes to request
+news_event = {
+	id = prc.7 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.7"}
+	title = prc.7.t
+	desc = prc.7.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.7.a
+	}
+}
+
+# PRC / USA says no to faction request
+news_event = {
+	id = prc.8 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.8"}
+	title = prc.8.t
+	desc = prc.8.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.7.a
+	}
+}
+
+# PRC gets into the UN
+country_event = {
+	id = prc.9 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.9"}
+	hidden = yes
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_opinion_modifier = { target = SOV modifier = PRC_un_recognition_opinion }
+		add_opinion_modifier = { target = FRA modifier = PRC_un_recognition_opinion }
+		add_opinion_modifier = { target = ENG modifier = PRC_un_recognition_opinion }
+		add_opinion_modifier = { target = CHI modifier = PRC_not_un_recognition_opinion }
+		give_guarantee = TRS
+		news_event = news.1016
+		set_global_flag = prc_un_recognizzed
+	}
+
+
+	option = { }
+
+}
+
+# PRC does not get into UN
+country_event = {
+	id = prc.10 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.10"}
+	hidden = yes
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	immediate = {
+		add_opinion_modifier = { target = CHI modifier = PRC_un_recognition_opinion }
+		FRA = { news_event = news.1017 }
+		ENG = { news_event = news.1017 }
+		SOV = { news_event = news.1017 }
+		USA = { news_event = news.1017 }
+		CHI = { news_event = news.1017 }
+		set_global_flag = prc_un_not_recognized
+	}
+
+	option = { }
+
+}
+
+# PRC sends out communist event
+country_event = {
+	id = prc.11 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.11"}
+	title = prc.11.t
+	desc = prc.11.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.11.b
+		ROOT = { add_opinion_modifier = { target = PRC modifier = PRC_communism_for_PRC_opinion } }
+		ROOT = { add_opinion_modifier = { target = SOV modifier = PRC_communism_against_USSR_opinion } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				ROOT = { is_in_faction_with = SOV }
+			}
+		}
+	}
+
+	option = {
+		name = prc.11.b
+		ROOT = { add_opinion_modifier = { target = SOV modifier = PRC_communism_for_USSR_opinion } }
+		ROOT = { add_opinion_modifier = { target = PRC modifier = PRC_communism_against_PRC_opinion } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+
+# China event from Cambodia: Become puppet or not
+country_event = {
+	id = prc.14 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.14"}
+	title = prc.14.t
+	desc = prc.14.d
+	picture = GFX_report_event_asian_politicians
+
+	is_triggered_only = yes
+
+	#Accept - become puppet
+	option = {
+		name = prc.14.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = PRC
+					ratio > 0.10
+				}
+				is_historical_focus_on = yes
+			}
+		}
+		PRC = {
+			country_event = prc.15
+			effect_tooltip = { puppet = CAM }
+		}
+	}
+
+	option = {
+		name = prc.14.b
+		ai_chance = { factor = 40 }
+		PRC = {
+			country_event = prc.16
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = CAM
+					generator = owned_states
+				}
+			}
+		}
+	}
+}
+
+# Cambodia accepts and is puppeted
+country_event = {
+	id = prc.15 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.15"}
+	title = prc.15.t
+	desc = prc.15.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.15.a
+		puppet = CAM
+		#add_named_threat = { threat = 20 name = prc_khmer_rogue }
+		#hidden_effect = {
+		#	news_event = { hours = 6 id = news.210 } 
+		#}
+	}
+}
+
+# Cambodia refuses, gain cb
+country_event = {
+	id = prc.16 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.16"}
+	title = prc.16.t
+	desc = prc.16.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.16.a
+		create_wargoal = {
+			type = take_state
+			target = CAM
+			generator = owned_states
+		}
+	}
+}
+
+# China event from Vietnam: Become puppet or not
+country_event = {
+	id = prc.17 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.17"}
+	title = prc.17.t
+	desc = prc.17.d
+	picture = GFX_report_event_asian_politicians
+
+	is_triggered_only = yes
+
+	#Accept - become puppet
+	option = {
+		name = prc.17.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = PRC
+					ratio > 0.10
+				}
+				is_historical_focus_on = yes
+			}
+		}
+		PRC = {
+			country_event = prc.18
+			effect_tooltip = { puppet = VIN }
+		}
+	}
+
+	option = {
+		name = prc.17.b
+		ai_chance = { factor = 40 }
+		PRC = {
+			country_event = prc.19
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = VIN
+					generator = owned_states
+				}
+			}
+		}
+	}
+}
+
+# Vietnam accepts and is puppeted
+country_event = {
+	id = prc.18 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.18"}
+	title = prc.18.t
+	desc = prc.18.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.18.a
+		puppet = VIN
+		#add_named_threat = { threat = 20 name = prc_khmer_rogue }
+		#hidden_effect = {
+		#	news_event = { hours = 6 id = news.210 } 
+		#}
+	}
+}
+
+# Vietnam refuses, gain cb
+country_event = {
+	id = prc.19 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.19"}
+	title = prc.19.t
+	desc = prc.19.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.19.a
+		create_wargoal = {
+			type = take_state
+			target = VIN
+			generator = owned_states
+		}
+	}
+}
+
+country_event = {
+	id = prc.20 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.20"}
+	title = prc.20.t
+	desc = prc.20.d
+	picture = report_event_chinese_elections_1958
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+trigger = {
+	always = no
+	}
+
+	option = {
+		name = prc.20.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Liu Shaoqi"
+			picture = "Portrait_China_Liu_Shaoqi.dds"
+			ideology = maoist
+		}
+	}
+	option = {
+		name = prc.20.b
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Chen Yun"
+			picture = "Portrait_China_Chen_Yun.dds"
+			ideology = maoist
+		}
+	}
+	option = {
+		name = prc.20.c
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Zhou Enlai"
+			picture = "Zhou_Enlai.dds"
+			ideology = maoist
+		}
+	}
+
+	option = {
+		name = prc.20.do
+	}
+
+}
+
+country_event = {
+  id = prc.21 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.21"}
+	title = "PRC Demands Macau"
+	desc = generic.1.d
+
+	is_triggered_only = yes
+
+	# Get Annexed
+	option = {
+		name = generic.1.a
+		PRC = {
+			transfer_state = 729
+		}
+	  ai_chance = {
+			factor = 50
+		}
+	}
+
+	# War
+	option = {
+		name = generic.1.b
+		PRC = {
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+			}
+		}
+	  ai_chance = {
+		  factor = 50
+		}
+	}
+}
+country_event = {
+  id = prc.22 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.22"}
+	title = "PRC Demands Hong Kong"
+	desc = generic.1.d
+
+	is_triggered_only = yes
+
+	# Get Annexed
+	option = {
+		name = generic.1.a
+		PRC = {
+			transfer_state = 326
+		}
+	  ai_chance = {
+			factor = 50
+		}
+	}
+
+	# War
+	option = {
+		name = generic.1.b
+		PRC = {
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}
+		}
+	  ai_chance = {
+		  factor = 50
+		}
+	}
+}
+country_event = {
+	id = peng.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = peng.1"}
+	title = "Military Coup in the PRC"
+	Desc = peng.20.d
+	picture = GFX_news_event_india_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Execute the Coup"
+		set_politics = { ruling_party = communism elections_allowed = no }
+		add_popularity = { ideology = communism popularity = 0.5 }
+		create_country_leader = {
+			name = "Peng Dehuai"
+			picture = "Portrait_PRC_Peng_Dehuai"
+			expire = "1992.1.1"
+			ideology = stalinism
+		}
+	}
+}
+country_event = {
+	id = prc_collapse.1 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc_collapse.1"}
+	title = "Soviet Union Intervenes in the Chinese Civil War"
+	Desc = ddr.20.d
+	picture = GFX_news_event_india_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Salvage the Situation"
+		#news_event = prc_collapse.2
+		SIK = {
+			set_state_owner = 287
+			set_state_owner = 617
+			set_state_owner = 618
+			set_state_owner = 619
+		}
+		MON = {
+			set_state_owner = 611
+			set_state_owner = 612
+			set_state_owner = 621
+			611 = {
+				add_core_of = MON
+			}
+			612 = {
+				add_core_of = MON
+			}
+			621 = {
+				add_core_of = MON
+			}
+		}
+		PRC = {
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = MAN }
+				}
+				CHI = {
+					set_state_owner = PREV
+				}
+			}
+		}
+		white_peace = CHI
+		SIK = {
+			white_peace = CHI
+		}
+	}
+}
+news_event = {
+	id = prc.50 #Mao Purged 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.50 #Mao Purged"}
+	title = prc.50.t
+	desc = prc.50.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.50.a
+	}
+}
+news_event = {
+	id = prc.85 #Deng Purged 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.85 #Deng Purged"}
+	title = prc.85.t
+	desc = prc.85.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.85.a
+	}
+}
+
+news_event = {
+	id = prc.86 #Shaoqi Purged 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.86 #Shaoqi Purged"}
+	title = prc.86.t
+	desc = prc.86.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.86.a
+	}
+}
+news_event = {
+	id = prc.75 #Lin Biao Incident 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.75 #Lin Biao Incident"}
+	title = prc.75.t
+	desc = prc.75.d
+	picture = GFX_report_event_prc_successful
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = prc.75.a
+	}
+}
+country_event = {
+	id = prc.70 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.70"}
+	title = "Lin Biao Executes Military Coup in the PRC"
+	Desc = "Lin Biao Executes Military Coup in the PRC"
+	picture = GFX_news_event_india_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Execute the Coup"
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		add_popularity = { ideology = neutrality popularity = 0.5 }
+		create_country_leader = {
+			name = "Lin Biao"
+			picture = "Portrait_PRC_Lin_Biao"
+			expire = "1992.1.1"
+			ideology = military_junta
+		}
+	}
+}
+
+country_event = {
+	id = prc.125 
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.125"}
+	title = "The Great Chinese Famine"
+	desc = PRC.125.d
+	#picture = GFX_news_event_india_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Execute the Coup"
+		add_ideas = famine5
+	}
+}
+country_event = {
+	id = prc.200
+    immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.200"}
+	title = "Chairman Mao passed away."
+	desc = PRC.200.d
+	#picture = GFX_news_event_india_troops
+	trigger = {
+		has_global_flag = ROC_taiwan
+		has_government = maoism
+		has_country_leader = {
+			character = PRC_mao_zedong
+			ruling_only = yes
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			retire_character = PRC_mao_zedong
+			add_country_leader_role = {
+				character = PRC_Hua_Guofeng
+				promote_leader = yes
+				country_leader = {
+					ideology = mao_zedong_thought
+					expire = "1992.10.20.1"
+					traits = {
+						
+					}
+				}
+			}
+			country_event = {
+				id = prc70s.102
+				hours = 8
+			}
+		}
+	}
+
+	option = {
+		name = "He is a great man."
+	}
+}
+country_event = {
+	id = prc.201
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.201"}
+	title = "Mao Zedong is dead."
+	desc = PRC.201.d
+	#picture = GFX_news_event_india_troops
+	trigger = {
+		has_global_flag = ROC_taiwan
+		NOT = {
+			has_country_leader = {
+				character = PRC_mao_zedong
+				ruling_only = yes
+			}
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "He's finally dead."
+		
+	}
+}
+country_event = {
+	id = prc.202
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.201"}
+	title = "Zhou Enlai Passed away"
+	desc = PRC.202.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Rest in peace, good prime minister of the people."
+		
+	}
+}
+country_event = {
+	id = prc.203
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.203"}
+	title = "Tangshan Earthquake"
+	desc = PRC.203.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Go to disaster relief!"
+		
+		
+			608 = {
+				remove_building  = {
+					type = infrastructure
+					level = 3
+				}
+			}
+			1556 = {
+				remove_building  = {
+					type = infrastructure
+					level = 4
+				}
+				remove_building  = {
+					type = arms_factory
+					level = 4
+				}
+				remove_building  = {
+					type = state_infrastructure 
+					level = 4
+				}
+				remove_building  = {
+					type = industrial_complex 
+					level = 4
+				}
+			}
+			1570= {
+				remove_building  = {
+					type = infrastructure
+					level = 6
+				}
+				remove_building  = {
+					type = arms_factory
+					level = 6
+				}
+				remove_building  = {
+					type = state_infrastructure 
+					level = 6
+				}
+				remove_building  = {
+					type = industrial_complex 
+					level = 6
+				}
+			}
+			614= {
+				remove_building  = {
+					type = infrastructure
+					level = 1
+				}
+				remove_building  = {
+					type = arms_factory
+					level = 1
+				}
+				remove_building  = {
+					type = state_infrastructure 
+					level = 2
+				}
+				remove_building  = {
+					type = industrial_complex 
+					level = 3
+				}
+			}
+			609= {
+				remove_building  = {
+					type = infrastructure
+					level = 10
+				}
+				remove_building  = {
+					type = arms_factory
+					level = 10
+				}
+				remove_building  = {
+					type = state_infrastructure 
+					level = 10
+				}
+				remove_building  = {
+					type = industrial_complex 
+					level = 10
+				}
+			}
+		
+	}
+}
+country_event = {
+	id = prc.204
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.203"}
+	title = "Zhu De died."
+	desc = PRC.204.d
+	#picture = GFX_news_event_india_troops
+	fire_only_once = yes
+	trigger = {
+		date > 1976.1.1
+		date < 1976.1.1
+		tag = PRC
+
+	}
+	option = {
+		name = "Tragic."
+	}
+}
+country_event = {
+	id = prc.205
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.203"}
+	title = "Symposium of the Adminstrative group of the CMC"
+	desc = PRC.205.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "We will never surrender to the Soviets."
+		
+	}
+}
+country_event = {
+	id = prc.206
+ immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.206"}
+	title = "On whether Lin Biao is heir status of the problem."
+	desc = PRC.206.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Lin Biao will be Mao's successor"
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 10 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.207
+		}
+	}
+	option = {
+		name = "Lin Biao will not be Mao's successor"
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = -10 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.207
+		}
+	}
+}
+country_event = {
+	id = prc.207
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.207"}
+	title = "Zhou Enlai's attitude"
+	desc = PRC.207.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Zhou Enlai supported Lin Biao"
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 10 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.208
+		}
+	}
+	option = {
+		name = "Zhou Enlai opposed Lin Biao"
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = -10 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.208
+		}
+	}
+}
+country_event = {
+	id = prc.208
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.207"}
+	title = "On whether to establish the post of National chairman"
+	desc = PRC.208.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Pass."
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 10 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+	}
+	option = {
+		name = "Failed to passed."
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = -10 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+	}
+}
+country_event = {
+	id = prc.210
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.210"}
+	title = "Discussion within the Lin Biao faction"
+	desc = PRC.210.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Ah."
+	}
+}
+country_event = {
+	id = prc.211
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.211"}
+	title = "Plot."
+	desc = PRC.211.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Who will be the winner?"
+		
+	}
+}
+country_event = {
+	id = prc.212
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.212"}
+	title = "The second Plenary Session of the Ninth Central Committee(I):Chairman of the PRC"
+	desc = PRC.212.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Retain the system of president of the state."
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 14 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.213
+			days = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc.215
+				days = 6
+			}
+		}
+		
+	}
+	option = {
+		name = "Abolish the system of state presidents."
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = -15 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.213
+			days = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = prc.216
+				days = 6
+			}
+		}
+	}
+}
+country_event = {
+	id = prc.213
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.213"}
+	title = "The second Plenary Session of the Ninth Central Committee(II):the three adverbs"
+	desc = PRC.213.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Keep three adverbs."
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 14 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.214
+			days = 2
+		}
+	}
+	option = {
+		name = "Delete three adverbs"
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = -15 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		country_event = {
+			id = prc.214
+			days = 2
+		}
+	}
+}
+country_event = {
+	id = prc.214
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.214"}
+	title = "The second Plenary Session of the Ninth Central Committee(III):Criticize Chen Boda"
+	desc = PRC.214.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Do not Criticize Chen Boda."
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 5 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+	}
+	option = {
+		name = "Criticize Chen Boda."
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = -5 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+	}
+}
+country_event = {
+	id = prc.215#林彪大获全胜
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.215"}
+	title = "12.The second Plenary session of the Ninth CPC Central Committee closed: Lin Biao won"
+	desc = PRC.215.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Long live Vice Chairman Lin"
+		custom_effect_tooltip = LinBiao_gain_influence_tt
+		add_to_variable = { Linbiao_influence = 4 } 
+		set_variable = { cpc_bar_e = LinBiao_influence }
+		complete_national_focus = Retention_of_the_chairmanship
+	}
+}
+country_event = {
+	id = prc.216#毛主席批判了林彪
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.216"}
+	title = "The second Plenary session of the Ninth CPC Central Committee closed: Lin Biao was criticized"
+	desc = PRC.216.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "What on earth is Lin Biao's plot?"
+		custom_effect_tooltip = LinBiao_lose_influence_tt
+		add_to_variable = { Linbiao_influence = 4 } 
+		custom_effect_tooltip = revolutionary_gain_influence_tt
+		complete_national_focus = abolition_of_the_chairmanship
+	}
+}
+country_event = {
+	id = prc.217#毛主席南巡
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.217"}
+	title = "Chairman Mao made a tour to the south"
+	desc = PRC.217.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "Chairman Mao was assassinated in Shanghai."
+			custom_effect_tooltip = conservative_gain_influence_tt
+			set_variable = { Linbiao_influence = 100 } 
+			add_to_variable = {
+				pie_popularity_1 = 20
+			}
+			set_temp_variable = {
+				temp_pie_popularity_1 = pie_popularity_1
+			}
+			set_temp_variable = {
+				temp_pie_popularity_2 = pie_popularity_2
+			}
+			set_temp_variable = {
+				pie_full_temp = 100
+			}
+			subtract_from_temp_variable = {
+				pie_full_temp = temp_pie_popularity_1
+			}
+			subtract_from_temp_variable = {
+				pie_full_temp = temp_pie_popularity_2
+			}
+			set_variable = {
+				pie_full_temp = pie_full_temp
+			}
+			set_variable = { temp_pie_popularity_2 = pie_popularity_1 }
+			add_to_variable = { temp_pie_popularity_2 = pie_popularity_2 }
+			set_variable = { changed_pie_popularity_2 = temp_pie_popularity_2 }
+			complete_national_focus = linbiao_seizes_power
+			add_political_power = -500
+			add_stability = -0.3
+	}
+	option = {
+		name = "Chairman Mao completed his southern tour"
+			custom_effect_tooltip = conservative_lose_influence_tt
+			set_variable = { Linbiao_influence = 0 } 
+			add_to_variable = {
+				pie_popularity_1 = -10
+			}
+			set_temp_variable = {
+				temp_pie_popularity_1 = pie_popularity_1
+			}
+			set_temp_variable = {
+				temp_pie_popularity_2 = pie_popularity_2
+			}
+			set_temp_variable = {
+				pie_full_temp = 100
+			}
+			subtract_from_temp_variable = {
+				pie_full_temp = temp_pie_popularity_1
+			}
+			subtract_from_temp_variable = {
+				pie_full_temp = temp_pie_popularity_2
+			}
+			set_variable = {
+				pie_full_temp = pie_full_temp
+			}
+			set_variable = { temp_pie_popularity_2 = pie_popularity_1 }
+			add_to_variable = { temp_pie_popularity_2 = pie_popularity_2 }
+			set_variable = { changed_pie_popularity_2 = temp_pie_popularity_2 }
+			country_event = {
+				id = prc.218
+			}
+			add_political_power = -500
+			add_stability = -0.3
+	}
+}
+country_event = {
+	id = prc.218#林彪坠机
+ 	immediate = {log = "[GetDateText]: [Root.GetTag]: id = prc.218"}
+	title = "The death of Marshal Lin Biao"
+	desc = PRC.216.d
+	#picture = GFX_news_event_india_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+
+	}
+	option = {
+		name = "The death of a traitor."
+		set_country_flag = linbiao_dead
+		complete_national_focus = linbiao_incident
+		retire_character = PRC_lin_biao
+		retire_character = PRC_Lin_Liguo
+	}
+}
+
+

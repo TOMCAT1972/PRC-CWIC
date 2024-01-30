@@ -1,0 +1,829 @@
+shared_focus = {
+	id = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+	icon = GFX_PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+	cost = 3.6
+	x = 10
+	y = 4
+	available = {
+
+	}
+	cancelable = no
+	mutually_exclusive = {
+		focus = PRC_50s_Accept_Using_The_Yangtze_as_A_Partition
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign_tt
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Accept_Using_The_Yangtze_as_A_Partition
+	icon = GFX_PRC_50s_Accept_Using_The_Yangtze_as_A_Partition
+	cost = 3.6
+	x = 2
+	y = 0
+	relative_position_id = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+	available = {
+
+	}
+	mutually_exclusive = {
+		focus = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+	}
+	completion_reward = {
+		custom_effect_tooltip = PRC_50s_Accept_Using_The_Yangtze_as_A_Partition_tt
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Liberate_The_Whole_of_China
+	icon = GFX_PRC_50s_Liberate_The_Whole_of_China
+	cost = 26.4
+	x = 1
+	y = 1
+	relative_position_id = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+	prerequisite = {
+		focus = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+	}
+	cancelable = no
+	select_effect = {
+		country_event = {
+			id = PRC_50s_Rework_event.1
+			days = 60
+			random = 20
+		}
+		country_event = {
+			id = PRC_50s_Rework_event.2
+			days = 90
+			random = 30
+		}
+	}
+	#bypass = {
+	#    NOT = {
+	#        has_war_with = CHI
+	#    }
+	#}
+	available = {
+		NOT = {
+			has_global_flag = roc_rebound_shanghai
+		}
+	}
+	cancel_if_invalid = yes
+	completion_reward = {
+		hidden_effect = {
+			remove_ideas = PRC_50s_People_s_War_of_Liberation
+			add_timed_idea = {
+				idea = PRC_50s_People_s_War_of_Liberation
+				days = 200
+			}
+		}
+		complete_national_focus = PRC_50s_Found_The_People_s_Republic_of_China
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Launch_The_Chamdo_Battle
+	icon = GFX_PRC_50s_Launch_The_Chamdo_Battle
+	cost = 3.6
+	x = -6
+	y = 1
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Liberate_The_Whole_of_China
+	}
+	available = {
+		1557 = {
+			is_controlled_by = PRC
+		}
+	}
+	completion_reward = {
+		start_border_war = {
+			change_state_after_war = no 
+			combat_width = 80 #
+			minimum_duration_in_days = 18
+			attacker = {
+				state = 1557
+				num_provinces = 3
+				modifier = 10
+				on_win = PRC_50s_Rework_event.41
+			}
+			defender = {
+				state = 867
+				num_provinces = 3
+				modifier = 0.1
+			}
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Trust_in_Gaxag
+	icon = GFX_PRC_50s_Trust_in_Gaxag
+	cost = 3.6
+	x = -7
+	y = 2
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Launch_The_Chamdo_Battle
+	}
+	mutually_exclusive = {
+		focus = PRC_50s_Trust_in_The_Communist_Party_of_Tibet
+	}
+	available = {
+		TIB = {
+			is_puppet_of = PRC
+		}
+	}
+	completion_reward = {
+		add_stability = 0.05
+		TIB = {
+			add_stability = 0.05
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Send_Aid_to_Tibet
+	icon = GFX_PRC_50s_Send_Aid_to_Tibet
+	cost = 3.6
+	x = -8
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Trust_in_Gaxag
+	}
+	available = {
+
+	}
+	completion_reward = {
+		set_temp_variable = { temp_x = 5 }
+		PRC_50s_spend_money_tt = yes
+		TIB = {
+			add_stability = 0.05
+		}
+		country_event = {
+			id = PRC_50s_Rework_event.66
+			days = 10
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Trust_in_The_Communist_Party_of_Tibet
+	icon = GFX_PRC_50s_Trust_in_The_Communist_Party_of_Tibet
+	cost = 3.6
+	x = -5
+	y = 2
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Launch_The_Chamdo_Battle
+	}
+	mutually_exclusive = {
+		focus = PRC_50s_Trust_in_Gaxag
+	}
+	available = {
+		TIB = {
+			is_puppet_of = PRC
+		}
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Grant_Limited_Autonomy_to_Tibet
+	icon = GFX_PRC_50s_Grant_Limited_Autonomy_to_Tibet
+	cost = 3.6
+	x = -4
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Trust_in_The_Communist_Party_of_Tibet
+	}
+	available = {
+		always = no
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Establish_The_Tibet_Working_Committee
+	icon = GFX_PRC_50s_Establish_The_Tibet_Working_Committee
+	cost = 3.6
+	x = -7
+	y = 4
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Send_Aid_to_Tibet
+		focus = PRC_50s_Grant_Limited_Autonomy_to_Tibet
+	}
+	available = {
+	}
+	completion_reward = {
+		TIB = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Incorporate_CPT_into_CPC
+	icon = GFX_PRC_50s_Incorporate_CPT_into_CPC
+	cost = 3.6
+	x = -5
+	y = 4
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Send_Aid_to_Tibet
+		focus = PRC_50s_Grant_Limited_Autonomy_to_Tibet
+	}
+	available = {
+		always = no
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_The_Last_Bastion_of_The_Kuomintang
+	icon = GFX_PRC_50s_The_Last_Bastion_of_The_Kuomintang
+	cost = 3.6
+	x = 0
+	y = 1
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Liberate_The_Whole_of_China
+	}
+	available = {
+		
+	}
+	completion_reward = {
+		add_war_support = 0.05
+		add_timed_idea = {
+			idea = PRC_50s_attack_kmt
+			days = 200
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Request_for_Naval_Assistance_from_The_USSR
+	icon = GFX_PRC_50s_Request_for_Naval_Assistance_from_The_USSR
+	cost = 3.6
+	x = -1
+	y = 2
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_The_Last_Bastion_of_The_Kuomintang
+	}
+	available = {
+
+	}
+	completion_reward = {
+		SOV = {
+			country_event = {
+				id = PRC_50s_Rework_event.3
+			}
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Prepare_Ships_for_Landing
+	icon = GFX_PRC_50s_Prepare_Ships_for_Landing
+	cost = 3.6
+	x = 1
+	y = 2
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_The_Last_Bastion_of_The_Kuomintang
+	}
+	available = {
+
+	}
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 50
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Launch_The_Taiwan_Campaign
+	icon = GFX_PRC_50s_Launch_The_Taiwan_Campaign
+	cost = 3.6
+	x = 0
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Request_for_Naval_Assistance_from_The_USSR
+	}
+	prerequisite = {
+		focus = PRC_50s_Prepare_Ships_for_Landing
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = prc_50s_No_defeat_at_the_Battle_of_Kinmen
+		}
+	}
+	allow_branch = {
+		NOT = {
+			has_country_flag = prc_50s_Failure_of_the_Battle_of_Kinmen_flag
+		}
+	}
+	select_effect = {
+		hidden_effect = {
+			country_event = {
+				id = PRC_50s_Rework_event.5
+			}
+		}
+	}
+	completion_reward = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = PRC_50s_attack_kmt
+				}
+				swap_ideas = {
+					remove_idea = PRC_50s_attack_kmt
+					add_idea = PRC_50s_attack_kmt_2
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = PRC_50s_attack_kmt }
+				}
+				add_timed_idea = {
+					idea = PRC_50s_attack_kmt_2
+					days = 50
+				}
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_50s_attack_kmt
+				add_idea = PRC_50s_attack_kmt_2
+			}
+		}
+		declare_war_on = { target = CHI type = annex_everything }
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Strengthen_The_Defence_of_The_Southeast_Coast
+	icon = GFX_PRC_50s_Strengthen_The_Defence_of_The_Southeast_Coast
+	cost = 3.6
+	x = -2
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Request_for_Naval_Assistance_from_The_USSR
+	}
+	prerequisite = {
+		focus = PRC_50s_Prepare_Ships_for_Landing
+	}
+	allow_branch = {
+		has_country_flag = prc_50s_Failure_of_the_Battle_of_Kinmen_flag
+	}
+	available = {
+
+	}
+	completion_reward = {
+		595 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = {
+					all_provinces = yes
+					limit_to_coastal = yes
+				}
+				level = 3
+				instant_build = yes
+			}
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 592
+					state = 596
+					state = 1579
+					state = 1576
+					state = 1575
+					state = 1574
+				}
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = {
+					all_provinces = yes
+					limit_to_coastal = yes
+				}
+				level = 1
+				instant_build = yes
+			}
+		}
+		set_temp_variable = { temp_x = 2.5 }
+		PRC_50s_spend_money_tt = yes
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Step_up_Socialist_Propaganda_for_Taiwan
+	icon = GFX_PRC_50s_Step_up_Socialist_Propaganda_for_Taiwan
+	cost = 3.6
+	x = 0
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Request_for_Naval_Assistance_from_The_USSR
+	}
+	prerequisite = {
+		focus = PRC_50s_Prepare_Ships_for_Landing
+	}
+	available = {
+		has_completed_focus = PRC_50s_Send_Spies_to_Infiltrate_Taiwan
+	}
+	allow_branch = {
+		has_country_flag = prc_50s_Failure_of_the_Battle_of_Kinmen_flag
+	}
+	completion_reward = {
+		CHI = {
+			add_popularity = {
+				ideology = maoism
+				popularity = 0.025
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = PRC_50s_attack_kmt_2_t
+				}
+				swap_ideas = {
+					remove_idea = PRC_50s_attack_kmt_2_t
+					add_idea = PRC_50s_attack_kmt_3
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = PRC_50s_attack_kmt_2_t }
+				}
+				add_timed_idea = {
+					idea = PRC_50s_attack_kmt_3
+					days = 50
+				}
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_50s_attack_kmt_2_t
+				add_idea = PRC_50s_attack_kmt_3
+			}
+		}
+		set_temp_variable = { temp_x = 2.5 }
+		PRC_50s_spend_money_tt = yes
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 0 
+			is_historical_focus_on = yes
+		}
+	}
+}
+shared_focus = {
+	id = PRC_50s_Send_Spies_to_Infiltrate_Taiwan
+	icon = GFX_PRC_50s_Send_Spies_to_Infiltrate_Taiwan
+	cost = 3.6
+	x = 2
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Request_for_Naval_Assistance_from_The_USSR
+	}
+	prerequisite = {
+		focus = PRC_50s_Prepare_Ships_for_Landing
+	}
+	allow_branch = {
+		has_country_flag = prc_50s_Failure_of_the_Battle_of_Kinmen_flag
+	}
+	available = {
+
+	}
+	completion_reward = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = PRC_50s_attack_kmt
+				}
+				swap_ideas = {
+					remove_idea = PRC_50s_attack_kmt
+					add_idea = PRC_50s_attack_kmt_2_t
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = PRC_50s_attack_kmt }
+				}
+				add_timed_idea = {
+					idea = PRC_50s_attack_kmt_2_t
+					days = 50
+				}
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = PRC_50s_attack_kmt
+				add_idea = PRC_50s_attack_kmt_2_t
+			}
+		}
+		set_temp_variable = { temp_x = 2.5 }
+		PRC_50s_spend_money_tt = yes
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 0 
+			is_historical_focus_on = yes
+		}
+	}
+}
+shared_focus = {
+	id = PRC_50s_Support_for_The_Communist_Party_of_Taiwan
+	icon = GFX_PRC_50s_Support_for_The_Communist_Party_of_Taiwan
+	cost = 3.6
+	x = 0
+	y = 4
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Strengthen_The_Defence_of_The_Southeast_Coast
+	}
+	prerequisite = {
+		focus = PRC_50s_Step_up_Socialist_Propaganda_for_Taiwan
+	}
+	prerequisite = {
+		focus = PRC_50s_Send_Spies_to_Infiltrate_Taiwan
+	}
+	available = {
+
+	}
+	completion_reward = {
+		CHI = {
+			add_popularity = {
+				ideology = maoism
+				popularity = 0.05
+			}
+		}
+		country_event = {
+			id = PRC_50s_Rework_event.4
+		}
+		set_temp_variable = { temp_x = 2.5 }
+		PRC_50s_spend_money_tt = yes
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 0 
+			is_historical_focus_on = yes
+		}
+	}
+}
+shared_focus = {
+	id = PRC_50s_Promote_The_Peaceful_Liberation_of_Sinkiang
+	icon = GFX_PRC_50s_Promote_The_Peaceful_Liberation_of_Sinkiang
+	cost = 3.6
+	x = 6
+	y = 1
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Liberate_The_Whole_of_China
+	}
+	available = {
+		always = no
+	}
+	bypass = {
+		always = yes
+	}
+	completion_reward = {
+
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Retain_Three_Regions_Revolution_Government
+	icon = GFX_PRC_50s_Retain_Three_Regions_Revolution_Government
+	cost = 3.6
+	x = 7
+	y = 2
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Promote_The_Peaceful_Liberation_of_Sinkiang
+	}
+	mutually_exclusive = {
+		focus = PRC_50s_Integrate_Three_Regions_Revolution_Government
+	}
+	available = {
+
+	}
+	completion_reward = {
+		add_stability = 0.1
+		add_political_power = -50
+		set_temp_variable = { temp_x = 20 }
+		PRC_50s_gain_money_tt = yes
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+shared_focus = {
+	id = PRC_50s_Integrate_Three_Regions_Revolution_Government
+	icon = GFX_PRC_50s_Integrate_Three_Regions_Revolution_Government
+	cost = 3.6
+	x = 5
+	y = 2
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Promote_The_Peaceful_Liberation_of_Sinkiang
+	}
+	mutually_exclusive = {
+		focus = PRC_50s_Retain_Three_Regions_Revolution_Government
+	}
+	available = {
+		is_neighbor_of = SIK
+	}
+	completion_reward = {
+		annex_country = {
+			target = SIK
+			transfer_troops = yes
+		}
+		set_temp_variable = { temp_x = 5 }
+		PRC_50s_spend_money_tt = yes
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 618
+					state = 287
+					state = 619
+					state = 617
+				}
+			}
+			add_dynamic_modifier = { modifier = PRC_50s_SIK_resist }
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Establish_Production_And_Construction_Corps_of_Xinjiang
+	icon = GFX_PRC_50s_Establish_Production_And_Construction_Corps_of_Xinjiang
+	cost = 3.6
+	x = 5
+	y = 3
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Integrate_Three_Regions_Revolution_Government
+	}
+	available = {
+
+	}
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 618
+					state = 287
+					state = 619
+					state = 617
+				}
+			}
+			remove_dynamic_modifier = { modifier = PRC_50s_SIK_resist }
+			add_dynamic_modifier = { modifier = PRC_50s_SIK_resist_2 }
+		}
+		add_stability = 0.025
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Purge_Separatists_among_Ethnic_Minorities
+	icon = GFX_PRC_50s_Purge_Separatists_among_Ethnic_Minorities
+	cost = 3.6
+	x = 4
+	y = 4
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Establish_Production_And_Construction_Corps_of_Xinjiang
+	}
+	available = {
+
+	}
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 618
+					state = 287
+					state = 619
+					state = 617
+				}
+			}
+			remove_dynamic_modifier = { modifier = PRC_50s_SIK_resist_2 }
+			add_dynamic_modifier = { modifier = PRC_50s_SIK_resist_3 }
+			remove_core_of = SIK
+		}
+
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+shared_focus = {
+	id = PRC_50s_Transform_Uighur_Mosque
+	icon = GFX_PRC_50s_Transform_Uighur_Mosque
+	cost = 3.6
+	x = 6
+	y = 4
+	relative_position_id = PRC_50s_Liberate_The_Whole_of_China
+	prerequisite = {
+		focus = PRC_50s_Establish_Production_And_Construction_Corps_of_Xinjiang
+	}
+	available = {
+
+	}
+	completion_reward = {
+		add_stability = 0.025
+		random_owned_state = {
+			limit = {
+				OR = {
+					state = 618
+					state = 287
+					state = 619
+					state = 617
+				}
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		set_temp_variable = { temp_x = 1.5 }
+		PRC_50s_gain_money_tt = yes
+	}
+}
+
+
+
+
