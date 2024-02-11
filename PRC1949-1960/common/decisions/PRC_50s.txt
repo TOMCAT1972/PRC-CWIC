@@ -1,3 +1,26 @@
+PRC_tiaoshi_jueyi_categories = {
+	PRC_xianshi_49_60_guoce = {
+		allowed = { 
+			original_tag = PRC
+		}
+        visible = {
+			always = yes
+		}
+		available = {
+            always = yes
+        }
+		cost = 0
+        priority = 114
+		days_remove = 0
+        fire_only_once = no
+        complete_effect = {
+			set_variable = { PRC_focus = 1 }
+            mark_focus_tree_layout_dirty = yes
+		}
+		remove_effect = {
+		}
+	}
+}
 PRC_50s_Vietnam_Issue_categories = {  
 	PRC_50s_Negotiate_with_North_and_South_Vietnamese_mission = {
 		activation = {
@@ -141,10 +164,12 @@ PRC_50s_The_First_Five-year_Plan_categories = {
 		selectable_mission = no
 		days_mission_timeout = 1700
 		complete_effect = {
-            add_political_power = -25
+            add_political_power = 25
+			complete_national_focus = a
 		}
 		timeout_effect = {
-			add_political_power = 25
+			add_political_power = -25
+			complete_national_focus = PRC_50s_Achieve_Expected_Target
 		} 
 	}
 	PRC_1_FYP_infrastructure = {

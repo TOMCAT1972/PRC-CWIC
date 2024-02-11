@@ -1,5 +1,5 @@
 spriteTypes = {
-	#阶级和阶层系统
+	#开局
 	SpriteType = {
 		name = "GFX_idea_PRC_50s_People_s_War_of_Liberation"
 		texturefile = "gfx/interface/ideas/PRC/PRC_50s_People_s_War_of_Liberation.png"
@@ -21,7 +21,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/PRC/PRC_50s_Imperialist_forces.png"
 	}
 	SpriteType = {
-		name = "GFX_idea_PRC_bandit"
-		texturefile = "gfx/interface/ideas/PRC/PRC_bandit.png"
+		name = "GFX_idea_PRC_Bandit"
+		texturefile = "gfx/interface/ideas/PRC/PRC_Bandit.png"
 	}
+    SpriteType = {
+		name = "GFX_idea_PRC_PLA_Ground_Force"
+		texturefile = "gfx/interface/ideas/PRC/PRC_PLA_Ground_Force.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_PRC_PLA_Navy"
+		texturefile = "gfx/interface/ideas/PRC/PRC_PLA_Navy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_PRC_PLA_Air_Force"
+		texturefile = "gfx/interface/ideas/PRC/PRC_PLA_Air_Force.png"
+	}
+
 }

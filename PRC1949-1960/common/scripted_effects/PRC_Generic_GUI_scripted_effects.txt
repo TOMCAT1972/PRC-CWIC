@@ -219,6 +219,8 @@ PRC_Pop_Update_effect = {
 	}
 }
 PRC_Pop_Unlock_effect = {
+	set_country_flag = PRC_Pop_visible_flag
+
 	set_country_flag = PRC_Major_Pop1_flag
 	set_variable = {
 		PRC_Pop1_Attitude = -20

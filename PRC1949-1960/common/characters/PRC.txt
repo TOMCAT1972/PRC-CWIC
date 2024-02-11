@@ -3,7 +3,7 @@ characters={
 		name=PRC_Mao_Zedong
 		portraits={
 			civilian={
-				large="gfx/leaders/PRC/Mao_Zedong.dds"
+				large="gfx/leaders/PRC/Mao_Zedong_1949.dds"
 			}
 			army={
 				large="gfx/leaders/PRC/Mao_Zedong_Field_Marshal.dds"
@@ -478,7 +478,7 @@ characters={
 		name=PRC_Deng_Hua
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Deng_Hua_1955.png"
+				large="gfx/leaders/PRC/Army/Deng_Hua_1955.dds"
 			}
 		}
 		corps_commander={
@@ -500,7 +500,7 @@ characters={
 		name=PRC_Yang_Chengwu
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Yang_Chengwu_1955.png"
+				large="gfx/leaders/PRC/Army/Yang_Chengwu_1955.dds"
 			}
 		}
 		corps_commander={
@@ -683,7 +683,7 @@ characters={
 		name=PRC_Xie_Fuzhi
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Xie_Fuzhi_1955.png"
+				large="gfx/leaders/PRC/Army/Xie_Fuzhi_1955.dds"
 			}
 		}
 		corps_commander={
@@ -702,7 +702,7 @@ characters={
 		name=PRC_Chen_Zaidao
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Chen_Zaidao_1955.png"
+				large="gfx/leaders/PRC/Army/Chen_Zaidao_1955.dds"
 			}
 		}
 		corps_commander={
@@ -725,7 +725,7 @@ characters={
 		name=PRC_Ye_Fei
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Ye_Fei.png"
+				large="gfx/leaders/PRC/Army/Ye_Fei_1955.dds"
 			}
 		}
 		corps_commander={
@@ -767,7 +767,7 @@ characters={
 		name=PRC_Han_Xianchu
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Han_Xianchu_1955.png"
+				large="gfx/leaders/PRC/Army/Han_Xianchu_1955.dds"
 			}
 		}
 		corps_commander={
@@ -791,7 +791,7 @@ characters={
 		name=PRC_Xiao_Hua
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Xiao_Hua_1955.png"
+				large="gfx/leaders/PRC/Army/Xiao_Hua_1955.dds"
 			}
 		}
 		corps_commander={
@@ -840,7 +840,7 @@ characters={
 		name=PRC_Wang_Bicheng
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Wang_Bicheng_1955.png"
+				large="gfx/leaders/PRC/Army/Wang_Bicheng_1955.dds"
 			}
 		}
 		corps_commander={
@@ -863,7 +863,7 @@ characters={
 		name=PRC_Su_Zhenghua
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Su_Zhenghua_1955.png"
+				large="gfx/leaders/PRC/Army/Su_Zhenghua_1955.dds"
 			}
 		}
 		corps_commander={
@@ -885,7 +885,7 @@ characters={
 		name=PRC_Zhang_Zongxun
 		portraits={
 			army={
-				large="gfx/leaders/PRC/Army/Zhang_Zongxun_1955.png"
+				large="gfx/leaders/PRC/Army/Zhang_Zongxun_1955.dds"
 			}
 		}
 		corps_commander={

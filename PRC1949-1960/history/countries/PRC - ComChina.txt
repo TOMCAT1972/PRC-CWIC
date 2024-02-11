@@ -308,7 +308,7 @@ recruit_character = PRC_Chen_Liangyu
 		PRC_50s_Economic_ruin_caused_by_war
 		PRC_50s_Imperialist_forces
 		PRC_50s_Illiteracy_everywhere_1
-		PRC_bandit
+		PRC_bandit_1
 		international_credibility_3
 		agrarian_bourgeoisie_1
 		closed_economy
@@ -327,8 +327,7 @@ recruit_character = PRC_Chen_Liangyu
 	#add_dynamic_modifier = {
     #    modifier = PRC_econemy_dynamic_modifier
 	#}
-
-    add_dynamic_modifier = { modifier = PRC_PLA_Ground_Force }
+    
     set_variable = { PRC_50s_People_s_Liberation_Army_0 = 0.5 }
     set_variable = { PRC_50s_People_s_Liberation_Army_1 = -0.5 }
     set_variable = { PRC_50s_People_s_Liberation_Army_2 = -0.3 }
@@ -344,8 +343,21 @@ recruit_character = PRC_Chen_Liangyu
     set_variable = { PRC_50s_People_s_Liberation_Army_12 = -0.5 }
     set_variable = { PRC_50s_People_s_Liberation_Army_13 = 114 }
     set_variable = { PRC_50s_People_s_Liberation_Army_14 = 0.99 }
+	add_dynamic_modifier = { 
+		modifier = PRC_PLA_Ground_Force 
+	}
+
+	set_variable = { PRC_50s_People_s_Liberation_Army_24 = -0.2 }
+    set_variable = { PRC_50s_People_s_Liberation_Army_25 = -0.1 }
+    set_variable = { PRC_50s_People_s_Liberation_Army_26 = -0.1 }
+    set_variable = { PRC_50s_People_s_Liberation_Army_27 = 0.3 }
+    set_variable = { PRC_50s_People_s_Liberation_Army_28 = -0.25 }
+    set_variable = { PRC_50s_People_s_Liberation_Army_29 = 0.5 }
+    set_variable = { PRC_50s_People_s_Liberation_Army_30 = -0.5 }
+	add_dynamic_modifier = { 
+		modifier = PRC_PLA_Navy 
+	}
     
-	add_dynamic_modifier = { modifier = PRC_PLA_Air_Force }
     set_variable = { PRC_50s_People_s_Liberation_Army_15 = 0.3 }
     set_variable = { PRC_50s_People_s_Liberation_Army_16 = -0.2 }
     set_variable = { PRC_50s_People_s_Liberation_Army_17 = 0.15 }
@@ -355,15 +367,9 @@ recruit_character = PRC_Chen_Liangyu
     set_variable = { PRC_50s_People_s_Liberation_Army_21 = -0.25 }
     set_variable = { PRC_50s_People_s_Liberation_Army_22 = 0.5 }
     set_variable = { PRC_50s_People_s_Liberation_Army_23 = -0.05 }
-    
-	add_dynamic_modifier = { modifier = PRC_PLA_Navy }
-    set_variable = { PRC_50s_People_s_Liberation_Army_24 = -0.2 }
-    set_variable = { PRC_50s_People_s_Liberation_Army_25 = -0.1 }
-    set_variable = { PRC_50s_People_s_Liberation_Army_26 = -0.1 }
-    set_variable = { PRC_50s_People_s_Liberation_Army_27 = 0.3 }
-    set_variable = { PRC_50s_People_s_Liberation_Army_28 = -0.25 }
-    set_variable = { PRC_50s_People_s_Liberation_Army_29 = 0.5 }
-    set_variable = { PRC_50s_People_s_Liberation_Army_30 = -0.5 }
+	add_dynamic_modifier = { 
+		modifier = PRC_PLA_Air_Force 
+	} 
 }
 
 1950.5.1 = {

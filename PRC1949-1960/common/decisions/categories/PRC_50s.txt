@@ -1,3 +1,14 @@
+PRC_tiaoshi_jueyi_categories = {    
+	icon = GFX_PRC_politic_decision_1
+	allowed = {
+		original_tag = PRC
+	}
+	visible = {
+		is_debug = yes
+		is_ai = no
+	}
+	priority = 1
+}
 PRC_50s_Vietnam_Issue_categories = {    
 	icon = GFX_PRC_politic_decision_1
 	allowed = {

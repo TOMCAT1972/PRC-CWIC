@@ -3361,7 +3361,7 @@ country_event = {
 	trigger = {
 		has_start_date < 1949.10.01
 		date > 1956.02.09
-		has_country_flag = Found_PRC_flag
+		has_country_flag = PRC_Found_flag
 	}
 	fire_only_once = yes
 	
@@ -3379,7 +3379,7 @@ country_event = {
 	trigger = {
 		has_start_date < 1949.10.01
 		date > 1957.08.16
-		has_country_flag = Found_PRC_flag
+		has_country_flag = PRC_Found_flag
 	}
 	fire_only_once = yes
 	
@@ -3397,7 +3397,7 @@ country_event = {
 	trigger = {
 		has_start_date < 1949.10.01
 		date > 1957.03.01
-		has_country_flag = Found_PRC_flag
+		has_country_flag = PRC_Found_flag
 	}
 	fire_only_once = yes
 	
