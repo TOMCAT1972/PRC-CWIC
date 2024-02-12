@@ -1124,7 +1124,7 @@ country_event = {
 }
 
 country_event = {
-	id =  , #党员中的贪污腐化问题
+	id =  PRC_50s_Rework_event.63 #党员中的贪污腐化问题
 	title = PRC_50s_Rework_event.63.t 
 	desc = PRC_50s_Rework_event.63.d
 	#picture = GFX_PRC_50s_Rework_event_63
