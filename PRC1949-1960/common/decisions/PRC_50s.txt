@@ -165,7 +165,7 @@ PRC_50s_The_First_Five-year_Plan_categories = {
 		days_mission_timeout = 1700
 		complete_effect = {
             add_political_power = 25
-			complete_national_focus = a
+			complete_national_focus = PRC_50s_Exceed_Target
 		}
 		timeout_effect = {
 			add_political_power = -25
