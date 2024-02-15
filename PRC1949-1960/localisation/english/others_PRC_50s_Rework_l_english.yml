@@ -1,6 +1,10 @@
 ﻿l_english:
  ##decisions##
  PRC_50s_civilwar_Sending_Liu_Shaoqi_to_Moscow:0 "Send Liu Shaoqi to Moscow"
+ PRC_50s_Liberate_Provinces_decision:0 "[Get_PRC_Liberated_Provinces]"
+ PRC_Liberate_Gansu:0 "Liberate Gansu"
+ PRC_50s_Kinmen_battle:0 "Kinmen Battle"
+
  PRC_50s_socialist_transformation_Water_conservancy_construction:0 "Promote Water Conservancy Construction"
  PRC_50s_socialist_transformation_Rural_grain_sales_will_be_increased:0 "Increase Rual Resold Food"
  PRC_50s_socialist_transformation_Rural_rectification_work:0 "Rural Consolidation"

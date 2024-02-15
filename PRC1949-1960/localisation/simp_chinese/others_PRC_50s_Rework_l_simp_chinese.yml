@@ -1,7 +1,10 @@
 ﻿l_simp_chinese:
  ##decisions##
- PRC_50s_Kinmen_battle:0 "发动金门战役"
  PRC_50s_civilwar_Sending_Liu_Shaoqi_to_Moscow:0 "派遣刘少奇出访莫斯科"
+ PRC_50s_Liberate_Provinces_decision:0 "[Get_PRC_Liberated_Provinces]"
+ PRC_Liberate_Gansu:0 "解放甘肃"
+ PRC_50s_Kinmen_battle:0 "发动金门战役"
+
  PRC_50s_socialist_transformation_Water_conservancy_construction:0 "促进水利建设"
  PRC_50s_socialist_transformation_Rural_grain_sales_will_be_increased:0 "增加农村返销粮"
  PRC_50s_socialist_transformation_Rural_rectification_work:0 "整顿农村工作"
