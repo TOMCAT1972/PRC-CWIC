@@ -2553,7 +2553,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = PRC_50s_Heal_The_Wounds_of_War
 	mutually_exclusive = {
-		focus = PRC_50s_Control_The_Process_of_Cooperation
+		focus = PRC_50s_Control_The_Process_of_Co-operation
 	}
 	prerequisite = {
 		focus = PRC_50s_Co-operative_Transformation_of_Agriculture
@@ -2596,7 +2596,7 @@ shared_focus = {
 	y = 5
 	relative_position_id = PRC_50s_Heal_The_Wounds_of_War
 	mutually_exclusive = {
-		focus = PRC_50s_Accelerate_The_Process_of_Cooperation
+		focus = PRC_50s_Accelerate_The_Process_of_Co-operation
 	}
 	prerequisite = {
 		focus = PRC_50s_Co-operative_Transformation_of_Agriculture
