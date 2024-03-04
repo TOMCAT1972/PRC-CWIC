@@ -5,8 +5,17 @@ shared_focus = {
 	cost = 3.6
 	x = 10
 	y = 4
+    allow_branch = {
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+        }
+    }
 	available = {
-
+        
 	}
 	cancelable = no
 	mutually_exclusive = {
@@ -26,6 +35,15 @@ shared_focus = {
 	x = 2
 	y = 0
 	relative_position_id = PRC_50s_Launch_The_Crossing_Yangtze_River_Campaign
+    allow_branch = {
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+        }
+    }
 	available = {
 
 	}
@@ -840,17 +858,29 @@ shared_focus = {
 	icon = GFX_PRC_50s_Found_The_People_s_Republic_of_China
 	cost = 3.6
 	x = 47
-	y = 2
+	y = 3
     offset = {
-        x = -22
-        y = 3
+        x = -36
+        y = 8
         trigger = {
-            NOT = {
-                check_variable = { 
-                    var = PRC_focus 
-                    value = 1 
-                    compare = equals
-                }
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 0
+                compare = equals
+            }
+        }
+    }
+    allow_branch = {
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 1
+                compare = greater_than
             }
         }
     }
@@ -860,7 +890,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		drop_cosmetic_tag = yes
-		set_variable = { PRC_focus = 1 }
+		set_variable = { PRC_49_60_focus_var = 1 }
         mark_focus_tree_layout_dirty = yes
 		news_event = {
 			id = news.1005
@@ -886,10 +916,17 @@ shared_focus = {
 		focus = PRC_50s_Found_The_People_s_Republic_of_China
 	}
 	allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 1
+                compare = not_equals
+            }
         }
     }
 	completion_reward = {
@@ -2667,10 +2704,17 @@ shared_focus = {
 		focus = PRC_50s_Found_The_People_s_Republic_of_China
 	}
 	allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 1
+                compare = not_equals
+            }
         }
     }
 	completion_reward = {
@@ -3261,12 +3305,19 @@ shared_focus = {
 	icon = GFX_PRC_50s_Lessons_from_Three_Major_Campaigns
 	cost = 3.6
 	x = 13
-	y = 13
+	y = 12
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 0
+                compare = equals
+            }
         }
     }
 	available = {
@@ -4211,15 +4262,33 @@ shared_focus = {
     icon = GFX_PRC_50s_Lean_to_Soviet_Side
     cost = 3.6
     x = 16
-    y = 22
+    y = 21
+    offset = {
+        x = 6
+        y = -2
+        trigger = {
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 0
+                compare = not_equals
+            }
+        }
+    }
     mutually_exclusive = {
         focus = PRC_50s_Keep_in_Touch_with_The_USA
     }
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 0
+                compare = equals
+            }
         }
     }
     available = {
@@ -4250,10 +4319,17 @@ shared_focus = {
         focus = PRC_50s_Lean_to_Soviet_Side
     }
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 0
+                compare = equals
+            }
         }
     }
     available = {
@@ -6551,13 +6627,31 @@ shared_focus = {
     id = PRC_50s_The_First_Five-year_Plan
     icon = GFX_PRC_50s_The_First_Five-year_Plan
     cost = 3.6
-    x = 60
+    x = 56
     y = 13
+    offset = {
+        x = -20
+        y = 0
+        trigger = {
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 1
+                compare = equals
+            } 
+        }
+    }
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 1
+                compare = not_equals
+            }
         }
     }
     available = {
@@ -7581,13 +7675,31 @@ shared_focus = {
     id = PRC_50s_Establish_The_Two_Hundred_Policy
     icon = GFX_PRC_50s_Establish_The_Two_Hundred_Policy
     cost = 5
-    x = 35
+    x = 33
     y = 13
+    offset = {
+        x = -1
+        y = -9
+        trigger = {
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 2
+                compare = equals
+            }
+        }
+    }
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 2
+                compare = not_equals
+            }
         }
     }
     available = {
@@ -7825,7 +7937,7 @@ shared_focus = {
         focus = PRC_50s_Adhere_to_Mass_Line
     }
     mutually_exclusive = {
-        focus = PRC_50s_Insist_on_Selfcriticism
+        focus = PRC_50s_Insist_on_Self-criticism
     }
     select_effect = {
         country_event = {
@@ -8203,7 +8315,7 @@ shared_focus = {
         focus = PRC_50s_Establish_A_Truly_Democratic_Regime
     }
     mutually_exclusive = {
-        focus = PRC_50s_Suppress_Internal_Antiparty_Elements
+        focus = PRC_50s_Suppress_Internal_Anti-party_Elements
     }
     available = {
         custom_trigger_tooltip = {
@@ -8863,14 +8975,32 @@ shared_focus = {
     cost = 3.2
     x = 54
     y = 21
+    offset = {
+        x = -17
+        y = -16
+        trigger = {
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 3
+                compare = greater_than_or_equals
+            }
+        }
+    }
     available = {
         always = no
     }
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 3
+                compare = less_than
+            }
         }
     }
     completion_reward = {
@@ -10658,16 +10788,33 @@ shared_focus = {
     cost = 9
     x = 43
     y = 22
+    offset = {
+        x = -17
+        y = -16
+        trigger = {
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 4
+                compare = equals
+            }
+        }
+    }
     available = {
         has_country_flag = PRC_lushan_meeting_unlock_flag
     }
     allow_branch = {
-        check_variable = { 
-            var = PRC_focus 
-            value = 1 
-            compare = equals
+        NOT = { 
+            check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
+            check_variable = {
+                var = PRC_49_60_focus_var
+                value = 4
+                compare = not_equals
+            }
         }
-        has_country_flag = PRC_lushan_meeting_unlock_flag
     }
     cancelable = no
     completion_reward = {

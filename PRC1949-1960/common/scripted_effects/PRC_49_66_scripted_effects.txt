@@ -331,11 +331,11 @@ PRC_50s_Imperialist_forces_swap = {
 PRC_50s_administration_integration_in = {
     if = {
         limit = { has_idea = administration_integration_5 }
-        swap_ideas = { remove_idea = administration_integration_3 add_idea = administration_integration_4 }
+        swap_ideas = { remove_idea = administration_integration_5 add_idea = administration_integration_4 }
     }
     elseif = {
         limit = { has_idea = administration_integration_4 }
-        swap_ideas = { remove_idea = administration_integration_3 add_idea = administration_integration_3 }
+        swap_ideas = { remove_idea = administration_integration_4 add_idea = administration_integration_3 }
     }
     elseif = {
         limit = { has_idea = administration_integration_3 }

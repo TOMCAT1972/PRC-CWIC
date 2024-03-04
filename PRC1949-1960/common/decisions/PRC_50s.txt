@@ -1,10 +1,14 @@
 PRC_tiaoshi_jueyi_categories = {
-	PRC_xianshi_49_60_guoce = {
+	PRC_unlock_49_60_focus = {
 		allowed = { 
 			original_tag = PRC
 		}
         visible = {
-			always = yes
+			check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = not_equals
+			}
 		}
 		available = {
             always = yes
@@ -14,7 +18,158 @@ PRC_tiaoshi_jueyi_categories = {
 		days_remove = 0
         fire_only_once = no
         complete_effect = {
-			set_variable = { PRC_focus = 1 }
+			set_variable = { PRC_focus_tree_var = 0 }
+			set_variable = { PRC_49_60_focus_var = 0 }
+            mark_focus_tree_layout_dirty = yes
+		}
+		remove_effect = {
+		}
+	}
+	PRC_unlock_Liberation_War_focus = {
+		allowed = { 
+			original_tag = PRC
+		}
+        visible = {
+			check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = equals
+			}
+			check_variable = {
+				var = PRC_49_60_focus_var
+				value = 0
+				compare = not_equals
+			}
+		}
+		available = {
+            always = yes
+        }
+		cost = 0
+        priority = 114
+		days_remove = 0
+        fire_only_once = no
+        complete_effect = {
+			set_variable = { PRC_49_60_focus_var = 0 }
+            mark_focus_tree_layout_dirty = yes
+		}
+		remove_effect = {
+		}
+	}
+	PRC_unlock_Transition_Period_focus = {
+        allowed = { 
+			original_tag = PRC
+		}
+        visible = {
+			check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = equals
+			}
+			check_variable = {
+				var = PRC_49_60_focus_var
+				value = 1
+				compare = not_equals
+			}
+		}
+		available = {
+            always = yes
+        }
+		cost = 0
+        priority = 114
+		days_remove = 0
+        fire_only_once = no
+        complete_effect = {
+			set_variable = { PRC_49_60_focus_var = 1 }
+            mark_focus_tree_layout_dirty = yes
+		}
+		remove_effect = {
+		}
+	}
+	PRC_unlock_Two_Hundred_focus = {
+        allowed = { 
+			original_tag = PRC
+		}
+        visible = {
+			check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = equals
+			}
+			check_variable = {
+				var = PRC_49_60_focus_var
+				value = 2
+				compare = not_equals
+			}
+		}
+		available = {
+            always = yes
+        }
+		cost = 0
+        priority = 114
+		days_remove = 0
+        fire_only_once = no
+        complete_effect = {
+			set_variable = { PRC_49_60_focus_var = 2 }
+            mark_focus_tree_layout_dirty = yes
+		}
+		remove_effect = {
+		}
+	}
+	PRC_unlock_GFL_focus = {
+        allowed = { 
+			original_tag = PRC
+		}
+        visible = {
+			check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = equals
+			}
+			check_variable = {
+				var = PRC_49_60_focus_var
+				value = 3
+				compare = not_equals
+			}
+		}
+		available = {
+            always = yes
+        }
+		cost = 0
+        priority = 114
+		days_remove = 0
+        fire_only_once = no
+        complete_effect = {
+			set_variable = { PRC_49_60_focus_var = 3 }
+            mark_focus_tree_layout_dirty = yes
+		}
+		remove_effect = {
+		}
+	}
+	PRC_unlock_Lushan_focus = {
+        allowed = { 
+			original_tag = PRC
+		}
+        visible = {
+			check_variable = {
+				var = PRC_focus_tree_var
+				value = 0
+				compare = equals
+			}
+			check_variable = {
+				var = PRC_49_60_focus_var
+				value = 4
+				compare = not_equals
+			}
+		}
+		available = {
+            always = yes
+        }
+		cost = 0
+        priority = 114
+		days_remove = 0
+        fire_only_once = no
+        complete_effect = {
+			set_variable = { PRC_49_60_focus_var = 4 }
             mark_focus_tree_layout_dirty = yes
 		}
 		remove_effect = {

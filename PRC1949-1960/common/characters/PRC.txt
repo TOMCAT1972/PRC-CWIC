@@ -31,7 +31,7 @@ characters={
 		country_leader={
 			desc="POLITICS_MAO_ZEDONG_DESC"
 			ideology=mao_zedong_thought
-			traits={ CJiaoyuan People_leaders Third_World_Champion }
+			traits={ People_leaders }
 			expire="1976.9.10.1"
 			id=-1
 		}
