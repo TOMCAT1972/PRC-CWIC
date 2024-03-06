@@ -930,11 +930,46 @@ shared_focus = {
         }
     }
 	completion_reward = {
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
-		add_timed_idea = {
-			idea = PRC_50s_Heal_The_Wounds_of_War_idea
-			days = 1095
-		}
+        effect_tooltip = {
+            add_timed_idea = {
+                PRC_50s_National_Economic_Recovery_1
+                days = 1020
+            }
+        }
+		swap_ideas = { 
+            remove_idea = PRC_50s_Economic_ruin_caused_by_war 
+            add_idea = PRC_50s_Economic_ruin_caused_by_war_1 
+        }
+        hidden_effect = {
+            set_variable = {
+                PRC_NER_consumer_goods_factor = 0.05
+            }
+            set_variable = {
+                PRC_NER_production_factory_start_efficiency_factor = 0
+            }
+            set_variable = {
+                PRC_NER_production_factory_efficiency_gain_factor = 0
+            }
+            set_variable = {
+                PRC_NER_production_speed_agri_industrial_complex_factor = 0
+            }
+            set_variable = {
+                PRC_NER_production_speed_industrial_complex_factor = 0
+            }
+            set_variable = {
+                PRC_NER_production_speed_infrastructure_factor = 0
+            }
+            set_variable = {
+                PRC_NER_production_speed_rail_way_factor = 0
+            }
+            set_variable = {
+                PRC_NER_production_speed_fossil_fuel_powerplant_factor = 0
+            }
+            add_dynamic_modifier = {
+                modifier = PRC_50s_National_Economic_Recovery
+                days = 1020
+            }
+        }
 	}
 	ai_will_do = {
 		base = 10
@@ -1935,7 +1970,7 @@ shared_focus = {
 shared_focus = {
 	id = PRC_50s_Boost_Economic_Confidence
 	icon = GFX_PRC_50s_Boost_Economic_Confidence
-	cost = 3.6
+	cost = 6
 	x = -0
 	y = 1
 	relative_position_id = PRC_50s_Heal_The_Wounds_of_War
@@ -1946,11 +1981,38 @@ shared_focus = {
 
 	}
 	completion_reward = {
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
-		add_timed_idea = {
-			idea = PRC_50s_Boost_Economic_Confidence
-			days = 365
-		}
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = PRC_50s_National_Economic_Recovery_1
+                add_idea = PRC_50s_National_Economic_Recovery_2
+            }
+        }
+        add_to_variable = {
+            PRC_NER_consumer_goods_factor = 0.05
+        }
+        add_to_variable = {
+            PRC_NER_production_factory_start_efficiency_factor = 0.025
+        }
+        add_to_variable = {
+            PRC_NER_production_factory_efficiency_gain_factor = 0.025
+        }
+        add_to_variable = {
+            PRC_NER_production_speed_agri_industrial_complex_factor = 0.05
+        }
+        add_to_variable = {
+            PRC_NER_production_speed_industrial_complex_factor = 0.035
+        }
+        force_update_dynamic_modifier = yes
+		if = {
+            limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
+            swap_ideas = { 
+                remove_idea = PRC_50s_Economic_ruin_caused_by_war_1
+                add_idea = PRC_50s_Economic_ruin_caused_by_war_2 
+            }
+        }
+        else = {
+            PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        }
 	}
 	ai_will_do = {
 		base = 10
@@ -1970,22 +2032,32 @@ shared_focus = {
 
 	}
 	completion_reward = {
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
-		if = {
-			limit = {
-				has_idea = PRC_50s_Boost_Economic_Confidence
-			}
-			swap_ideas = {
-				remove_idea = PRC_50s_Boost_Economic_Confidence
-				add_idea = PRC_50s_Guarantee_Private_Factory_Orders
-			}
-		}
-		else = {
-			add_timed_idea = {
-				idea = PRC_50s_Guarantee_Private_Factory_Orders1
-				days = 180
-			}
-		}
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = PRC_50s_National_Economic_Recovery_1
+                add_idea = PRC_50s_National_Economic_Recovery_3
+            }
+        }
+        add_to_variable = {
+            PRC_NER_production_factory_start_efficiency_factor = 0.025
+        }
+        add_to_variable = {
+            PRC_NER_production_factory_efficiency_gain_factor = 0.025
+        }
+        add_to_variable = {
+            PRC_NER_production_speed_industrial_complex_factor = 0.04
+        }
+        force_update_dynamic_modifier = yes
+        if = {
+            limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
+            swap_ideas = { 
+                remove_idea = PRC_50s_Economic_ruin_caused_by_war_1
+                add_idea = PRC_50s_Economic_ruin_caused_by_war_2 
+            }
+        }
+        else = {
+            PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        }
 	}
 	ai_will_do = {
 		base = 10
@@ -2005,7 +2077,19 @@ shared_focus = {
 
 	}
 	completion_reward = {
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = PRC_50s_National_Economic_Recovery_1
+                add_idea = PRC_50s_National_Economic_Recovery_4
+            }
+        }
+        add_to_variable = {
+            PRC_NER_production_speed_infrastructure_factor = 0.05
+        }
+        add_to_variable = {
+            PRC_NER_production_speed_rail_way_factor = 0.075
+        }
+        force_update_dynamic_modifier = yes
 		random_owned_state = {
 			add_building_construction = {
 				type = supply_node
@@ -2036,6 +2120,16 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+        if = {
+            limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
+            swap_ideas = { 
+                remove_idea = PRC_50s_Economic_ruin_caused_by_war_1
+                add_idea = PRC_50s_Economic_ruin_caused_by_war_2 
+            }
+        }
+        else = {
+            PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        }
 	}
 	ai_will_do = {
 		base = 10
@@ -2055,9 +2149,18 @@ shared_focus = {
 
 	}
 	completion_reward = {
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = PRC_50s_National_Economic_Recovery_1
+                add_idea = PRC_50s_National_Economic_Recovery_5
+            }
+        }
+        add_to_variable = {
+            PRC_NER_production_speed_fossil_fuel_powerplant_factor = 0.075
+        }
+        force_update_dynamic_modifier = yes
 		add_tech_bonus = {
-			bonus = 0.5
+			bonus = 0.3
 			uses = 2
 			category = hardware_tech
 		}
@@ -2075,6 +2178,16 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+        if = {
+            limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
+            swap_ideas = { 
+                remove_idea = PRC_50s_Economic_ruin_caused_by_war_1
+                add_idea = PRC_50s_Economic_ruin_caused_by_war_2 
+            }
+        }
+        else = {
+            PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        }
 	}
 	ai_will_do = {
 		base = 10
@@ -2097,7 +2210,16 @@ shared_focus = {
 
 	}
 	completion_reward = {
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
+		if = {
+            limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
+            swap_ideas = { 
+                remove_idea = PRC_50s_Economic_ruin_caused_by_war_1
+                add_idea = PRC_50s_Economic_ruin_caused_by_war_2 
+            }
+        }
+        else = {
+            PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        }
 		random_owned_state = {
 			add_resource = {
 				type = steel
@@ -2146,7 +2268,16 @@ shared_focus = {
 	completion_reward = {
 		set_temp_variable = { PRC_Pop_n_temp = 4 }
 		PRC_Pop_removal_effect = yes
-		PRC_50s_Economic_ruin_caused_by_war_swap = yes
+		if = {
+            limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
+            swap_ideas = { 
+                remove_idea = PRC_50s_Economic_ruin_caused_by_war_1
+                add_idea = PRC_50s_Economic_ruin_caused_by_war_2 
+            }
+        }
+        else = {
+            PRC_50s_Economic_ruin_caused_by_war_swap = yes
+        }
 		598 = {
 			add_building_construction = {
 				type = industrial_complex

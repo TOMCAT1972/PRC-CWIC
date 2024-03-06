@@ -251,8 +251,8 @@ PRC_50s_gain_money_tt = {
 
 PRC_50s_Economic_ruin_caused_by_war_swap = {
     if = {
-        limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war }
-        swap_ideas = { remove_idea = PRC_50s_Economic_ruin_caused_by_war add_idea = PRC_50s_Economic_ruin_caused_by_war_2 }
+        limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war_1 }
+        swap_ideas = { remove_idea = PRC_50s_Economic_ruin_caused_by_war_2 add_idea = PRC_50s_Economic_ruin_caused_by_war_2 }
     }
     else_if = {
         limit = { has_idea = PRC_50s_Economic_ruin_caused_by_war_2 }
