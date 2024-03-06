@@ -36,6 +36,7 @@ leader_traits = {
 		political_power_factor = -0.3
 		stability_factor = -0.2
 	}
+	
 	sickly = {
 		random = no
 		political_power_factor = -0.15
@@ -103,8 +104,22 @@ leader_traits = {
 	
 	China_Unifier = {
 		random = no
-		stability_factor = 0.15
+		stability_factor = 0.10
 	}
+	
+	leader_of_national_revolutionary_movement = {
+		random = no
+		
+		conscription = 0.01
+		war_support_factor = 0.05
+	}
+
+    Hero_of_the_Second_Sino_Japanese_War = {
+           random = no
+           experience_gain_army = 0.05
+           dig_in_speed_factor = 0.2
+    }
+
 	reformist_colonial_governor = {
 		random = no
 		political_power_factor = -0.1
@@ -114,7 +129,7 @@ leader_traits = {
 		random = no
 		political_power_gain = -0.6
 	}
-	
+
 	Containment_Proponent = {
 		random = no
 		send_volunteer_size = 2
@@ -403,6 +418,46 @@ military_leader_cost_factor = -0.10
 		max_command_power = 50
 	}
 	
+	Generalissimo = {
+		random = no
+		max_command_power = 50
+		army_org_factor = 0.08
+	}
+
+	Saviour_of_the_Chinese_Nation = {
+		random = no 
+		stability_factor = 0.15
+		war_support_factor = 0.10
+		drift_defence_factor = 0.10
+		
+	}
+
+	Staunch_anti_communist = {
+		random = no 
+		targeted_modifier = {
+   			tag = PRC
+			attack_bonus_against = 0.05
+    		defense_bonus_against = 0.05
+		}
+		communism_acceptance = -50
+		maoism_acceptance = -50
+		
+	}
+
+	fading_legacy_of_guofu = {
+		random = no 
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		army_morale_factor = -0.05
+		
+	}
+	
+	Rommel_of_the_east = {
+	         random = no
+			 army_org_factor = 0.1
+			 army_org_regain = 0.1
+	}		 
+	
 	Communist_Vanquisher = {
 		random = no
 		communism_acceptance = -50
@@ -535,35 +590,11 @@ military_leader_cost_factor = -0.50
 		random = no
 		production_speed_infrastructure_factor = 0.20
 	}
-	
-	Corrupted_Ways = {
+
+	HOS_only_in_name = {
 		random = no
-		consumer_goods_factor = 0.03
-military_leader_cost_factor = -0.15
-	}
-	
-	Ruthless_Tyrant = {
-		random = no
-		political_power_factor = 0.25
-		drift_defence_factor = 0.50
-		MONTHLY_POPULATION = -0.03
-		stability_factor = 0.10
-	}
-	
-	Fierce_Anti_Communist = {
-		random = no
-		communism_acceptance = -50
-		maoism_acceptance = -50
-		war_support_factor = 0.10
-		army_core_attack_factor = 0.05
-		army_core_defence_factor = 0.05
-	}
-	
-	Capitalist_Modernizer = {
-		random = no
-		consumer_goods_factor = -0.05
-		production_speed_buildings_factor = 0.10
 		stability_factor = -0.05
+		political_power_factor = -0.05
 	}
 	
 	Non_Aligned_Figurehead = {
@@ -604,7 +635,7 @@ military_leader_cost_factor = -0.15
 		planning_speed = 0.30
 		war_support_factor = 0.15
 	}
-	Paternalistic_Highlander = {
+    Paternalistic_Highlander = {
 		random = no
 		political_power_cost = 0.15
 		stability_factor = 0.02
@@ -687,13 +718,14 @@ military_leader_cost_factor = -0.15
 		random = no
 		monthly_population = 0.02
 	}
+	
 	Great_Leader = {
 		random = no
 		stability_factor = 0.15
 		army_core_attack_factor = 0.10
 		army_core_defence_factor = 0.10
 	}
-	politically_ignorant = {
+    politically_ignorant = {
 		random = no
 		political_power_cost = 0.15
 		political_power_gain = -0.15
@@ -2155,7 +2187,7 @@ military_leader_cost_factor = -0.25
 	nuclear_enthusiast = {
 		random = no
 		sprite = 14
-		production_speed_nuclear_reactor_factor = 0.05
+        production_speed_nuclear_reactor_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1
@@ -2874,7 +2906,7 @@ military_leader_cost_factor = -0.25
 	industrial_concern = {
 		random = no
 
-		production_speed_industrial_complex_factor = 0.1
+		production_speed_industrial_complex_factor = 0.2
 		
 		ai_will_do = {
 			factor = 1
@@ -2885,6 +2917,14 @@ military_leader_cost_factor = -0.25
 		random = no
 
 		production_speed_infrastructure_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	technical_concern = {
+		random = no
 		
 		ai_will_do = {
 			factor = 1
@@ -4741,35 +4781,43 @@ military_leader_cost_factor = 0.25
 			factor = 1
 		}
 	}
-#####shigeru yoshida
+	
+#Shigeru Yoshida
     yoshida_doctrine = {
-    random = no
-    production_speed_arms_factory_factor = -0.25	
-    conscription_factor	= -0.01
-    consumer_goods_factor = -0.05
-    production_speed_industrial_complex_factor = 0.01
- 	ai_will_do = {
-	factor = 1		
-    }
-}
+		random = no
+		production_speed_arms_factory_factor = -0.25	
+		conscription_factor	= -0.01
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.01
+		ai_will_do = {
+			factor = 1		
+		}
+	}
     broad_range_politician = {
        random = no
        military_leader_cost_factor = -0.25
        political_power_gain = 0.2
- 	ai_will_do = {
-	        factor = 1		
-	    }
+		ai_will_do = {
+				factor = 1		
+			}
     }
 	american_economic_alignment = {
-	random = no
+		random = no
 		communism_acceptance = -30
 		maoism_acceptance = -30
 		Social_Democratic_acceptance = -30
 		conservative_acceptance = 30
 		trade_opinion_factor = 0.2
-    ai_will_do = {
+		ai_will_do = {
 			factor = 1
 		}
+	}
+	
+#Ichiro Hatoyama
+	party_unifier = {
+		stability_factor = 0.05
+		random = no
+		political_power_factor = 0.10
 	}
 	distinguished_soldier = {
 	random = no
@@ -5022,82 +5070,13 @@ military_leader_cost_factor = 0.25
 		#local_resources_factor = 0.15
 	}
 	orthodox_stalinist = {
+		political_power_factor = 0.15
+		trade_opinion_factor = -0.2
 		random = no
-		political_power_gain = 0.1
 	}
-	political_genius = {
+	societal_conservative = {
 		random = no
-		political_power_gain = 0.1
 		stability_factor = 0.1
-		war_support_factor = 0.1
-		economy_cost_factor = -0.20
-	}
-	alcholic_paranoiac = {
-		random = no
-		military_leader_cost_factor = 0.3
-		trade_opinion_factor = -0.1
-	}
-	unpopular_jew = {
-		random = no
-		stability_factor = -0.05
-		war_support_factor = -0.05
-	}
-	mass_organizer = {
-		random = no
-		political_power_gain = 0.1
-		industrial_capacity_factory = 0.05
-	}
-	distrusted_by_stalin = {
-		random = no
-		communism_acceptance = -25
-	}
-	face_of_destalinization = {
-		random = no
-		research_speed_factor = 0.02
-		trade_laws_cost_factor = -0.25
-	}
-	stalinist_at_heart = {
-		random = no
-		trade_opinion_factor = -0.15
-		stability_factor = 0.1
-		political_power_factor = 0.1
-	}
-	modest_president = {
-		random = no
-		consumer_goods_factor = -0.03
-	}
-	massively_popular_reformer = {
-		random = no
-		political_power_gain = 0.2
-		stability_factor = 0.1
-		war_support_factor = 0.1
-	}
-	prague_spring_leader = {
-		random = no
-		research_speed_factor = 0.03
-		consumer_goods_factor = -0.03
-		production_speed_buildings_factor = 0.1
-		industrial_capacity_factory = 0.05
-	}
-	strong_revisionist = {
-		random = no
-		communism_acceptance = -30
-		maoism_acceptance = -30
-		trotskyism_acceptance = 50
-	}
-	strong_compromiser = {
-		random = no
-		communism_acceptance = 25
-		trotskyism_acceptance = 25
-	}
-	normalization_leader = {
-		stability_factor = 0.15
-		war_support_factor = 0.05
-		research_speed_factor = -0.05
-	}
-	husaks_children = {
-		monthly_population = 0.15
-		production_speed_buildings_factor = 0.05
 	}
 	goulash_communism = {
 		random = no
@@ -5287,11 +5266,6 @@ military_leader_cost_factor = 0.25
 		research_speed_factor = 0.1
 		production_speed_buildings_factor = 0.1
 		MONTHLY_POPULATION = 0.5
-	}
-	little_stalin = {
-		drift_defence_factor = 0.1
-		stability_factor = 0.02
-		army_morale_factor = 0.05
 	}
 
 }	

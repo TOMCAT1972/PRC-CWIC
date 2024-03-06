@@ -890,6 +890,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		drop_cosmetic_tag = yes
+        set_country_flag = PRC_Founding_of_New_China_flag
 		set_variable = { PRC_49_60_focus_var = 1 }
         mark_focus_tree_layout_dirty = yes
 		news_event = {

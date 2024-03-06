@@ -1,6 +1,6 @@
 ideas = {
 	
-	country = {
+	hidden_ideas  = {
 		hundred_flowers_campaign = {
 			picture = hundred_flowers_campaign
 			
@@ -18,7 +18,7 @@ ideas = {
 
 			picture = PRC_ideas_hundred_flowers_capaign
 		}
-		Xinjiang_Seperatists = {
+		Xinjiang_Separatists = {
 			picture = army_problems
 			allowed = { always = no }
 

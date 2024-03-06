@@ -11,7 +11,7 @@ scripted_gui = {
 				value = 1 
 			    compare = equals
 			}
-			has_country_flag = PRC_Found_flag
+			has_country_flag = PRC_Founding_of_New_China_flag
 			any_of = {
 				array = country_politics_list
 				value = v
